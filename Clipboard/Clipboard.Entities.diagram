@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<minimalLanguageDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Clipboard">
+  <diagramMoniker Id="7dec8c11-35ed-4dd2-98a4-0ac78259dcca" />
+  <nestedChildShapes>
+    <entityShape Id="a01c424c-8f54-4c35-bb52-18a3697527e5" absoluteBounds="2, 0.875, 1.75, 1.3915071614583332">
+      <entityMoniker Id="6a17e4d2-ae27-44f8-b14c-f8e57307d315" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c4a9b71f-dd36-4168-bfd1-93b24aac125a" absoluteBounds="2.0149999999999997, 1.205, 1.7200000000000002, 0.96150716145833326" name="Properties" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </entityShape>
+  </nestedChildShapes>
+</minimalLanguageDiagram>

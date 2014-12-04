@@ -1,0 +1,9 @@
+﻿body {
+    padding-top: 60px;
+}
+
+.ClipboardContent {
+	height: 100vw;
+	min-height: 300px;
+    width: 100%;
+}
