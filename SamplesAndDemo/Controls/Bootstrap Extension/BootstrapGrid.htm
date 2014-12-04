@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html >
+<html xmlns:aas="http://aspectize.com/ajax">
+<head>
+    <title>Untitled</title>
+</head>
+<body>
+
+    <div aas:control="BootstrapGridControl">
+        <h1 class="page-header">Bootstrap Grid</h1>
+
+        <h2>Basic Usage</h2>
+        <div class="row">
+            <div class="col-sm-12">
+                <div aas:name="GridProduct" class="BootstrapGrid"></div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <h2>Grid with pagination and AutoSort</h2>
+        <div class="row form-inline">
+            <div class="col-sm-3">
+                Page size: <select name="SelectPageSize" class="form-control"></select> <input name="CheckBoxAutoSort" type="checkbox" class="form-control" /> allow AutoSort
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-sm-12">
+                <div aas:name="GridProductPage" class="BootstrapGrid"></div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <h2>Group Rows</h2>
+        <div class="row">
+            <div class="col-sm-12">
+                <div aas:name="GridSubCategory" class="BootstrapGrid"></div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <h2>Different types of columns</h2>
+        <br />
+        Edit the SafetyStockLevel affect the Row class: if values is less than 100, class is danger, otherwise class is success.
+        <div class="row">
+            <div class="col-sm-12">
+                <div aas:name="GridProductColumns" class="BootstrapGrid"></div>
+            </div>
+        </div>
+        <br />
+        <br />
+
+    </div>
+
+</body>
+</html>

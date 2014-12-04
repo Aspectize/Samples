@@ -1,0 +1,72 @@
+﻿
+/* TabVertical */
+
+.TabVertical.aasNewTabControl > .pageZone 
+{
+    clear:none;
+    float: left;
+    width: 77%;
+    border-color: transparent;
+    border-left: none;
+    border-right: none;
+    border-style: none;
+    border-width: 0;
+    background-color:transparent;        
+}
+
+.TabVertical.aasNewTabControl > .tabZone
+{
+    width: 217px; 
+    margin-top: 18px;
+    background: none;
+    font: inherit;
+}
+
+.TabVertical.aasNewTabControl > .tabZone > ul > li.aasTab
+{
+    float:none;
+    position:relative;
+    text-align: left;
+    width: 200px;
+    background: none no-repeat scroll 0 0 transparent;
+    padding: 6px 10px;
+    line-height: 19px;
+}
+
+.TabVertical.aasNewTabControl > .tabZone > ul > li.aasTab > span > a,
+.TabVertical.aasNewTabControl > .tabZone > ul > li.aasTab > span > a:visited,
+.TabVertical.aasNewTabControl > .tabZone > ul > li.aasTab > span > a:link
+{
+    padding: 0;
+    color: #999999;
+    display: block;
+    font-size: 13px;
+    background: none;
+    margin-left:0;
+    background: url("../Images/TabNotSelected.png") no-repeat scroll right transparent;
+}    
+
+.TabVertical.aasNewTabControl > .tabZone > ul > li.aasTab:hover,
+.TabVertical.aasNewTabControl > .tabZone > ul > li.aasTab > span > a:hover 
+{
+    background-color: #F1F1F1;
+}
+
+.TabVertical.aasNewTabControl > .tabZone > ul > li.aasSelectedTab:hover
+{
+}
+
+.TabVertical.aasNewTabControl > .tabZone > ul > li.aasSelectedTab > span > a,
+.TabVertical.aasNewTabControl > .tabZone > ul > li.aasSelectedTab > span > a:hover
+{
+    color: #FFFFFF;
+    background-color: #4782A4;
+    background: url("../Images/TabSelected.png") no-repeat scroll right transparent;
+}
+
+.TabVertical.aasNewTabControl > .tabZone > ul > li.aasSelectedTab,
+.TabVertical.aasNewTabControl > .tabZone > ul > li.aasSelectedTab:hover
+{
+    background-color: #428BCA;
+}
+

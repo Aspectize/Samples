@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html xmlns:aas="http://aspectize.com/ajax">
+<head>
+    <title>Untitled</title>
+</head>
+<body>
+
+    <div aas:control="Upload">
+        <h1 class="page-header">Upload</h1>
+
+        <h2>Basic usage</h2>
+        <div class="row">
+            <br />
+            <input name="CheckBoxMultiple" type="checkbox" /> allow multiple files
+            <br />
+            <div aas:name="Uploader" class="AspectizeFileUpload"></div>
+        </div>
+        <br />
+        <br />
+        <div class="row {DisplayNbFileUploaded}">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div><span>{NbFileUploaded}</span> files uploaded</div>
+                    <div>
+                        <div aas:name="GridUploadedFiles" class="BootstrapGrid"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+
+        <h2>Customize UI</h2>
+        <h3>Uploader apparence can be modified with css</h3>
+        <div class="row">
+            
+            <div class="col-sm-4">
+                <h4>as an image</h4>
+                <div aas:name="UploaderImage" class="AspectizeFileUpload"></div>
+            </div>
+            <div class="col-sm-4">
+                <h4>as a button</h4>
+                <div aas:name="UploaderButton" class="AspectizeFileUpload"></div>
+            </div>
+            <div class="col-sm-4">
+                <h4>as a link</h4>
+                <div aas:name="UploaderLink" class="AspectizeFileUpload"></div>
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+</html>

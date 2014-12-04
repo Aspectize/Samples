@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns:aas="http://aspectize.com/ajax">
+<head>
+    <title>Untitled</title>
+</head>
+<body>
+
+    <div aas:control="Timer">
+        <h1 class="page-header">Timer</h1>
+        <div class="row">
+            <input name="ActivateTimer" type="button" value="Activate Timer" class="btn btn-default" />
+            <input name="DeactivateTimer" type="button" value="Deactivate Timer" class="btn btn-default" />
+        </div>
+        <br />
+        <div class="row">
+            Count : <input name="TxtCount" type="text" value="10" />
+            Period : <input name="TxtPeriod" type="text" value="500" />
+        </div>
+        <br />
+        <div class="row">
+            <h4>Trace of Timer call</h4>
+            <input name="BtnResetTrace" type="button" value="Reset trace" class="btn btn-default" />
+            <div aas:name="GridTrace" class="BootstrapGrid"></div>
+        </div>
+        <div aas:name="Timer" class="AspectizeTimer"></div>
+    </div>
+
+</body>
+</html>

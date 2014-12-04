@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns:aas="http://aspectize.com/ajax">
+<head>
+    <title>Untitled</title>
+</head>
+<body>
+
+    <div aas:control="RadioButtons">
+        <h1 class="page-header">RadioButtons</h1>
+
+        <h2>Basic Usage</h2>
+        <div class="row">
+            <div class="col-sm-4">
+                <div aas:name="RadioButtonCategory" class="AspectizeRadioButtons"></div>
+            </div>
+        </div>
+        <div  class="row">
+            <div class="col-sm-4">
+                Current Category Selected: <span>{CurrentDisplay}</span>
+            </div>
+        </div>
+        <br />
+        <br />
+        <h2>SelectedValue Usage</h2>
+        <div class="row">
+            <div class="col-sm-4">
+                Choose a product: <select name="SelectProduct" class="form-control"></select>
+                <div>Product: <span>{CurrentProduct}</span> </div>
+                <div>is associated with the SubCategory: <span>{CurrentProductSubCategory}</span></div>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-sm-12">
+                Choose another SubCategory to associate with the current product:
+                <div aas:name="RadioButtonSubCategory" class="AspectizeRadioButtons"></div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

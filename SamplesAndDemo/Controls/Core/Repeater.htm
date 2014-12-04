@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns:aas="http://aspectize.com/ajax">
+<head>
+    <title>Untitled</title>
+</head>
+<body>
+
+    <div aas:control="Repeater">
+        <h1 class="page-header">Repeater</h1>
+        <div class="row form-inline">
+            <h4>Repeat Product of the following catgeory:</h4>
+            <div class="col-sm-3">
+                Category: <select name="SelectCategory" class="form-control"></select>
+            </div>
+            <div class="col-sm-3">
+                Sub Categories:<select name="SelectSubCategory" class="form-control"></select>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="row form-inline">
+            <h4>Order and filter:</h4>
+            Order by:<select name="SelectOrder" class="form-control"></select> Filter by name:<input name="TxtFilter" type="text" class="form-control" /> <span>{NbProduct}</span> products.
+        </div>
+        <br />
+        <br />
+        <div class="row">
+            <h4>The repeater repeats a view for each product:</h4>
+            <div aas:name="RepeaterPanelProduct" class="AspectizeRepeaterPanel"></div>
+        </div>
+    </div>
+
+    <div aas:control="ProductItem">
+        <div class="row ProductItem">
+            <div class="col-sm-2">
+                {ProductName}
+            </div>
+            <div class="col-sm-2">
+                {ProductNumber}
+            </div>
+            <div class="col-sm-3">
+                <div aas:name="ImageProduct" class="AspectizeImage"></div>
+            </div>
+            <div class="col-sm-2">
+                <a name="Delete">Delete</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

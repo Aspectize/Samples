@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html xmlns:aas="http://aspectize.com/ajax">
+<head>
+    <title>Untitled</title>
+</head>
+<body>
+
+    <div aas:control="MainControl" class="container-fluid">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-header">
+                <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand hidden-xs logo"><img src="../Applications/AzureHostManagerCommon/Images/HtmlCut/Logo.png"></a>
+                <a class="navbar-brand" name="Home">Aspectize Samples</a>
+            </div>
+        </div>
+        <div aas:name="ZoneMainContent" class="Panel row"></div>
+    </div>
+
+    <div aas:control="SideBarContent">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <h4>Core Controls</h4>
+            <ul class="nav nav-sidebar">
+                <div aas:name="RepeaterPanelMenuCoreControl" class="AspectizeRepeaterPanel"></div>
+            </ul>
+            <h4>Layout Controls</h4>
+            <ul class="nav nav-sidebar">
+                <div aas:name="RepeaterPanelMenuLayout" class="AspectizeRepeaterPanel"></div>
+            </ul>
+            <h4>Bootstrap Extension</h4>
+            <ul class="nav nav-sidebar">
+                <div aas:name="RepeaterPanelMenuBootstrap" class="AspectizeRepeaterPanel"></div>
+            </ul>
+            <h4>Google Extension</h4>
+            <ul class="nav nav-sidebar">
+                <div aas:name="RepeaterPanelMenuGoogle" class="AspectizeRepeaterPanel"></div>
+            </ul>
+        </div>
+        <div aas:name="ZoneContent" class="Panel col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main"></div>
+    </div>
+
+    <div aas:control="SampleHome">
+        <div class="container">
+            <h1 class="text-center">Aspectize Samples and Demo</h1>
+            <p class="text-center"><a target="_blank" class="btn btn-primary" href="https://github.com/Aspectize/Samples">View Source on Github</a></p>
+            <div class="row">
+                 <div class="col-sm-3">
+                    <h3>Core Controls</h3>
+                    <ul>
+                        <div aas:name="RepeaterPanelMenuCoreControl" class="AspectizeRepeaterPanel"></div>
+                    </ul>
+                 </div>
+                 <div class="col-sm-3">
+                    <h3>Layout Controls</h3>
+                    <ul>
+                        <div aas:name="RepeaterPanelMenuLayout" class="AspectizeRepeaterPanel"></div>
+                    </ul>
+                 </div>
+                 <div class="col-sm-3">
+                    <h3>Bootstrap Extension</h3>
+                    <ul>
+                        <div aas:name="RepeaterPanelMenuBootstrapExtension" class="AspectizeRepeaterPanel"></div>
+                    </ul>
+                 </div>
+                 <div class="col-sm-3">
+                    <h3>Google Extension</h3>
+                    <ul>
+                        <div aas:name="RepeaterPanelMenuGoogleExtension" class="AspectizeRepeaterPanel"></div>
+                    </ul>
+                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div aas:control="LiItem">
+        <li><a name="Link" class="{LinkName}">{LinkName}</a></li>
+    </div>
+
+</body>
+</html>

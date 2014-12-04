@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html xmlns:aas="http://aspectize.com/ajax">
+<head>
+    <title>Untitled</title>
+</head>
+<body>
+
+    <div aas:control="BootstrapModal">
+        <h1 class="page-header">Bootstrap Modal</h1>
+
+        <div class="row">
+            <h2>Basic Usage</h2>
+            <br />
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-inline">
+                        <input name="CheckBoxKeyboard" type="checkbox" class="form-control" /> Closes the modal when escape key is pressed  <input name="CheckBoxBackdrop" type="checkbox" class="form-control"  /> Modal with backdrop
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-sm-12">
+                    <input name="BtnDisplayModal" type="button" value="Display Modal" class="btn btn-default" />
+                </div>
+            </div>
+            <br />
+            <br />
+        </div>
+        <br />
+        <br />
+    </div>
+    
+    <div aas:control="name:'BootstrapModalExample',isModal:true">
+        <div class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>One fine body&hellip;</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button name="BtnClose" type="button" class="btn btn-default">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

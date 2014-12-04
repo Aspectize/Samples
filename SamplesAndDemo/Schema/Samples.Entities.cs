@@ -1,0 +1,199 @@
+﻿
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Data;
+using System.ComponentModel;
+
+using Aspectize.Core;
+
+[assembly:AspectizeDALAssemblyAttribute]
+
+namespace Samples
+{
+	public static partial class SchemaNames
+	{
+		public static partial class Entities
+		{
+			public const string ComplexLayoutTrace = "ComplexLayoutTrace";
+			public const string TimerTrace = "TimerTrace";
+		}
+	}
+
+	[SchemaNamespace]
+	public class DomainProvider : INamespace
+	{
+		public string Name { get { return GetType().Namespace; } }
+		public static string DomainName { get { return new DomainProvider().Name; } }
+	}
+
+
+	[DataDefinition(MustPersist = false)]
+	public enum EnumCoreControl
+	{
+		[Description("ComboBox")]
+		ComboBox,
+		[Description("RadioButtons")]
+		RadioButtons,
+		[Description("CheckBoxList")]
+		CheckBoxList,
+		[Description("Image")]
+		Image,
+		[Description("Repeater")]
+		Repeater,
+		[Description("Upload")]
+		Upload,
+		[Description("Grid")]
+		Grid,
+		[Description("TreeView")]
+		TreeView,
+		[Description("Timer")]
+		Timer
+	}
+
+	[DataDefinition(MustPersist = false)]
+	public enum EnumProductOrderField
+	{
+		[Description("Name")]
+		Name,
+		[Description("ProductNumber")]
+		ProductNumber
+	}
+
+	[DataDefinition(MustPersist = false)]
+	public enum EnumPageSize
+	{
+		[Description("p10")]
+		p10		 = 		10,
+		[Description("p20")]
+		p20		 = 		20,
+		[Description("p50")]
+		p50		 = 		50
+	}
+
+	[DataDefinition(MustPersist = false)]
+	public enum EnumLayout
+	{
+		[Description("Panel")]
+		Panel,
+		[Description("Tab")]
+		Tab,
+		[Description("Dialog")]
+		Dialog,
+		[Description("Flyout")]
+		Flyout,
+		[Description("ComplexLayout")]
+		ComplexLayout
+	}
+
+	[DataDefinition(MustPersist = false)]
+	public enum EnumSamplePanelView
+	{
+
+	}
+
+	[DataDefinition(MustPersist = false)]
+	public enum EnumBootstrapExtension
+	{
+		[Description("BootstrapGrid")]
+		BootstrapGrid,
+		[Description("BootstrapTab")]
+		BootstrapTab,
+		[Description("BootstrapDatepicker")]
+		BootstrapDatepicker,
+		[Description("BootstrapModal")]
+		BootstrapModal
+	}
+
+	[DataDefinition(MustPersist = false)]
+	public enum EnumBootstrapTabOrientation
+	{
+		[Description("Normal")]
+		Normal,
+		[Description("tabs-left")]
+		Left,
+		[Description("tabs-right")]
+		Right
+	}
+
+	[DataDefinition(MustPersist = false)]
+	public enum EnumGoogleExtension
+	{
+		[Description("GoogleTable")]
+		GoogleTable,
+		[Description("GoogleLineChart")]
+		GoogleLineChart
+	}
+
+	[DataDefinition(MustPersist = false)]
+	public class ComplexLayoutTrace : Entity, IDataWrapper
+	{
+		public static partial class Fields
+		{
+			public const string Id = "Id";
+			public const string DateEvent = "DateEvent";
+			public const string Trace = "Trace";
+		}
+
+		void IDataWrapper.InitData(DataRow data, string namePrefix)
+		{
+			base.InitData(data, null);
+		}
+
+		[Data(IsPrimaryKey=true)]
+		public Guid Id
+		{
+			get { return getValue<Guid>("Id"); }
+			set { setValue<Guid>("Id", value); }
+		}
+
+		[Data]
+		public DateTime DateEvent
+		{
+			get { return getValue<DateTime>("DateEvent"); }
+			set { setValue<DateTime>("DateEvent", value); }
+		}
+
+		[Data]
+		public string Trace
+		{
+			get { return getValue<string>("Trace"); }
+			set { setValue<string>("Trace", value); }
+		}
+
+	}
+
+	[DataDefinition(MustPersist = false)]
+	public class TimerTrace : Entity, IDataWrapper
+	{
+		public static partial class Fields
+		{
+			public const string Id = "Id";
+			public const string DateEvent = "DateEvent";
+		}
+
+		void IDataWrapper.InitData(DataRow data, string namePrefix)
+		{
+			base.InitData(data, null);
+		}
+
+		[Data(IsPrimaryKey=true)]
+		public Guid Id
+		{
+			get { return getValue<Guid>("Id"); }
+			set { setValue<Guid>("Id", value); }
+		}
+
+		[Data]
+		public DateTime DateEvent
+		{
+			get { return getValue<DateTime>("DateEvent"); }
+			set { setValue<DateTime>("DateEvent", value); }
+		}
+
+	}
+
+}
+
+
+  

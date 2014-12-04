@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns:aas="http://aspectize.com/ajax">
+<head>
+    <title>Untitled</title>
+</head>
+<body>
+
+    <div aas:control="CheckBoxList">
+        <h1 class="page-header">CheckBoxList</h1>
+
+        <h2>Basic Usage with related entities</h2>
+        <div class="row">
+            <div class="col-sm-2">
+                Select a Sales:
+                <div aas:name="GridSalesPerson" class="AspectizeGrid"></div>
+            </div>
+            <div class="col-sm-3">
+                Select a Sales Order:
+                <div aas:name="GridSalesOrder" class="AspectizeGrid"></div>
+            </div>
+            <div class="col-sm-5">
+                Select sales reason associated to Sale Order: each check will associate a SalesReason to SalesOrder.
+                <div aas:name="CheckBoxListDemo" class="AspectizeCheckBoxList"></div>
+            </div>
+        </div>
+        <br />
+        <br />    
+
+
+    </div>
+
+</body>
+</html>

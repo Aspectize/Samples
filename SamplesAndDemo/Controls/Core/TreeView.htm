@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns:aas="http://aspectize.com/ajax">
+<head>
+    <title>Untitled</title>
+</head>
+<body>
+
+    <div aas:control="TreeView">
+        <h1 class="page-header">TreeView</h1>
+
+        <h2>Basic Usage</h2>
+        <div class="row">
+            <div class="col-sm-6">
+                <div aas:name="TreeViewProduct" class="AspectizeTreeView"></div>
+            </div>
+            <div class="col-sm-6">
+                <div aas:name="ZoneDetail" class="Panel"></div>
+            </div>
+        </div>
+        <br />
+        <br />
+
+        <h2>TreeView with recursive Nodes</h2>
+        <div class="row">
+            <div class="col-sm-6">
+                <div aas:name="TreeViewEmployee" class="AspectizeTreeView"></div>
+            </div
+            <div class="col-sm-6">
+                <div aas:name="ZoneEmployeeDetail" class="Panel"></div>
+            </div>
+        </div>
+        <br />
+        <br />
+    </div>
+
+    <div aas:control="CategoryDetail">
+        This is the Category: <span>{CategoryName}</span>
+    </div>
+
+    <div aas:control="SubcategoryDetail">
+        This is the Sub category: <span>{SubCategoryName}</span>
+    </div>
+
+    <div aas:control="ProductDetail">
+        This is the Product: <span>{ProductName}</span>
+    </div>
+
+    <div aas:control="EmployeeDetail">
+        This is Employee: <span>{EmployeeName}</span>
+    </div>
+</body>
+</html>
