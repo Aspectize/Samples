@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<diagram xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="8096e38e-3e5a-4ad6-b4bf-fce441aedb9f" domain="LeanKanban" xmlns="http://schemas.microsoft.com/dsltools/EntityDesigner">
+  <entities>
+    <entity Id="134a19e2-7c2b-4055-83e0-32fd68648150" name="WorkItem" guid="cd5f57bf-e9dd-4eef-b16e-c648aa27a6e4" hasCustomValidators="false" hasTriggers="false">
+      <properties>
+        <entityProperty name="DateCreation" type="DateTime" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+        <entityProperty name="Title" defaultValue="&quot;&quot;" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+        <entityProperty name="Description" defaultValue="&quot;&quot;" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+        <entityProperty name="Adress" defaultValue="&quot;&quot;" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+      </properties>
+    </entity>
+    <entity Id="47d41d0a-fc2a-4727-a00f-0333064f8511" name="State" guid="52094058-8703-4c68-8eb9-797756f0ed24" hasCustomValidators="false" hasTriggers="false">
+      <properties>
+        <entityProperty name="Title" defaultValue="&quot;&quot;" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+      </properties>
+    </entity>
+    <entity Id="f1b2b85c-0b3f-4df1-a6b3-757484340bea" name="Board" guid="3fc9c6eb-a0a3-4ab6-948f-1ac14b6d65b5" hasCustomValidators="false" hasTriggers="false">
+      <properties>
+        <entityProperty name="Name" defaultValue="&quot;&quot;" identity="false" isEnumType="false" isCompoType="false" isExternType="false" regexPattern="(?#Name can not be empty)\S+" isEnumInBaseType="false" />
+      </properties>
+    </entity>
+  </entities>
+  <relations>
+    <relation Id="a0bfa082-1298-46d7-9d2e-c7baebfe91e6" name="WorkItemState" guid="00000000-0000-0000-0000-000000000000" separateTable="false" hasTriggers="false" hasCustomValidators="false">
+      <entityReferenceClasses>
+        <relationReferencesEntityReferenceClasses Id="a9a2f368-caec-41b9-8a46-faa46b6b4053" role="State" cardinality="I__I" fkNames="StateId">
+          <entityMoniker Id="47d41d0a-fc2a-4727-a00f-0333064f8511" />
+        </relationReferencesEntityReferenceClasses>
+        <relationReferencesEntityReferenceClasses Id="6052d84f-bcbf-4a2c-87b8-ce6b4e0985fd" role="WorkItem" cardinality="O__N">
+          <entityMoniker Id="134a19e2-7c2b-4055-83e0-32fd68648150" />
+        </relationReferencesEntityReferenceClasses>
+      </entityReferenceClasses>
+    </relation>
+    <relation Id="a9866cc8-ba6c-4858-84fd-0547b341ceae" name="BoardState" guid="00000000-0000-0000-0000-000000000000" separateTable="false" hasTriggers="false" hasCustomValidators="false">
+      <entityReferenceClasses>
+        <relationReferencesEntityReferenceClasses Id="99cd5868-3c15-431c-81ef-d4ab15a4bb44" role="Board" cardinality="I__I" fkNames="BoardId">
+          <entityMoniker Id="f1b2b85c-0b3f-4df1-a6b3-757484340bea" />
+        </relationReferencesEntityReferenceClasses>
+        <relationReferencesEntityReferenceClasses Id="d29041e0-ea7e-4d17-8f9a-35373612baf7" role="State" cardinality="O__N">
+          <entityMoniker Id="47d41d0a-fc2a-4727-a00f-0333064f8511" />
+        </relationReferencesEntityReferenceClasses>
+      </entityReferenceClasses>
+    </relation>
+  </relations>
+</diagram>

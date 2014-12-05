@@ -1,0 +1,101 @@
+﻿body
+{
+    padding-top: 50px;
+}
+
+.BoardItem, .BoardItem.aasRepeaterItem.aasSelected
+{
+	float:left;
+	width: 25%;
+	color: #f6f6f6;
+    font-size: 16px;
+    height: 90px;
+    line-height: 22px;
+    margin: 0 16px 16px 0;
+	background-color: #0E74AF;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 3px;
+    display: block;
+    font-weight: 700;
+    min-height: 18px;
+    padding: 8px 12px;
+    text-decoration: none;
+}
+
+.BoardItem:hover,
+.BoardItem.aasRepeaterItem.aasSelected:hover
+{
+	text-decoration: none;
+	color: #f6f6f6;
+}
+
+.NewBoardItem
+{
+	float:left;
+	width: 25%;
+	background-color: #dbdbdb;
+    color: #8c8c8c;
+    font-weight: 400;
+    line-height: 90px;
+    text-align: center;
+    font-size: 16px;
+    height: 90px;
+    margin: 0 16px 16px 0;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 3px;
+    display: block;
+    min-height: 18px;
+    padding: 8px 12px;
+    text-decoration: none;
+}
+
+.StateItem, .StateItem.aasRepeaterItem.aasSelected {
+	width: 260px;
+	float: left;
+	padding:6px 3px;
+	margin: 0px 5px;
+	background: #e3e3e3;
+	border-radius:3px;
+}
+
+.NewStateItem
+{
+	width: 260px;
+	height: 30px;
+	line-height: 30px;
+	float: left;
+	text-decoration: none;
+	border-radius:3px;
+	display: inline-block;
+	text-align: center;
+	background-color: #e3e3e3;
+}
+
+.WorkItem, .WorkItem.aasRepeaterItem.aasSelected
+{ 
+    border: 1px solid #888;
+    margin: 5px;
+    padding: 10px;
+    background-color:white;
+    min-height: 100px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    width: 244px;
+	border-radius:3px;
+}
+
+    
+.WorkItem:hover,
+.WorkItem.aasRepeaterItem.aasSelected:hover
+{
+    text-decoration: none;
+	background-color:#f0f0f0;
+}
+
+.StateItemTitle
+{
+	font-weight:bold;
+}
