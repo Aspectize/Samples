@@ -16,7 +16,7 @@
                 <span class="icon-bar"></span>
               </button>
               <a name="Home" class="navbar-brand">Aspectize Clipboard</a>
-                <a name="Clipboards" class="navbar-brand">Clipboards</a>
+                <a name="Clipboards" class="hidden navbar-brand" >Clipboards</a>
             </div>
             <div class="collapse navbar-collapse"></div>
           </div>
@@ -56,6 +56,7 @@
 
     <div aas:control="ClipboardRead">
         <div><h1><span>{libelle}</span><span class="pull-right">{Code}</span></h1></div>
+        <input name="Update" type="button" value="Update" />
         <br />
         <textarea readonly class="ClipboardContent" cols="20" name="TxtClipboard"></textarea>
         <div aas:name="Timer" class="AspectizeTimer"></div>

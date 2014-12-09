@@ -24,6 +24,9 @@ clipboardRead.Timer.Period.BindData(10000);
 clipboardRead.Timer.OnTimer.BindCommand(aas.Services.Server.LoadDataService.LoadClipboardDate(clipboardEdit.ParentData.Id), clipboardRead.ParentData.DateModified, true);
 clipboardRead.Timer.OnTimer.BindCommand(aas.Services.Server.LoadDataService.LoadClipboard(clipboardEdit.ParentData.Id, clipboardEdit.ParentData.DateModified), aas.Data.MainData, true);
 clipboardRead.TxtClipboard.value.BindData(clipboardRead.ParentData.Content);
+clipboardRead.Update.click.BindCommand(aas.Services.Server.LoadDataService.LoadClipboardDate(clipboardEdit.ParentData.Id), clipboardRead.ParentData.DateModified, true);
+clipboardRead.Update.click.BindCommand(aas.Services.Server.LoadDataService.LoadClipboard(clipboardEdit.ParentData.Id, clipboardEdit.ParentData.DateModified), aas.Data.MainData, true);
+
 
 var newClipboard = Aspectize.CreateView("NewClipboard", aas.Controls.NewClipboard);
 newClipboard.Cancel.click.BindCommand(aas.Services.Browser.BootStrapClientService.ShowModal(aas.ViewName.NewClipboard));
