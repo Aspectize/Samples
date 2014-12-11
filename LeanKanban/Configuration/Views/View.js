@@ -19,7 +19,7 @@ board.BtnNewState.click.BindCommand(aas.Services.Browser.ClientService.ShowModal
 board.BtnNewState.click.BindCommand(aas.Services.Browser.DataService.AddRowAndSelect(board.ParentPath.BoardState.State));
 board.BoardName.BindData(board.ParentData.Name);
 
-var stateItem = Aspectize.CreateRepeatedView("StateItem", aas.Controls.StateItem, aas.Zones.Board.RepeaterPanelState, aas.Data.MainData.State);
+var stateItem = Aspectize.CreateRepeatedView("StateItem", aas.Controls.StateItem, aas.Zones.Board.RepeaterPanelState, board.ParentData.BoardState.State);
 stateItem.Title.BindData(stateItem.ParentData.Title);
 stateItem.BtnNewWorkItem.click.BindCommand(aas.Services.Browser.ClientService.ShowModal(aas.ViewName.EditWorkItem));
 stateItem.BtnNewWorkItem.click.BindCommand(aas.Services.Browser.DataService.AddRowAndSelect(stateItem.ParentPath.WorkItemState.WorkItem));
@@ -28,7 +28,7 @@ stateItem.BtnNewWorkItem.click.BindCommand(aas.Services.Browser.UIService.SetCur
 var workItem = Aspectize.CreateRepeatedView("WorkItem", aas.Controls.WorkItem, aas.Zones.StateItem.RepeaterPanelWorkItem, stateItem.ParentData.WorkItemState.WorkItem);
 workItem.Title.BindData(workItem.ParentData.Title);
 workItem.WorkItem.click.BindCommand(aas.Services.Browser.ClientService.ShowModal(aas.ViewName.EditWorkItem));
-workItem.WorkItem.click.BindCommand(aas.Services.Browser.UIService.SetCurrent(aas.Path.MainData.WorkItem, workItem.ParentData.Id));
+//workItem.WorkItem.click.BindCommand(aas.Services.Browser.UIService.SetCurrent(aas.Path.MainData.WorkItem, workItem.ParentData.Id));
 
 var editBoard = Aspectize.CreateView("EditBoard", aas.Controls.EditState, "", false, aas.Data.MainData.Board);
 editBoard.ViewTitle.BindData("Edit Board");
@@ -54,10 +54,10 @@ editState.Cancel.click.BindCommand(aas.Services.Browser.ClientService.CloseModal
 editState.Save.click.BindCommand(aas.Services.Server.MyDataService.SaveTransactional(aas.Data.MainData), "", false, true);
 editState.Save.click.BindCommand(aas.Services.Browser.ClientService.CloseModal(aas.ViewName.EditState));
 
-var vEditWorkItem = Aspectize.CreateView("EditWorkItem", aas.Controls.EditWorkItem, "", false, aas.Data.MainData.WorkItem);
+var vEditWorkItem = Aspectize.CreateView("EditWorkItem", aas.Controls.EditWorkItem, "", false, aas.Data.MainData.Board.BoardState.State.WorkItemState.WorkItem);
 vEditWorkItem.Title.value.BindData(vEditWorkItem.ParentData.Title);
 vEditWorkItem.Description.value.BindData(vEditWorkItem.ParentData.Description);
-vEditWorkItem.SelectState.BindList(aas.Data.MainData.State, "Id", "Title", vEditWorkItem.ParentData.WorkItemState.State_Id);
+vEditWorkItem.SelectState.BindList(aas.Data.MainData.Board.BoardState.State, "Id", "Title", vEditWorkItem.ParentData.WorkItemState.State_Id);
 
 vEditWorkItem.OnDeactivated.BindCommand(aas.Services.Browser.DataRecorder.CancelRowChanges(aas.Data.MainData));
 vEditWorkItem.OnLoad.BindCommand(aas.Services.Browser.DataRecorder.Start(aas.Data.MainData));
@@ -66,5 +66,4 @@ vEditWorkItem.Cancel.click.BindCommand(aas.Services.Browser.ClientService.CloseM
 vEditWorkItem.Save.click.BindCommand(aas.Services.Server.MyDataService.SaveTransactional(aas.Data.MainData), "", false, true);
 vEditWorkItem.Save.click.BindCommand(aas.Services.Browser.ClientService.CloseModal(aas.ViewName.EditWorkItem));
 
-//vEditWorkItem.Adresse.value.BindData(vEditWorkItem.ParentData.Adress);
 
