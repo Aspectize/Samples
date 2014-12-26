@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data;
 using Aspectize.Core;
+using System.Security.Permissions;
+using BasicAuth;
 
 namespace LeanKanban.Services
 {
     public interface ILoadDataService
     {
+        [PrincipalPermission(SecurityAction.Demand, Authenticated = true)]
         DataSet LoadBoards();
+
+        [PrincipalPermission(SecurityAction.Demand, Authenticated = true)]
         DataSet LoadBoard(Guid boardId);
     }
 
@@ -17,9 +22,17 @@ namespace LeanKanban.Services
     {
         DataSet ILoadDataService.LoadBoards()
         {
+            var aspectizeUser = ExecutingContext.CurrentUser;
+
+            var userId = new Guid(aspectizeUser.UserId.ToString());
+            
             IDataManager dm = EntityManager.FromDataBaseService("MyDataService");
 
-            dm.LoadEntities<Board>();
+            var roleRelations = new List<IRoleRelationQuery>();
+
+            roleRelations.Add(new RoleRelationQuery<User, BoardUser>());
+
+            dm.LoadEntitiesGraph<User>(roleRelations, userId);
 
             return dm.Data;
         }

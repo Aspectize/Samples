@@ -18,18 +18,21 @@
               <a name="Boards" class="navbar-brand">LeanKanban</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
-              <!--<ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>-->
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden-xs hidden-sm dropdown {ShowRegister}">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #FFFFFF;">Welcome <span>{UserName}</span><span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a aas:name="LogOut">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div><!--/.nav-collapse -->
           </div>
         </nav>
         <div aas:name="Content" class="Panel container"></div>
     </div>
 
-    <div aas:control="MainContent">
+    <div aas:control="MyBoards">
         <h1>My Boards</h1>
         
         <div class="row">
@@ -93,7 +96,7 @@
                         <div class="form">
                             <div class="form-group">
                                 <label>{LabelTxtName}</label>
-                                <input name="TxtName" class="form-control" />
+                                <input name="TxtName" class="form-control" autofocus="autofocus" />
                                 <div class="hidden alert alert-danger text-center error-TxtName"></div>
                             </div>
                         </div>

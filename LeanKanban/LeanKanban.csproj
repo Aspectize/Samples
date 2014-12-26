@@ -45,6 +45,10 @@
       <HintPath>S:\Delivery\Aspectize.core\AspectizeCore.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="BasicAuth">
+      <HintPath>..\..\..\Delivery\Applications\BasicAuth\BasicAuth.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="SmartBlocksCore">
       <HintPath>S:\Delivery\Aspectize.core\SmartBlocksCore.dll</HintPath>
       <Private>False</Private>
@@ -70,6 +74,8 @@
     <Compile Include="Services\LoadDataService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Configuration\Views\Login.js" />
+    <Content Include="Controls\Login.htm" />
     <Content Include="Services\ClientService.js" />
     <Content Include="Configuration\Views\View.js" />
   </ItemGroup>
@@ -146,7 +152,7 @@
           </IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>True</UseCustomServer>
-          <CustomServerUrl>http://localhost/WebHost2</CustomServerUrl>
+          <CustomServerUrl>http://localhost/WebHost</CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>

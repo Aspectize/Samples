@@ -41,5 +41,18 @@
         </relationReferencesEntityReferenceClasses>
       </entityReferenceClasses>
     </relation>
+    <relation Id="63b7d853-e02b-4754-bc23-8a544c51e3ae" name="BoardUser" guid="00000000-0000-0000-0000-000000000000" separateTable="false" hasTriggers="false" hasCustomValidators="false">
+      <entityReferenceClasses>
+        <relationReferencesEntityReferenceClasses Id="8b50c0f4-eab2-4091-89ae-8c8cf5af073e" role="User" cardinality="I__I" fkNames="UserId">
+          <entityReferenceMoniker Id="c8ebb00b-9a9a-4125-a373-db1a94f606dc" />
+        </relationReferencesEntityReferenceClasses>
+        <relationReferencesEntityReferenceClasses Id="7f46ea8b-fff6-4dee-9e6a-419e1895c153" role="Board" cardinality="O__N">
+          <entityMoniker Id="f1b2b85c-0b3f-4df1-a6b3-757484340bea" />
+        </relationReferencesEntityReferenceClasses>
+      </entityReferenceClasses>
+    </relation>
   </relations>
+  <entityReferences>
+    <entityReference Id="c8ebb00b-9a9a-4125-a373-db1a94f606dc" name="User" domain="BasicAuth" />
+  </entityReferences>
 </diagram>

@@ -24,6 +24,7 @@ namespace LeanKanban
 		{
 			public const string WorkItemState = "WorkItemState";
 			public const string BoardState = "BoardState";
+			public const string BoardUser = "BoardUser";
 		}
 	}
 
@@ -180,6 +181,23 @@ namespace LeanKanban
 
 		[RelationEnd(Type = typeof(State), Role = typeof(State), Multiplicity = Multiplicity.ZeroOrMany)]
 		public IEntity State;
+
+	}
+
+	[DataDefinition]
+	[RelationPersistenceMode(SeparateTable = false)]
+	public class BoardUser : DataWrapper, IDataWrapper, IRelation
+	{
+		void IDataWrapper.InitData(DataRow data, string namePrefix)
+		{
+			base.InitData(data, null);
+		}
+
+		[RelationEnd(Type = typeof(BasicAuth.User), Role = typeof(BasicAuth.User), Multiplicity = Multiplicity.One, FkNames = "UserId")]
+		public IEntity User;
+
+		[RelationEnd(Type = typeof(Board), Role = typeof(Board), Multiplicity = Multiplicity.ZeroOrMany)]
+		public IEntity Board;
 
 	}
 
