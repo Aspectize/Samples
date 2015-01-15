@@ -11,17 +11,17 @@
 <link rel='stylesheet' type='text/css' href='~Bootstrap/jQuery/jquery-ui.css' />
 <script src="~Bootstrap/jQuery/jquery-ui.min.js"></script>
 
-<link rel='stylesheet' href='~Bootstrap/css/bootstrap.min.css' type='text/css'>
+<link rel='stylesheet' href='~Bootstrap/bootstrap 3.1.1/css/bootstrap.min.css' type='text/css'>
 <link rel='stylesheet' href='http://netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css' type='text/css'>
 
-<script src='~Bootstrap/js/bootstrap.min.js'></script>
+<script src='~Bootstrap/bootstrap 3.1.1/js/bootstrap.min.js'></script>
 
 <!-- bootstrap datepicker -->
 <script src='~Bootstrap/DatePicker/js/moment.min.js'></script>
 <script src='~Bootstrap/DatePicker/js/bootstrap-datetimepicker.min.js'></script>
 <link rel='stylesheet' type='text/css' href='~Bootstrap/DatePicker/css/bootstrap-datetimepicker.min.css' />
 
-<link rel='stylesheet' type='text/css' href='~Bootstrap/css/bootstrap-tabs.css' />
+<link rel='stylesheet' type='text/css' href='~Bootstrap/bootstrap 3.1.1/css/bootstrap-tabs.css' />
 
 
 <link rel='stylesheet' type='text/css' href='~/Styles/dashboard.css' />
