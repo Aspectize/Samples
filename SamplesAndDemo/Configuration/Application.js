@@ -1,6 +1,6 @@
 ﻿var app = newApplication();
 
-app.Directories = "Bootstrap, GoogleExtension";
+app.Directories = "Bootstrap, GoogleExtension, JQueryExtension";
 
 var ctxData0 = newContextData();
 

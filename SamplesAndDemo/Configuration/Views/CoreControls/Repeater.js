@@ -1,0 +1,12 @@
+
+var vRepeater = Aspectize.CreateView("Repeater", aas.Controls.Repeater, aas.Zones.SideBarContent.ZoneContent);
+vRepeater.NbProduct.BindData(vRepeater.RepeaterPanelProduct.RowCount);
+vRepeater.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement, {element: aas.ViewName.Repeater});
+vRepeater.TxtFilter.keyup.BindCommand(aas.Services.Browser.UIService.SetCustomFilter, {controlName: aas.ViewName.Repeater.RepeaterPanelProduct, customFilter: aas.Expression('(Name).toLowerCase().indexOf("' + vRepeater.TxtFilter.value + '".toLowerCase()) !== -1')}, null, false, true);
+vRepeater.SelectOrder.BindList(aas.Data.MainData.EnumProductOrderField, "EnumerationElement", "EnumerationElement");
+vRepeater.SelectOrder.NullValueDisplay.BindData("Choose Order Field");
+vRepeater.SelectOrder.CurrentSyncDisabled.BindData("true");
+vRepeater.SelectOrder.SelectedValueChanged.BindCommand(aas.Services.Browser.UIService.SetSortExpression, {controlName: aas.ViewName.Repeater.RepeaterPanelProduct, sortExpression: aas.Expression(IIF(vRepeater.SelectOrder.CurrentValue, vRepeater.SelectOrder.CurrentValue + ' ASC', ''))}, null, false, true);
+vRepeater.SelectCategory.BindList(aas.Data.AdventureWorksData.Category, "CategoryID", "Name", null, "Name ASC", "", "");
+vRepeater.SelectSubCategory.BindList(aas.Data.AdventureWorksData.Category.CategorySubcategory.Subcategory, "SubcategoryID", "Name", null, "Name ASC", "", "");
+

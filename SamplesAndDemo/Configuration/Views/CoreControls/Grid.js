@@ -1,0 +1,34 @@
+
+var vGrid = Aspectize.CreateView("Grid", aas.Controls.Grid, aas.Zones.SideBarContent.ZoneContent);
+vGrid.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement, {element: aas.ViewName.Grid});
+vGrid.TxtFilter.keyup.BindCommand(aas.Services.Browser.UIService.SetCustomFilter, {controlName: vGrid.GridDynamicFilter, customFilter: aas.Expression('(Name).toLowerCase().indexOf("' + vGrid.TxtFilter.value + '".toLowerCase()) !== -1')});
+vGrid.SelectPageSize.BindList(aas.Data.MainData.EnumPageSize, "EnumerationValue", "EnumerationValue");
+vGrid.GridProduct.BindGrid(aas.Data.AdventureWorksData.Category.CategorySubcategory.Subcategory.ProductSubcategory.Product);
+vGrid.GridProductPage.BindGrid(aas.Data.AdventureWorksData.Category.CategorySubcategory.Subcategory.ProductSubcategory.Product);
+vGrid.GridProductPage.PageSize.BindData(vGrid.SelectPageSize.CurrentValue);
+vGrid.GridProductPage.AutoSort.BindData(vGrid.CheckBoxAutoSort.checked);
+vGrid.GridSubCategory.BindGrid(aas.Data.AdventureWorksData.Subcategory, "CategorySubcategory.Category.Name ASC");
+vGrid.GridSubCategory.GroupRows.BindData("true");
+var cCategory = vGrid.GridSubCategory.AddGridColumn("Category", "Span");
+cCategory.Text.BindData(vGrid.GridSubCategory.DataSource.CategorySubcategory.Category.Name);
+var cName = vGrid.GridSubCategory.AddGridColumn("Name", "Span");
+cName.Text.BindData(vGrid.GridSubCategory.DataSource.Name);
+vGrid.GridProductColumns.BindGrid(aas.Data.AdventureWorksData.Category.CategorySubcategory.Subcategory.ProductSubcategory.Product);
+var cName = vGrid.GridProductColumns.AddGridColumn("Name", "Span");
+cName.Text.BindData(vGrid.GridProductColumns.DataSource.Name);
+var cProductNumber = vGrid.GridProductColumns.AddGridColumn("ProductNumber", "Span");
+cProductNumber.Text.BindData(vGrid.GridProductColumns.DataSource.ProductNumber);
+var cSafetyStockLevel = vGrid.GridProductColumns.AddGridColumn("SafetyStockLevel", "TextBox");
+cSafetyStockLevel.Text.BindData(vGrid.GridProductColumns.DataSource.SafetyStockLevel);
+var cSize = vGrid.GridProductColumns.AddGridColumn("Size", "Span");
+cSize.Text.BindData(vGrid.GridProductColumns.DataSource.Size);
+var cSizeUnitMeasureCode = vGrid.GridProductColumns.AddGridColumn("SizeUnitMeasureCode", "Span");
+cSizeUnitMeasureCode.Text.BindData(vGrid.GridProductColumns.DataSource.SizeUnitMeasureCode);
+var cDynamicImage = vGrid.GridProductColumns.AddGridColumn("DynamicImage", "Image");
+cDynamicImage.ImageUrl.BindData(aas.Expression('./LoadDataService.LoadImage.jpg.cmd.ashx?productId=' + vGrid.GridProductColumns.DataSource.ProductID));
+var cRowClassRed = vGrid.GridProductColumns.AddGridColumn("RowClassRed", "RowClass");
+cRowClassRed.className.BindData(aas.Expression(IIF(vGrid.GridProductColumns.DataSource.SafetyStockLevel < 100, 'Red', 'Green')));
+vGrid.GridCategory.BindGrid(aas.Data.AdventureWorksData.Category, "Name ASC", "", true);
+vGrid.GridSubCategoryChild.BindGrid(aas.Data.AdventureWorksData.Category.CategorySubcategory.Subcategory, "Name ASC", "", true);
+vGrid.GridDynamicFilter.BindGrid(aas.Data.AdventureWorksData.Category.CategorySubcategory.Subcategory.ProductSubcategory.Product);
+
