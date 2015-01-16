@@ -209,62 +209,62 @@
     <Content Include="Images\TabNotSelected.png" />
     <Content Include="Images\TabSelected.png" />
     <Content Include="main.js" />
-    <Content Include="Schema\AdventureWorks.HumanResources.Entities">
+    <None Include="Schema\AdventureWorks.HumanResources.Entities">
       <Generator>AspectizeEntitiesCodeGenerator2012</Generator>
       <LastGenOutput>AdventureWorks.HumanResources.Entities.cs</LastGenOutput>
-    </Content>
-    <Content Include="Schema\AdventureWorks.HumanResources.Entities.diagram">
+    </None>
+    <None Include="Schema\AdventureWorks.HumanResources.Entities.diagram">
       <DependentUpon>AdventureWorks.HumanResources.Entities</DependentUpon>
-    </Content>
-    <Content Include="Schema\AdventureWorks.Person.Entities">
+    </None>
+    <None Include="Schema\AdventureWorks.Person.Entities">
       <Generator>AspectizeEntitiesCodeGenerator2012</Generator>
       <LastGenOutput>AdventureWorks.Person.Entities.cs</LastGenOutput>
-    </Content>
-    <Content Include="Schema\AdventureWorks.Person.Entities.diagram">
+    </None>
+    <None Include="Schema\AdventureWorks.Person.Entities.diagram">
       <DependentUpon>AdventureWorks.Person.Entities</DependentUpon>
-    </Content>
-    <Content Include="Schema\AdventureWorks.Production.Entities">
+    </None>
+    <None Include="Schema\AdventureWorks.Production.Entities">
       <Generator>AspectizeEntitiesCodeGenerator2012</Generator>
       <LastGenOutput>AdventureWorks.Production.Entities.cs</LastGenOutput>
-    </Content>
-    <Content Include="Schema\AdventureWorks.Production.Entities.diagram">
+    </None>
+    <None Include="Schema\AdventureWorks.Production.Entities.diagram">
       <DependentUpon>AdventureWorks.Production.Entities</DependentUpon>
-    </Content>
-    <Content Include="Schema\AdventureWorks.Purchasing.Entities">
+    </None>
+    <None Include="Schema\AdventureWorks.Purchasing.Entities">
       <Generator>AspectizeEntitiesCodeGenerator2012</Generator>
       <LastGenOutput>AdventureWorks.Purchasing.Entities.cs</LastGenOutput>
-    </Content>
-    <Content Include="Schema\AdventureWorks.Purchasing.Entities.diagram">
+    </None>
+    <None Include="Schema\AdventureWorks.Purchasing.Entities.diagram">
       <DependentUpon>AdventureWorks.Purchasing.Entities</DependentUpon>
-    </Content>
-    <Content Include="Schema\AdventureWorks.Sales.Entities">
+    </None>
+    <None Include="Schema\AdventureWorks.Sales.Entities">
       <Generator>AspectizeEntitiesCodeGenerator2012</Generator>
       <LastGenOutput>AdventureWorks.Sales.Entities.cs</LastGenOutput>
-    </Content>
-    <Content Include="Schema\AdventureWorks.Sales.Entities.diagram">
+    </None>
+    <None Include="Schema\AdventureWorks.Sales.Entities.diagram">
       <DependentUpon>AdventureWorks.Sales.Entities</DependentUpon>
-    </Content>
-    <Content Include="Schema\AutoIdentity.Entities">
+    </None>
+    <None Include="Schema\AutoIdentity.Entities">
       <Generator>AspectizeEntitiesCodeGenerator2012</Generator>
       <LastGenOutput>AutoIdentity.Entities.cs</LastGenOutput>
-    </Content>
-    <Content Include="Schema\AutoIdentity.Entities.diagram">
+    </None>
+    <None Include="Schema\AutoIdentity.Entities.diagram">
       <DependentUpon>AutoIdentity.Entities</DependentUpon>
-    </Content>
-    <Content Include="Schema\Samples.Entities">
+    </None>
+    <None Include="Schema\Samples.Entities">
       <Generator>AspectizeEntitiesCodeGenerator2012</Generator>
       <LastGenOutput>Samples.Entities.cs</LastGenOutput>
-    </Content>
-    <Content Include="Schema\Samples.Entities.diagram">
+    </None>
+    <None Include="Schema\Samples.Entities.diagram">
       <DependentUpon>Samples.Entities</DependentUpon>
-    </Content>
-    <Content Include="Schema\Upload.Entities">
+    </None>
+    <None Include="Schema\Upload.Entities">
       <Generator>AspectizeEntitiesCodeGenerator2012</Generator>
       <LastGenOutput>Upload.Entities.cs</LastGenOutput>
-    </Content>
-    <Content Include="Schema\Upload.Entities.diagram">
+    </None>
+    <None Include="Schema\Upload.Entities.diagram">
       <DependentUpon>Upload.Entities</DependentUpon>
-    </Content>
+    </None>
     <None Include="Scripts\_references.js" />
     <Content Include="Services\ClientService.js" />
     <Content Include="Styles\dashboard.css" />
