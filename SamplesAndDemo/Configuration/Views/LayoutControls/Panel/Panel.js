@@ -6,3 +6,7 @@ vPanel.BtnViewB.click.BindCommand(aas.Services.Browser.UIService.ShowView, {view
 vPanel.BtnViewC.click.BindCommand(aas.Services.Browser.UIService.ShowView, {viewName: aas.ViewName.ViewC});
 vPanel.BtnViewD.click.BindCommand(aas.Services.Browser.UIService.ShowView, {viewName: aas.ViewName.ViewD});
 
+var vViewA = Aspectize.CreateView("ViewA", aas.Controls.ViewA, aas.Zones.Panel.ZonePanelSample, true);
+var vViewB = Aspectize.CreateView("ViewB", aas.Controls.ViewB, aas.Zones.Panel.ZonePanelSample);
+var vViewC = Aspectize.CreateView("ViewC", aas.Controls.ViewC, aas.Zones.Panel.ZonePanelSample);
+var vViewD = Aspectize.CreateView("ViewD", aas.Controls.ViewD, aas.Zones.Panel.ZonePanelSample);
