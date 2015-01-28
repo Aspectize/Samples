@@ -7,7 +7,7 @@
         <entityProperty name="NationalIDNumber" physicalName="NationalIDNumber" nullable="true" size="15" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
         <entityProperty name="LoginID" physicalName="LoginID" size="256" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
         <entityProperty name="Title" physicalName="Title" size="50" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
-        <entityProperty name="BirthDate" type="DateTime" physicalName="BirthDate" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+        <entityProperty name="BirthDate" type="Date" physicalName="BirthDate" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
         <entityProperty name="MaritalStatus" physicalName="MaritalStatus" nullable="true" size="1" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
         <entityProperty name="Gender" physicalName="Gender" nullable="true" size="1" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
         <entityProperty name="HireDate" type="DateTime" physicalName="HireDate" nullable="true" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />

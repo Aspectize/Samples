@@ -182,10 +182,10 @@ namespace AdventureWorks.HumanResources
 		}
 
 		[Data(PhysicalName = "BirthDate")]
-		public DateTime BirthDate
+		public Date BirthDate
 		{
-			get { return getValue<DateTime>("BirthDate"); }
-			set { setValue<DateTime>("BirthDate", value); }
+			get { return getValue<Date>("BirthDate"); }
+			set { setValue<Date>("BirthDate", value); }
 		}
 
 		[Data(Size = 1, IsNullable = true, PhysicalName = "MaritalStatus")]

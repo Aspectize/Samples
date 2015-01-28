@@ -8,7 +8,7 @@ vGrid.GridProductPage.BindGrid(aas.Data.AdventureWorksData.Category.CategorySubc
 vGrid.GridProductPage.PageSize.BindData(vGrid.SelectPageSize.CurrentValue);
 vGrid.GridProductPage.AutoSort.BindData(vGrid.CheckBoxAutoSort.checked);
 vGrid.GridSubCategory.BindGrid(aas.Data.AdventureWorksData.Subcategory, "CategorySubcategory.Category.Name ASC");
-vGrid.GridSubCategory.GroupRows.BindData("true");
+vGrid.GridSubCategory.GroupRows.BindData(true);
 var cCategory = vGrid.GridSubCategory.AddGridColumn("Category", "Span");
 cCategory.Text.BindData(vGrid.GridSubCategory.DataSource.CategorySubcategory.Category.Name);
 var cName = vGrid.GridSubCategory.AddGridColumn("Name", "Span");

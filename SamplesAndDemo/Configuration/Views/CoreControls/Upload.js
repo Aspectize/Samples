@@ -15,7 +15,7 @@ vUpload.UploaderLink.Text.BindData("Click on the link to upload");
 vUpload.UploaderLink.OnFileSelected.BindCommand(aas.Services.Server.UploaderService.UploadFiles, {uploadedFiles: vUpload.UploaderLink.SelectedFile}, aas.Data.UploadData, false, true);
 vUpload.GridUploadedFiles.BindGrid(aas.Data.UploadData.FileUploaded);
 vUpload.GridUploadedFiles.EmptyGridMessage.BindData("");
-vUpload.GridUploadedFiles.AutoSort.BindData("false");
+vUpload.GridUploadedFiles.AutoSort.BindData(false);
 var cName = vUpload.GridUploadedFiles.AddGridColumn("Name", "BootstrapSpan");
 cName.Text.BindData(vUpload.GridUploadedFiles.DataSource.Name);
 var cContentType = vUpload.GridUploadedFiles.AddGridColumn("ContentType", "BootstrapSpan");

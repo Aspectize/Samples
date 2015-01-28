@@ -71,5 +71,10 @@
         <enumItem name="GoogleLineChart" value="0" />
       </enumItems>
     </enumEntity>
+    <enumEntity Id="da994fba-ff4c-43b8-933d-dcfbddeb5028" name="EnumJQueryExtension">
+      <enumItems>
+        <enumItem name="JQueryDatePicker" value="0" />
+      </enumItems>
+    </enumEntity>
   </enumEntities>
 </diagram>

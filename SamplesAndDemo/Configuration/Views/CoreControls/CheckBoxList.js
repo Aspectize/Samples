@@ -12,4 +12,3 @@ vCheckBoxList.GridSalesPerson.BindGrid(aas.Data.AdventureWorksData.SalesPerson);
 vCheckBoxList.GridSalesPerson.OnRowClick.BindCommand(aas.Services.Server.LoadDataService.LoadSalesOrdersHeader, {salesPersonId: aas.Data.AdventureWorksData.SalesPerson.SalesPersonID}, aas.Data.AdventureWorksData, true, true);
 var cContact = vCheckBoxList.GridSalesPerson.AddGridColumn("Contact", "Span");
 cContact.Text.BindData(aas.Expression(vCheckBoxList.GridSalesPerson.DataSource.ContactSalesPerson.Contact.FirstName + ' ' + vCheckBoxList.GridSalesPerson.DataSource.ContactSalesPerson.Contact.LastName));
-

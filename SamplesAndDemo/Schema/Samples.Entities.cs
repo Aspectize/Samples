@@ -126,6 +126,13 @@ namespace Samples
 	}
 
 	[DataDefinition(MustPersist = false)]
+	public enum EnumJQueryExtension
+	{
+		[Description("JQueryDatePicker")]
+		JQueryDatePicker
+	}
+
+	[DataDefinition(MustPersist = false)]
 	public class ComplexLayoutTrace : Entity, IDataWrapper
 	{
 		public static partial class Fields

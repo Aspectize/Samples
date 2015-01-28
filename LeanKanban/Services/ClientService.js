@@ -127,7 +127,7 @@ Global.ClientService = {
        }
 
        return retVal;
-   },
+   }
 
 };
 

@@ -124,44 +124,28 @@
     <Content Include="Configuration\Views\CoreControls\ComplexLayout\TraceElement.js" />
     <Content Include="Configuration\Views\CoreControls\Grid.js" />
     <Content Include="Configuration\Views\CoreControls\Image.js" />
-    <Content Include="Configuration\Views\CoreControls\ProductItem.js" />
     <Content Include="Configuration\Views\CoreControls\RadioButtons.js" />
     <Content Include="Configuration\Views\CoreControls\Repeater.js" />
     <Content Include="Configuration\Views\CoreControls\Timer.js" />
-    <Content Include="Configuration\Views\CoreControls\TreeView\CategoryDetail.js" />
-    <Content Include="Configuration\Views\CoreControls\TreeView\EmployeeDetail.js" />
-    <Content Include="Configuration\Views\CoreControls\TreeView\ProductDetail.js" />
-    <Content Include="Configuration\Views\CoreControls\TreeView\SubcategoryDetail.js" />
-    <Content Include="Configuration\Views\CoreControls\TreeView\TreeView.js" />
+    <Content Include="Configuration\Views\CoreControls\TreeView.js" />
     <Content Include="Configuration\Views\CoreControls\Upload.js" />
-    <Content Include="Configuration\Views\Extensions\Bootstrap\BootstrapDatepicker.js" />
-    <Content Include="Configuration\Views\Extensions\Bootstrap\BootstrapGrid.js" />
-    <Content Include="Configuration\Views\Extensions\Bootstrap\BootstrapModal\BootstrapModal.js" />
-    <Content Include="Configuration\Views\Extensions\Bootstrap\BootstrapTab\BootstrapTab.js" />
-    <Content Include="Configuration\Views\Extensions\Google\GoogleLineChart.js" />
-    <Content Include="Configuration\Views\Extensions\Google\GoogleTable.js" />
-    <Content Include="Configuration\Views\HomeMenuLiItemBootstrapControl.js" />
-    <Content Include="Configuration\Views\HomeMenuLiItemCoreControl.js" />
-    <Content Include="Configuration\Views\HomeMenuLiItemGoogleControl.js" />
-    <Content Include="Configuration\Views\HomeMenuLiItemLayoutControl.js" />
-    <Content Include="Configuration\Views\LayoutControls\Dialog\Dialog.js" />
-    <Content Include="Configuration\Views\LayoutControls\Flyout\Flyout.js" />
-    <Content Include="Configuration\Views\LayoutControls\Panel\Panel.js" />
-    <Content Include="Configuration\Views\LayoutControls\Tab\DynamicTab.js" />
-    <Content Include="Configuration\Views\LayoutControls\Tab\Tab.js" />
-    <Content Include="Configuration\Views\LayoutControls\Tab\TabContainer.js" />
-    <Content Include="Configuration\Views\LayoutControls\Tab\TabPageCategory.js" />
-    <Content Include="Configuration\Views\LayoutControls\Tab\TabVertical.js" />
+    <Content Include="Configuration\Views\BootstrapExtension\BootstrapDatepicker.js" />
+    <Content Include="Configuration\Views\BootstrapExtension\BootstrapGrid.js" />
+    <Content Include="Configuration\Views\BootstrapExtension\BootstrapModal.js" />
+    <Content Include="Configuration\Views\BootstrapExtension\BootstrapTab.js" />
+    <Content Include="Configuration\Views\GooleExtension\GoogleLineChart.js" />
+    <Content Include="Configuration\Views\GooleExtension\GoogleTable.js" />
+    <Content Include="Configuration\Views\JQueryExtension\JQueryDatepicker.js" />
+    <Content Include="Configuration\Views\Layout\Dialog.js" />
+    <Content Include="Configuration\Views\Layout\Flyout.js" />
+    <Content Include="Configuration\Views\Layout\Panel.js" />
+    <Content Include="Configuration\Views\Layout\Tab.js" />
     <Content Include="Configuration\Views\MainControl.js" />
     <Content Include="Configuration\Views\SideBar\SideBarContent.js" />
-    <Content Include="Configuration\Views\SideBar\SideBarLiItemBootstrapControl.js" />
-    <Content Include="Configuration\Views\SideBar\SideBarLiItemCoreControl.js" />
-    <Content Include="Configuration\Views\SideBar\SideBarLiItemGoogleControl.js" />
-    <Content Include="Configuration\Views\SideBar\SideBarLiItemLayoutControl.js" />
-    <Content Include="Controls\Bootstrap Extension\BootstrapDatepicker.htm" />
-    <Content Include="Controls\Bootstrap Extension\BootstrapGrid.htm" />
-    <Content Include="Controls\Bootstrap Extension\BootstrapModal.htm" />
-    <Content Include="Controls\Bootstrap Extension\BootstrapTab.htm" />
+    <Content Include="Controls\BootstrapExtension\BootstrapDatepicker.htm" />
+    <Content Include="Controls\BootstrapExtension\BootstrapGrid.htm" />
+    <Content Include="Controls\BootstrapExtension\BootstrapModal.htm" />
+    <Content Include="Controls\BootstrapExtension\BootstrapTab.htm" />
     <Content Include="Controls\Core\CheckBoxList.htm" />
     <Content Include="Controls\Core\Combo.htm" />
     <Content Include="Controls\Core\Grid.htm" />
@@ -171,9 +155,9 @@
     <Content Include="Controls\Core\Timer.htm" />
     <Content Include="Controls\Core\TreeView.htm" />
     <Content Include="Controls\Core\Upload.htm" />
-    <Content Include="Controls\Google Extension\GoogleLineChart.htm" />
-    <Content Include="Controls\Google Extension\GoogleTableVisualisation.htm" />
-    <Content Include="Controls\JQueryUI Extension\DatePicker.htm" />
+    <Content Include="Controls\GoogleExtension\GoogleLineChart.htm" />
+    <Content Include="Controls\GoogleExtension\GoogleTableVisualisation.htm" />
+    <Content Include="Controls\JQueryExtension\JQueryDatePicker.htm" />
     <Content Include="Controls\Layout\ComplexLayout.htm" />
     <Content Include="Controls\Layout\Dialog.htm" />
     <Content Include="Controls\Layout\Flyout.htm" />
@@ -263,6 +247,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

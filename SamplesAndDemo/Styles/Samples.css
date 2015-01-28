@@ -1,4 +1,22 @@
-﻿.navbar-brand.logo
+﻿.LinkFiles ul
+{
+	display:inline-block;
+	font-size: large;
+}
+
+.LinkFiles ul > li
+{
+	display:inline-block;    
+	border-right: 1px solid #ebecee;
+    padding: 0 0.6em;
+}
+
+.LinkFiles ul > li:last-child {
+    border-right: 0 none;
+    padding-right: 0;
+}
+
+.navbar-brand.logo
 {
 	padding: 0px;
 }

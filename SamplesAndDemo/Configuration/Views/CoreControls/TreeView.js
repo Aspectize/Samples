@@ -22,3 +22,15 @@ n0Employee.Text.BindData(aas.Expression(n0Employee.DataSource.EmployeeContact.Co
 var n1Employee = n0Employee.AddNodeBinding(n0Employee.ParentData.EmployeeManager_ROLE_Manager.Employee, true, true);
 n1Employee.Text.BindData(aas.Expression(n1Employee.DataSource.EmployeeContact.Contact.FirstName + ' ' + n1Employee.DataSource.EmployeeContact.Contact.LastName));
 
+var vCategoryDetail = Aspectize.CreateView("CategoryDetail", aas.Controls.CategoryDetail, aas.Zones.TreeView.ZoneDetail, false, aas.Data.AdventureWorksData.Category);
+vCategoryDetail.CategoryName.BindData(vCategoryDetail.ParentData.Name);
+
+var vEmployeeDetail = Aspectize.CreateView("EmployeeDetail", aas.Controls.EmployeeDetail, aas.Zones.TreeView.ZoneEmployeeDetail, true, aas.Data.AdventureWorksData.Employee_STAR);
+vEmployeeDetail.EmployeeName.BindData(aas.Expression(vEmployeeDetail.ParentData.EmployeeContact.Contact.FirstName + ' ' + vEmployeeDetail.ParentData.EmployeeContact.Contact.LastName));
+
+var vProductDetail = Aspectize.CreateView("ProductDetail", aas.Controls.ProductDetail, aas.Zones.TreeView.ZoneDetail, false, aas.Data.AdventureWorksData.Category.CategorySubcategory.Subcategory.ProductSubcategory.Product);
+vProductDetail.ProductName.BindData(vProductDetail.ParentData.Name);
+
+var vSubcategoryDetail = Aspectize.CreateView("SubcategoryDetail", aas.Controls.SubcategoryDetail, aas.Zones.TreeView.ZoneDetail, false, aas.Data.AdventureWorksData.Category.CategorySubcategory.Subcategory);
+vSubcategoryDetail.SubCategoryName.BindData(vSubcategoryDetail.ParentData.Name);
+

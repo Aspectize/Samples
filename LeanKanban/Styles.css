@@ -3,12 +3,6 @@
     padding-top: 50px;
 }
 
-#Login, #Register
-{
-	margin:auto;
-	max-width: 500px;
-}
-
 .BoardItem, .BoardItem.aasRepeaterItem.aasSelected
 {
 	float:left;
@@ -106,3 +100,10 @@
 {
 	font-weight:bold;
 }
+
+#Login, #Register
+{
+	margin:auto;
+	max-width: 500px;
+}
+
