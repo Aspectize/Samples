@@ -22,8 +22,8 @@ vSideBarLiItemGoogleControl.LinkName.BindData(vSideBarLiItemGoogleControl.Parent
 vSideBarLiItemGoogleControl.className.BindData(vSideBarLiItemGoogleControl.ParentData.EnumerationElement);
 vSideBarLiItemGoogleControl.Link.click.BindCommand(aas.Services.Browser.BootStrapClientService.ShowView, { viewName: vSideBarLiItemGoogleControl.ParentData.EnumerationElement });
 
-//var vSideBarLiItemJQueryControl = Aspectize.CreateRepeatedView("SideBarLiItemJQueryControl", aas.Controls.LiItem, aas.Zones.SideBarContent.RepeaterPanelMenuJQuery, aas.Data.MainData.EnumJQueryExtension, "", "Literal:");
-//vSideBarLiItemJQueryControl.LinkName.BindData(vSideBarLiItemJQueryControl.ParentData.EnumerationElement);
-//vSideBarLiItemJQueryControl.className.BindData(vSideBarLiItemJQueryControl.ParentData.EnumerationElement);
-//vSideBarLiItemJQueryControl.Link.click.BindCommand(aas.Services.Browser.BootStrapClientService.ShowView, { viewName: vSideBarLiItemJQueryControl.ParentData.EnumerationElement });
+var vSideBarLiItemJQueryControl = Aspectize.CreateRepeatedView("SideBarLiItemJQueryControl", aas.Controls.LiItem, aas.Zones.SideBarContent.RepeaterPanelMenuJQuery, aas.Data.MainData.EnumJQueryExtension, "", "Literal:");
+vSideBarLiItemJQueryControl.LinkName.BindData(vSideBarLiItemJQueryControl.ParentData.EnumerationElement);
+vSideBarLiItemJQueryControl.className.BindData(vSideBarLiItemJQueryControl.ParentData.EnumerationElement);
+vSideBarLiItemJQueryControl.Link.click.BindCommand(aas.Services.Browser.BootStrapClientService.ShowView, { viewName: vSideBarLiItemJQueryControl.ParentData.EnumerationElement });
 

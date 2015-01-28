@@ -135,6 +135,7 @@
     <Content Include="Configuration\Views\BootstrapExtension\BootstrapTab.js" />
     <Content Include="Configuration\Views\GooleExtension\GoogleLineChart.js" />
     <Content Include="Configuration\Views\GooleExtension\GoogleTable.js" />
+    <Content Include="Configuration\Views\JQueryExtension\JQueryAutoComplete.js" />
     <Content Include="Configuration\Views\JQueryExtension\JQueryDatepicker.js" />
     <Content Include="Configuration\Views\Layout\Dialog.js" />
     <Content Include="Configuration\Views\Layout\Flyout.js" />
@@ -157,6 +158,7 @@
     <Content Include="Controls\Core\Upload.htm" />
     <Content Include="Controls\GoogleExtension\GoogleLineChart.htm" />
     <Content Include="Controls\GoogleExtension\GoogleTableVisualisation.htm" />
+    <Content Include="Controls\JQueryExtension\JQueryAutoComplete.htm" />
     <Content Include="Controls\JQueryExtension\JQueryDatePicker.htm" />
     <Content Include="Controls\Layout\ComplexLayout.htm" />
     <Content Include="Controls\Layout\Dialog.htm" />
