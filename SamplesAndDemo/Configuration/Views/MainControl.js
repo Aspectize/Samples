@@ -23,5 +23,7 @@ vHomeMenuLiItemLayoutControl.LinkName.BindData(vHomeMenuLiItemLayoutControl.Pare
 var vHomeMenuLiItemJQueryControl = Aspectize.CreateRepeatedView("HomeMenuLiItemJQueryControl", aas.Controls.LiItem, aas.Zones.SampleHome.RepeaterPanelMenuJQueryExtension, aas.Data.MainData.EnumJQueryExtension);
 vHomeMenuLiItemJQueryControl.Link.click.BindCommand(aas.Services.Browser.BootStrapClientService.ShowView, { viewName: vHomeMenuLiItemJQueryControl.ParentData.EnumerationElement });
 vHomeMenuLiItemJQueryControl.LinkName.BindData(vHomeMenuLiItemJQueryControl.ParentData.EnumerationElement);
-//vHomeMenuLiItemJQueryControl.LinkName.BindData(vHomeMenuLiItemJQueryControl.ParentData.EnumerationElement);
 
+var vHomeMenuLiItemMiscControl = Aspectize.CreateRepeatedView("HomeMenuLiItemMiscControl", aas.Controls.LiItem, aas.Zones.SampleHome.RepeaterPanelMenuMiscExtension, aas.Data.MainData.EnumMiscExtension);
+vHomeMenuLiItemMiscControl.Link.click.BindCommand(aas.Services.Browser.BootStrapClientService.ShowView, { viewName: vHomeMenuLiItemMiscControl.ParentData.EnumerationElement });
+vHomeMenuLiItemMiscControl.LinkName.BindData(vHomeMenuLiItemMiscControl.ParentData.EnumerationElement);

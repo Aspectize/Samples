@@ -30,6 +30,10 @@
 
 <link rel='stylesheet' type='text/css' href='~Bootstrap/BootstrapOverride.css' />
 
+
+<script type="text/javascript" src="~TinyMCE/tinyMCEV4/js/tinymce/tinymce.min.js"></script>
+
+
 <script type="text/javascript" src="//www.google.com/jsapi"></script>
 <script type="text/javascript">
     google.load('visualization', '1.0', {'packages':['annotatedtimeline', 'corechart', 'table', 'geochart', 'orgchart']});

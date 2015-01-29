@@ -27,3 +27,8 @@ vSideBarLiItemJQueryControl.LinkName.BindData(vSideBarLiItemJQueryControl.Parent
 vSideBarLiItemJQueryControl.className.BindData(vSideBarLiItemJQueryControl.ParentData.EnumerationElement);
 vSideBarLiItemJQueryControl.Link.click.BindCommand(aas.Services.Browser.BootStrapClientService.ShowView, { viewName: vSideBarLiItemJQueryControl.ParentData.EnumerationElement });
 
+var vSideBarLiItemMiscControl = Aspectize.CreateRepeatedView("SideBarLiItemMiscControl", aas.Controls.LiItem, aas.Zones.SideBarContent.RepeaterPanelMenuMisc, aas.Data.MainData.EnumMiscExtension, "", "Literal:");
+vSideBarLiItemMiscControl.LinkName.BindData(vSideBarLiItemMiscControl.ParentData.EnumerationElement);
+vSideBarLiItemMiscControl.className.BindData(vSideBarLiItemMiscControl.ParentData.EnumerationElement);
+vSideBarLiItemMiscControl.Link.click.BindCommand(aas.Services.Browser.BootStrapClientService.ShowView, { viewName: vSideBarLiItemMiscControl.ParentData.EnumerationElement });
+

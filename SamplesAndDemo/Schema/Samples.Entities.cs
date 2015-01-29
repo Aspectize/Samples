@@ -133,6 +133,13 @@ namespace Samples
 	}
 
 	[DataDefinition(MustPersist = false)]
+	public enum EnumMiscExtension
+	{
+		[Description("TinyMCE")]
+		TinyMCE
+	}
+
+	[DataDefinition(MustPersist = false)]
 	public class ComplexLayoutTrace : Entity, IDataWrapper
 	{
 		public static partial class Fields

@@ -1,6 +1,6 @@
 ﻿var app = newApplication();
 
-app.Directories = "Bootstrap, GoogleExtension, JQueryExtension";
+app.Directories = "Bootstrap, GoogleExtension, JQueryExtension, TinyMce";
 
 var ctxData0 = newContextData();
 
@@ -16,5 +16,11 @@ var ctxData2 = newContextData();
 
 ctxData2.Name = "UploadData";
 ctxData2.NameSpaceList = "Upload";
+
+var ctxData3 = newContextData();
+
+ctxData3.Name = "Content";
+ctxData3.IsDataSet = false;
+
 
 
