@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:aas="http://aspectize.com/ajax">
+<head>
+    <title>Untitled</title>
+</head>
+<body>
+
+    <div aas:control="TinyMCEControl">
+        <div class="row">
+            <div class="pull-left">
+                <h1 class="page-header">TinyMCE</h1>
+            </div>
+            <div class="pull-right LinkFiles">
+                <ul>
+                    <li>
+                        <a href="https://github.com/Aspectize/Samples/blob/master/SamplesAndDemo/Controls/TinyMCE/TinyMCE.htm" target="_blank">View Html</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Aspectize/Samples/blob/master/SamplesAndDemo/Configuration/Views/TinyMCE/TinyMCE.js" target="_blank">View Configuration</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Basic Usage</h2>
+        <div class="row">
+            <div class="col-sm-12">
+                <input name="BtnEdit" type="button" value="Clik to toggle Edit Mode of TinyMCE" class="btn btn-default" />
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div aas:name="Content" class="TinyMCEv4" style="height: 425px; width: 750px;"></div>
+        </div>
+        
+        <br />
+        HTML content is bound to a Fragment Viewer:
+        <div class="row">
+            <div class="col-sm-12">
+                <div aas:name="HtmlViewer" class="AspectizeHtmlFragmentViewer"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
