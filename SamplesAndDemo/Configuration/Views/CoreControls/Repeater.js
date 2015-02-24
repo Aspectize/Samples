@@ -7,8 +7,8 @@ vRepeater.SelectOrder.BindList(aas.Data.MainData.EnumProductOrderField, "Enumera
 vRepeater.SelectOrder.NullValueDisplay.BindData("Choose Order Field");
 vRepeater.SelectOrder.CurrentSyncDisabled.BindData(true);
 vRepeater.SelectOrder.SelectedValueChanged.BindCommand(aas.Services.Browser.UIService.SetSortExpression, {controlName: aas.ViewName.Repeater.RepeaterPanelProduct, sortExpression: aas.Expression(IIF(vRepeater.SelectOrder.CurrentValue, vRepeater.SelectOrder.CurrentValue + ' ASC', ''))}, null, false, true);
-vRepeater.SelectCategory.BindList(aas.Data.AdventureWorksData.Category, "CategoryID", "Name", null, "Name ASC");
-vRepeater.SelectSubCategory.BindList(aas.Data.AdventureWorksData.Category.CategorySubcategory.Subcategory, "SubcategoryID", "Name", null, "Name ASC", "", "");
+vRepeater.SelectCategory.BindList(aas.Data.AdventureWorksData.Category, "CategoryID", "Name", "Name ASC");
+vRepeater.SelectSubCategory.BindList(aas.Data.AdventureWorksData.Category.CategorySubcategory.Subcategory, "SubcategoryID", "Name", "Name ASC", "", "");
 
 var vProductItem = Aspectize.CreateRepeatedView("ProductItem", aas.Controls.ProductItem, aas.Zones.Repeater.RepeaterPanelProduct, aas.Data.AdventureWorksData.Category.CategorySubcategory.Subcategory.ProductSubcategory.Product, "", "Literal:");
 vProductItem.ProductName.BindData(vProductItem.ParentData.Name);
