@@ -19,6 +19,18 @@
         <entityProperty name="Name" defaultValue="&quot;&quot;" identity="false" isEnumType="false" isCompoType="false" isExternType="false" regexPattern="(?#Name can not be empty)\S+" isEnumInBaseType="false" />
       </properties>
     </entity>
+    <entity Id="ad7be726-18f8-4904-a5f8-a560249936c1" name="User" guid="5719a5f6-b218-4cd1-98f2-e1a9511337b1" hasCustomValidators="false" hasTriggers="false">
+      <properties>
+        <entityProperty name="FirstName" defaultValue="&quot;&quot;" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+        <entityProperty name="LastName" defaultValue="&quot;&quot;" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+        <entityProperty name="Email" defaultValue="&quot;&quot;" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+        <entityProperty name="Password" nullable="true" defaultValue="&quot;&quot;" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" serverOnly="true" />
+        <entityProperty name="VerificationCode" type="Guid" nullable="true" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" serverOnly="true" />
+        <entityProperty name="DateLastLogin" type="DateTime" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+        <entityProperty name="Status" type="EnumUserStatus" defaultValue="Pending" isCustomType="true" identity="false" isEnumType="true" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+      </properties>
+    </entity>
+    <entity Id="83d08498-1278-4759-8d25-db20158ad9a7" name="CurrentUser" guid="eed2d870-a76f-42fb-b3c1-39221eaacf9a" mustPersist="false" hasCustomValidators="false" hasTriggers="false" />
   </entities>
   <relations>
     <relation Id="a0bfa082-1298-46d7-9d2e-c7baebfe91e6" name="WorkItemState" guid="00000000-0000-0000-0000-000000000000" separateTable="false" hasTriggers="false" hasCustomValidators="false">
@@ -41,18 +53,37 @@
         </relationReferencesEntityReferenceClasses>
       </entityReferenceClasses>
     </relation>
-    <relation Id="63b7d853-e02b-4754-bc23-8a544c51e3ae" name="BoardUser" guid="00000000-0000-0000-0000-000000000000" separateTable="false" hasTriggers="false" hasCustomValidators="false">
+    <relation Id="63b7d853-e02b-4754-bc23-8a544c51e3ae" name="BoardUser" guid="00000000-0000-0000-0000-000000000000" hasTriggers="false" hasCustomValidators="false">
+      <properties>
+        <relationProperty name="IsOwner" type="Boolean" defaultValue="true" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+      </properties>
       <entityReferenceClasses>
-        <relationReferencesEntityReferenceClasses Id="8b50c0f4-eab2-4091-89ae-8c8cf5af073e" role="User" cardinality="I__I" fkNames="UserId">
-          <entityReferenceMoniker Id="c8ebb00b-9a9a-4125-a373-db1a94f606dc" />
-        </relationReferencesEntityReferenceClasses>
         <relationReferencesEntityReferenceClasses Id="7f46ea8b-fff6-4dee-9e6a-419e1895c153" role="Board" cardinality="O__N">
           <entityMoniker Id="f1b2b85c-0b3f-4df1-a6b3-757484340bea" />
+        </relationReferencesEntityReferenceClasses>
+        <relationReferencesEntityReferenceClasses Id="c362f989-b978-486a-92c6-e6f62e6c3a16" role="User" cardinality="O__N">
+          <entityMoniker Id="ad7be726-18f8-4904-a5f8-a560249936c1" />
+        </relationReferencesEntityReferenceClasses>
+      </entityReferenceClasses>
+    </relation>
+    <relation Id="21428161-55a1-472c-930b-520384abdd8b" name="IsUser" guid="00000000-0000-0000-0000-000000000000" mustPersist="false" hasTriggers="false" hasCustomValidators="false">
+      <entityReferenceClasses>
+        <relationReferencesEntityReferenceClasses Id="6e8d1d8a-99a0-489e-b067-07aceb85341d" role="User" cardinality="I__I">
+          <entityMoniker Id="ad7be726-18f8-4904-a5f8-a560249936c1" />
+        </relationReferencesEntityReferenceClasses>
+        <relationReferencesEntityReferenceClasses Id="a9845c61-0a82-4c82-aeff-1b67bff5f9ee" role="CurrentUser" cardinality="O__I">
+          <entityMoniker Id="83d08498-1278-4759-8d25-db20158ad9a7" />
         </relationReferencesEntityReferenceClasses>
       </entityReferenceClasses>
     </relation>
   </relations>
-  <entityReferences>
-    <entityReference Id="c8ebb00b-9a9a-4125-a373-db1a94f606dc" name="User" domain="BasicAuth" />
-  </entityReferences>
+  <enumEntities>
+    <enumEntity Id="2acdbe52-4686-4558-9b31-e838e0b2d12c" name="EnumUserStatus">
+      <enumItems>
+        <enumItem name="Valid" value="0" />
+        <enumItem name="Blocked" value="0" />
+        <enumItem name="Pending" value="0" />
+      </enumItems>
+    </enumEntity>
+  </enumEntities>
 </diagram>

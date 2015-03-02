@@ -71,13 +71,31 @@
       <DependentUpon>LeanKanban.Entities</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Schema\LeanKanban.Entities.Entities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LeanKanban.Entities.diagram</DependentUpon>
+    </Compile>
+    <Compile Include="Services\InscriptionService.cs" />
     <Compile Include="Services\LoadDataService.cs" />
+    <Compile Include="Services\MyAuthenticateService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Configuration\Views\Login.js" />
+    <Content Include="Configuration\Views\Board.js" />
+    <Content Include="Configuration\Views\BoardItem.js" />
+    <Content Include="Configuration\Views\EditBoard.js" />
+    <Content Include="Configuration\Views\EditState.js" />
+    <Content Include="Configuration\Views\Login\ConfirmUser.js" />
+    <Content Include="Configuration\Views\Login\Login.js" />
+    <Content Include="Configuration\Views\Login\Register.js" />
+    <Content Include="Configuration\Views\MainControl.js" />
+    <Content Include="Configuration\Views\MyBoards.js" />
+    <Content Include="Configuration\Views\StateItem.js" />
+    <Content Include="Configuration\Views\WorkItem.js" />
     <Content Include="Controls\Login.htm" />
+    <Content Include="Services\AuthClientService.js" />
     <Content Include="Services\ClientService.js" />
-    <Content Include="Configuration\Views\View.js" />
+    <Content Include="Configuration\Views\EditWorkItem.js" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Configuration\Services\Service.js" />

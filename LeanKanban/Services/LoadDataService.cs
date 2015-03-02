@@ -6,27 +6,32 @@ using Aspectize.Core;
 using System.Security.Permissions;
 using BasicAuth;
 
-namespace LeanKanban.Services
+namespace LeanKanban
 {
+    public static class ServiceName
+    {
+        public const string MyDataService = "MyDataService";
+        public const string MyMailService = "MyMailService";
+    }
+
     public interface ILoadDataService
     {
-        [PrincipalPermission(SecurityAction.Demand, Authenticated = true)]
         DataSet LoadBoards();
 
-        [PrincipalPermission(SecurityAction.Demand, Authenticated = true)]
         DataSet LoadBoard(Guid boardId);
     }
 
     [Service(Name = "LoadDataService")]
     public class LoadDataService : ILoadDataService //, IInitializable, ISingleton
     {
+        [PrincipalPermission(SecurityAction.Demand, Authenticated = true)]
         DataSet ILoadDataService.LoadBoards()
         {
             var aspectizeUser = ExecutingContext.CurrentUser;
 
             var userId = new Guid(aspectizeUser.UserId.ToString());
             
-            IDataManager dm = EntityManager.FromDataBaseService("MyDataService");
+            IDataManager dm = EntityManager.FromDataBaseService(ServiceName.MyDataService);
 
             var roleRelations = new List<IRoleRelationQuery>();
 
@@ -37,9 +42,10 @@ namespace LeanKanban.Services
             return dm.Data;
         }
 
+        [PrincipalPermission(SecurityAction.Demand, Authenticated = true)]
         DataSet ILoadDataService.LoadBoard(Guid boardId)
         {
-            IDataManager dm = EntityManager.FromDataBaseService("MyDataService");
+            IDataManager dm = EntityManager.FromDataBaseService(ServiceName.MyDataService);
 
             var roleRelations = new List<IRoleRelationQuery>();
 

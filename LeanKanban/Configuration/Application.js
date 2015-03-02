@@ -1,15 +1,21 @@
 
 var app = newApplication();
 
-app.Directories = "Bootstrap, BasicAuth";
+app.Directories = "Bootstrap";
 app.SecurityEnabled = true;
 app.SecurityServicesConfiguration = "LeanKanbanSecurityService";
 
 app.AddAuthorizationRole(aas.Roles.Anonymous, aas.Enum.AccessControl.Forbidden);
-app.AddAuthorizationRole("Registered", aas.Enum.AccessControl.ReadWrite);
+app.AddAuthorizationRole(aas.Roles.Registered, aas.Enum.AccessControl.ReadWrite);
 
 var ctxData = newContextData();
 
 ctxData.IsProfile = true;
 ctxData.Name = "MainData";
-ctxData.NameSpaceList = "LeanKanban, BasicAuth";
+ctxData.NameSpaceList = "LeanKanban";
+
+var ctxUserConfirmation = newContextData();
+
+ctxUserConfirmation.IsDataSet = false;
+ctxUserConfirmation.Name = "UserConfirmation";
+

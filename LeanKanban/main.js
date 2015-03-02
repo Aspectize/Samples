@@ -1,5 +1,9 @@
 function Main() {
-    var mainView = Aspectize.Host.InitApplication();
+    Aspectize.Host.InitApplication();
 
-    Aspectize.Host.ActivateViewByName('MainControl');
+    if (Aspectize.Host.UrlArgs.StartingViewName != null) {
+        Aspectize.Host.ActivateViewByName(Aspectize.Host.UrlArgs.StartingViewName);
+    } else if (!Aspectize.Host.UrlArgs.StartingCommandName) {
+        Aspectize.Host.ActivateViewByName('MainControl');
+    }
 }
