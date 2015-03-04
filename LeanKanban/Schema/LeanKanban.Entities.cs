@@ -20,6 +20,8 @@ namespace LeanKanban
 			public const string Board = "Board";
 			public const string User = "User";
 			public const string CurrentUser = "CurrentUser";
+			public const string Activity = "Activity";
+			public const string Attachment = "Attachment";
 		}
 
 		public static partial class Relations
@@ -28,6 +30,10 @@ namespace LeanKanban
 			public const string BoardState = "BoardState";
 			public const string BoardUser = "BoardUser";
 			public const string IsUser = "IsUser";
+			public const string ActivityWorkItem = "ActivityWorkItem";
+			public const string ActivityUser = "ActivityUser";
+			public const string WorkItemAttachment = "WorkItemAttachment";
+			public const string AttachmentUser = "AttachmentUser";
 		}
 	}
 
@@ -59,7 +65,8 @@ namespace LeanKanban
 			public const string DateCreation = "DateCreation";
 			public const string Title = "Title";
 			public const string Description = "Description";
-			public const string Adress = "Adress";
+			public const string DueDate = "DueDate";
+			public const string Order = "Order";
 		}
 
 		void IDataWrapper.InitData(DataRow data, string namePrefix)
@@ -95,11 +102,18 @@ namespace LeanKanban
 			set { setValue<string>("Description", value); }
 		}
 
-		[Data(DefaultValue = "")]
-		public string Adress
+		[Data(IsNullable = true)]
+		public DateTime? DueDate
 		{
-			get { return getValue<string>("Adress"); }
-			set { setValue<string>("Adress", value); }
+			get { return getValue<DateTime?>("DueDate"); }
+			set { setValue<DateTime?>("DueDate", value); }
+		}
+
+		[Data]
+		public int Order
+		{
+			get { return getValue<int>("Order"); }
+			set { setValue<int>("Order", value); }
 		}
 
 	}
@@ -111,6 +125,7 @@ namespace LeanKanban
 		{
 			public const string Id = "Id";
 			public const string Title = "Title";
+			public const string Order = "Order";
 		}
 
 		void IDataWrapper.InitData(DataRow data, string namePrefix)
@@ -130,6 +145,13 @@ namespace LeanKanban
 		{
 			get { return getValue<string>("Title"); }
 			set { setValue<string>("Title", value); }
+		}
+
+		[Data]
+		public int Order
+		{
+			get { return getValue<int>("Order"); }
+			set { setValue<int>("Order", value); }
 		}
 
 	}
@@ -268,6 +290,90 @@ namespace LeanKanban
 	}
 
 	[DataDefinition]
+	public class Activity : Entity, IDataWrapper
+	{
+		public static partial class Fields
+		{
+			public const string Id = "Id";
+			public const string DateCreation = "DateCreation";
+			public const string DateModification = "DateModification";
+			public const string Comment = "Comment";
+		}
+
+		void IDataWrapper.InitData(DataRow data, string namePrefix)
+		{
+			base.InitData(data, null);
+		}
+
+		[Data(IsPrimaryKey=true)]
+		public Guid Id
+		{
+			get { return getValue<Guid>("Id"); }
+			set { setValue<Guid>("Id", value); }
+		}
+
+		[Data]
+		public DateTime DateCreation
+		{
+			get { return getValue<DateTime>("DateCreation"); }
+			set { setValue<DateTime>("DateCreation", value); }
+		}
+
+		[Data]
+		public DateTime DateModification
+		{
+			get { return getValue<DateTime>("DateModification"); }
+			set { setValue<DateTime>("DateModification", value); }
+		}
+
+		[Data(DefaultValue = "")]
+		public string Comment
+		{
+			get { return getValue<string>("Comment"); }
+			set { setValue<string>("Comment", value); }
+		}
+
+	}
+
+	[DataDefinition]
+	public class Attachment : Entity, IDataWrapper
+	{
+		public static partial class Fields
+		{
+			public const string Id = "Id";
+			public const string FileName = "FileName";
+			public const string DateUploaded = "DateUploaded";
+		}
+
+		void IDataWrapper.InitData(DataRow data, string namePrefix)
+		{
+			base.InitData(data, null);
+		}
+
+		[Data(IsPrimaryKey=true)]
+		public Guid Id
+		{
+			get { return getValue<Guid>("Id"); }
+			set { setValue<Guid>("Id", value); }
+		}
+
+		[Data(DefaultValue = "")]
+		public string FileName
+		{
+			get { return getValue<string>("FileName"); }
+			set { setValue<string>("FileName", value); }
+		}
+
+		[Data]
+		public DateTime DateUploaded
+		{
+			get { return getValue<DateTime>("DateUploaded"); }
+			set { setValue<DateTime>("DateUploaded", value); }
+		}
+
+	}
+
+	[DataDefinition]
 	[RelationPersistenceMode(SeparateTable = false)]
 	public class WorkItemState : DataWrapper, IDataWrapper, IRelation
 	{
@@ -342,6 +448,74 @@ namespace LeanKanban
 
 		[RelationEnd(Type = typeof(CurrentUser), Role = typeof(CurrentUser), Multiplicity = Multiplicity.ZeroOrOne)]
 		public IEntity CurrentUser;
+
+	}
+
+	[DataDefinition]
+	[RelationPersistenceMode(SeparateTable = false)]
+	public class ActivityWorkItem : DataWrapper, IDataWrapper, IRelation
+	{
+		void IDataWrapper.InitData(DataRow data, string namePrefix)
+		{
+			base.InitData(data, null);
+		}
+
+		[RelationEnd(Type = typeof(Activity), Role = typeof(Activity), Multiplicity = Multiplicity.ZeroOrMany)]
+		public IEntity Activity;
+
+		[RelationEnd(Type = typeof(WorkItem), Role = typeof(WorkItem), Multiplicity = Multiplicity.One, FkNames = "WorkItemId")]
+		public IEntity WorkItem;
+
+	}
+
+	[DataDefinition]
+	[RelationPersistenceMode(SeparateTable = false)]
+	public class ActivityUser : DataWrapper, IDataWrapper, IRelation
+	{
+		void IDataWrapper.InitData(DataRow data, string namePrefix)
+		{
+			base.InitData(data, null);
+		}
+
+		[RelationEnd(Type = typeof(User), Role = typeof(User), Multiplicity = Multiplicity.One, FkNames = "UserId")]
+		public IEntity User;
+
+		[RelationEnd(Type = typeof(Activity), Role = typeof(Activity), Multiplicity = Multiplicity.ZeroOrMany)]
+		public IEntity Activity;
+
+	}
+
+	[DataDefinition]
+	[RelationPersistenceMode(SeparateTable = false)]
+	public class WorkItemAttachment : DataWrapper, IDataWrapper, IRelation
+	{
+		void IDataWrapper.InitData(DataRow data, string namePrefix)
+		{
+			base.InitData(data, null);
+		}
+
+		[RelationEnd(Type = typeof(Attachment), Role = typeof(Attachment), Multiplicity = Multiplicity.ZeroOrMany)]
+		public IEntity Attachment;
+
+		[RelationEnd(Type = typeof(WorkItem), Role = typeof(WorkItem), Multiplicity = Multiplicity.One, FkNames = "WorkItemId")]
+		public IEntity WorkItem;
+
+	}
+
+	[DataDefinition]
+	[RelationPersistenceMode(SeparateTable = false)]
+	public class AttachmentUser : DataWrapper, IDataWrapper, IRelation
+	{
+		void IDataWrapper.InitData(DataRow data, string namePrefix)
+		{
+			base.InitData(data, null);
+		}
+
+		[RelationEnd(Type = typeof(User), Role = typeof(User), Multiplicity = Multiplicity.One, FkNames = "UserId")]
+		public IEntity User;
+
+		[RelationEnd(Type = typeof(Attachment), Role = typeof(Attachment), Multiplicity = Multiplicity.ZeroOrMany)]
+		public IEntity Attachment;
 
 	}
 

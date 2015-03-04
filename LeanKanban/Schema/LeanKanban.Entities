@@ -6,12 +6,14 @@
         <entityProperty name="DateCreation" type="DateTime" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
         <entityProperty name="Title" defaultValue="&quot;&quot;" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
         <entityProperty name="Description" defaultValue="&quot;&quot;" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
-        <entityProperty name="Adress" defaultValue="&quot;&quot;" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+        <entityProperty name="DueDate" type="DateTime" nullable="true" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+        <entityProperty name="Order" type="Int32" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
       </properties>
     </entity>
     <entity Id="47d41d0a-fc2a-4727-a00f-0333064f8511" name="State" guid="52094058-8703-4c68-8eb9-797756f0ed24" hasCustomValidators="false" hasTriggers="false">
       <properties>
         <entityProperty name="Title" defaultValue="&quot;&quot;" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+        <entityProperty name="Order" type="Int32" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
       </properties>
     </entity>
     <entity Id="f1b2b85c-0b3f-4df1-a6b3-757484340bea" name="Board" guid="3fc9c6eb-a0a3-4ab6-948f-1ac14b6d65b5" hasCustomValidators="false" hasTriggers="false">
@@ -31,6 +33,19 @@
       </properties>
     </entity>
     <entity Id="83d08498-1278-4759-8d25-db20158ad9a7" name="CurrentUser" guid="eed2d870-a76f-42fb-b3c1-39221eaacf9a" mustPersist="false" hasCustomValidators="false" hasTriggers="false" />
+    <entity Id="350d5738-4f4b-417f-8092-7447991b7a25" name="Activity" guid="6c88fb69-fa7b-4e8e-a2dc-2cf4221ea800" hasCustomValidators="false" hasTriggers="false">
+      <properties>
+        <entityProperty name="DateCreation" type="DateTime" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+        <entityProperty name="DateModification" type="DateTime" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+        <entityProperty name="Comment" defaultValue="&quot;&quot;" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+      </properties>
+    </entity>
+    <entity Id="ec5d87de-46f5-4e8a-b01a-fa8e99d5e540" name="Attachment" guid="b32e6584-b4aa-47e3-8257-b05e0bc34c2a" hasCustomValidators="false" hasTriggers="false">
+      <properties>
+        <entityProperty name="FileName" defaultValue="&quot;&quot;" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+        <entityProperty name="DateUploaded" type="DateTime" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+      </properties>
+    </entity>
   </entities>
   <relations>
     <relation Id="a0bfa082-1298-46d7-9d2e-c7baebfe91e6" name="WorkItemState" guid="00000000-0000-0000-0000-000000000000" separateTable="false" hasTriggers="false" hasCustomValidators="false">
@@ -73,6 +88,46 @@
         </relationReferencesEntityReferenceClasses>
         <relationReferencesEntityReferenceClasses Id="a9845c61-0a82-4c82-aeff-1b67bff5f9ee" role="CurrentUser" cardinality="O__I">
           <entityMoniker Id="83d08498-1278-4759-8d25-db20158ad9a7" />
+        </relationReferencesEntityReferenceClasses>
+      </entityReferenceClasses>
+    </relation>
+    <relation Id="dd3eeddd-1cef-461f-9fd5-8cfa229047e6" name="ActivityWorkItem" guid="00000000-0000-0000-0000-000000000000" separateTable="false" hasTriggers="false" hasCustomValidators="false">
+      <entityReferenceClasses>
+        <relationReferencesEntityReferenceClasses Id="df47f3ad-a477-4c04-8947-32f1e67f7c6f" role="Activity" cardinality="O__N">
+          <entityMoniker Id="350d5738-4f4b-417f-8092-7447991b7a25" />
+        </relationReferencesEntityReferenceClasses>
+        <relationReferencesEntityReferenceClasses Id="37374b43-1fd4-488b-8f76-1711c9bfe8c2" role="WorkItem" cardinality="I__I" fkNames="WorkItemId">
+          <entityMoniker Id="134a19e2-7c2b-4055-83e0-32fd68648150" />
+        </relationReferencesEntityReferenceClasses>
+      </entityReferenceClasses>
+    </relation>
+    <relation Id="a63b0785-cd85-4562-8903-997b988ca504" name="ActivityUser" guid="00000000-0000-0000-0000-000000000000" separateTable="false" hasTriggers="false" hasCustomValidators="false">
+      <entityReferenceClasses>
+        <relationReferencesEntityReferenceClasses Id="6abd8731-c6a1-440e-846f-fe47f21d9b6b" role="User" cardinality="I__I" fkNames="UserId">
+          <entityMoniker Id="ad7be726-18f8-4904-a5f8-a560249936c1" />
+        </relationReferencesEntityReferenceClasses>
+        <relationReferencesEntityReferenceClasses Id="3d4764f7-82c9-45b6-9aab-0fa5733e7b86" role="Activity" cardinality="O__N">
+          <entityMoniker Id="350d5738-4f4b-417f-8092-7447991b7a25" />
+        </relationReferencesEntityReferenceClasses>
+      </entityReferenceClasses>
+    </relation>
+    <relation Id="0ed83dcb-8083-470b-ae59-6727a5472047" name="WorkItemAttachment" guid="00000000-0000-0000-0000-000000000000" separateTable="false" hasTriggers="false" hasCustomValidators="false">
+      <entityReferenceClasses>
+        <relationReferencesEntityReferenceClasses Id="df765aa1-1c58-4cd9-83ac-c17248e263b7" role="Attachment" cardinality="O__N">
+          <entityMoniker Id="ec5d87de-46f5-4e8a-b01a-fa8e99d5e540" />
+        </relationReferencesEntityReferenceClasses>
+        <relationReferencesEntityReferenceClasses Id="66e87eed-2e04-413f-a075-4c9bf37cd831" role="WorkItem" cardinality="I__I" fkNames="WorkItemId">
+          <entityMoniker Id="134a19e2-7c2b-4055-83e0-32fd68648150" />
+        </relationReferencesEntityReferenceClasses>
+      </entityReferenceClasses>
+    </relation>
+    <relation Id="36f1fc9f-a749-496c-8e3e-98a4861ca987" name="AttachmentUser" guid="00000000-0000-0000-0000-000000000000" separateTable="false" hasTriggers="false" hasCustomValidators="false">
+      <entityReferenceClasses>
+        <relationReferencesEntityReferenceClasses Id="5dbc4bff-edac-49eb-846e-e09286da7c8a" role="User" cardinality="I__I" fkNames="UserId">
+          <entityMoniker Id="ad7be726-18f8-4904-a5f8-a560249936c1" />
+        </relationReferencesEntityReferenceClasses>
+        <relationReferencesEntityReferenceClasses Id="0e3095b9-a42b-4bb0-af42-d14cf621fbf4" role="Attachment" cardinality="O__N">
+          <entityMoniker Id="ec5d87de-46f5-4e8a-b01a-fa8e99d5e540" />
         </relationReferencesEntityReferenceClasses>
       </entityReferenceClasses>
     </relation>

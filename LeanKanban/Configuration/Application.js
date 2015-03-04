@@ -1,7 +1,7 @@
 
 var app = newApplication();
 
-app.Directories = "Bootstrap";
+app.Directories = "Bootstrap, JQueryExtension";
 app.SecurityEnabled = true;
 app.SecurityServicesConfiguration = "LeanKanbanSecurityService";
 

@@ -83,16 +83,20 @@
   <ItemGroup>
     <Content Include="Configuration\Views\Board.js" />
     <Content Include="Configuration\Views\BoardItem.js" />
+    <Content Include="Configuration\Views\DueDate.js" />
     <Content Include="Configuration\Views\EditBoard.js" />
     <Content Include="Configuration\Views\EditState.js" />
     <Content Include="Configuration\Views\Login\ConfirmUser.js" />
     <Content Include="Configuration\Views\Login\Login.js" />
     <Content Include="Configuration\Views\Login\Register.js" />
     <Content Include="Configuration\Views\MainControl.js" />
+    <Content Include="Configuration\Views\MoveCard.js" />
     <Content Include="Configuration\Views\MyBoards.js" />
     <Content Include="Configuration\Views\StateItem.js" />
     <Content Include="Configuration\Views\WorkItem.js" />
     <Content Include="Controls\Login.htm" />
+    <Content Include="Controls\DueDate.htm" />
+    <Content Include="Controls\MoveCard.htm" />
     <Content Include="Services\AuthClientService.js" />
     <Content Include="Services\ClientService.js" />
     <Content Include="Configuration\Views\EditWorkItem.js" />

@@ -6,17 +6,17 @@
 <link rel='stylesheet' type='text/css' href='../Aspectize.core/Aspectize.css' />
 
 <!-- JS Files -->
-<script src="~Bootstrap/jQuery/jQuery-1.9.1.min.js"></script>
-<link rel='stylesheet' type='text/css' href='~Bootstrap/jQuery/jquery-ui.css' />
-<script src="~Bootstrap/jQuery/jquery-ui.min.js"></script>
+<script src="~JQueryExtension/jQuery/jQuery-1.9.1.min.js"></script>
+<link rel='stylesheet' type='text/css' href='~JQueryExtension/jQuery/jquery-ui.css' />
+<script src="~JQueryExtension/jQuery/jquery-ui.min.js"></script>
 
-<!--
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
--->
+<script type="text/javascript" src="~JQueryExtension/jQuery-Timepicker-Addon-master/jquery-ui-timepicker-addon.js"></script>
+<link href="~JQueryExtension/jQuery-Timepicker-Addon-master/jquery-ui-timepicker-addon.css" rel="stylesheet">
 
-<link href="http://stagingagileazure.cloudapp.net/Applications/Bootstrap/bootstrap%203.2.0/css/bootstrap.min.css" rel="stylesheet">
-<script src="http://stagingagileazure.cloudapp.net/Applications/Bootstrap/bootstrap%203.2.0/js/bootstrap.min.js"></script>
+<link href="~Bootstrap/bootstrap%203.2.0/css/bootstrap.min.css" rel="stylesheet">
+<script src="~Bootstrap/bootstrap%203.2.0/js/bootstrap.min.js"></script>
+
+<link rel='stylesheet' type='text/css' href='~Bootstrap/BootstrapOverride.css' />
 
 <link rel="stylesheet" type='text/css' href="~/Styles.css">
 

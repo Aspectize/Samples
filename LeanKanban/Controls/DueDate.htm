@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled</title>
+</head>
+<body>
+
+    <div aas:control="DueDate" class="container">
+        <div class="row text-center header-title">Change Due Date</div>
+        <div class="FlyOutContent">
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="datepicker-select-label"> Date </label>
+                </div>
+                <div class="col-md-6">
+                    <label class="datepicker-select-label"> Time </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <span>{DueDateDate}</span>
+                </div>
+                <div class="col-md-6">
+                    <span>{DueDateHour}</span>
+                </div>
+            </div>
+            <div class="row" style="padding: 10px 0px;">
+                <div aas:name="DueDatePicker" aas:type="JQueryExtension.JQueryDatePicker"></div>
+            </div>
+            <div class="row" style="margin-left: -10px; margin-right: -10px;">
+                <button name="BtnSave" type="button" class="btn btn-success pull-left">Save</button>
+                <button name="BtnRemove" type="button" class="btn btn-danger pull-right">Remove</button>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

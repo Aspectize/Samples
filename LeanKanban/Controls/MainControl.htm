@@ -29,7 +29,7 @@
             </div>
           </div>
         </nav>
-        <div aas:name="Content" class="Panel container"></div>
+        <div aas:name="Content" aas:type="Panel" class="container"></div>
     </div>
 
     <div aas:control="MyBoards">
@@ -37,7 +37,7 @@
         
         <div class="row">
             <div class="StateContainer">
-                <div aas:name="RepeaterPanelBoard" class="AspectizeRepeaterPanel"></div>
+                <div aas:name="RepeaterPanelBoard" aas:type="AspectizeRepeaterPanel"></div>
             </div>
             <div>
                 <a name="BtnNewBoard" class="NewBoardItem">Add a board...</a>
@@ -51,7 +51,7 @@
         
         <div class="row">
             <div class="StateContainer">
-                <div aas:name="RepeaterPanelState" class="AspectizeRepeaterPanel"></div>
+                <div aas:name="RepeaterPanelState" aas:type="AspectizeRepeaterPanel"></div>
             </div>
             <div>
                 <a name="BtnNewState" class="NewStateItem">Add a list...</a>
@@ -71,7 +71,7 @@
         <div class="StateItem">
             <div class="StateItemTitle">{Title}</div>
             <div class="">
-                <div aas:name="RepeaterPanelWorkItem" class="AspectizeRepeaterPanel"></div>
+                <div aas:name="RepeaterPanelWorkItem" aas:type="AspectizeRepeaterPanel"></div>
             </div>
             <a name="BtnNewWorkItem">Add a card...</a>
         </div>
@@ -81,7 +81,12 @@
     <div aas:control="WorkItem">
         <a name="WorkItem" class="WorkItem">
             <div>{Title}</div>
-            <div></div> 
+            <div class="{DisplayDueDateBadge}">
+                <div title="This card is due later" class="WorkItemDueDate">
+                    <span class="badge-icon icon-sm icon-clock"></span>
+                    <span class="WorkItemDueDateText">{DueDate}</span>
+                </div>
+            </div>
         </a>
     </div>
 
@@ -113,27 +118,43 @@
 
     <div aas:control="name:'EditWorkItem', isModal:true">
         <div class="modal fade">
-            <div class="modal-dialog">
+            <div class="modal-dialog" style="width: 1200px;">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title">Edit WorkItem</h4>
                     </div>
                     <div class="modal-body">
-                        <div class="form">
-                            <div class="form-group">
-                                <label>Title:</label>
-                                <input name="Title" class="form-control"  autofocus="autofocus" />
-                                <div class="hidden alert alert-danger text-center error-Title"></div>
+                        <div class="row">
+                            <div class="col-md-9">
+                                <div class="EditWorkItemDueDate {DisplayDueDate}">
+                                    <div class="DueDateTitle">Due Date</div>
+                                    <a name="WorkItemDueDateLink" class="DueDateBadge" title="This workitem is due later">{WorkItemDueDate}</a>
+                                </div>                                
+                                
+                                <div class="form-group">
+                                    <label>Title:</label>
+                                    <input name="Title" class="form-control" autofocus="autofocus" />
+                                    <div class="hidden alert alert-danger text-center error-Title"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Description:</label>
+                                    <textarea cols="20" name="Description" rows="4" class="form-control"></textarea>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label>Description:</label>
-                                <textarea cols="20" name="Description" rows="4" class="form-control" ></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label>State:</label>
-                                <select name="SelectState" class="form-control" ></select>
+                            <div class="col-md-3">
+                                <h4>Add</h4>
+                                <div class="row">
+                                    <a name="DueDate" class="button-link" title="Add a due date for the card and get notifications when it is almost due."> <span class="icon-sm icon-clock"></span> Due date </a>
+                                </div>
+                                <br />
+                                <h4>Action</h4>
+                                <div class="row">
+                                    <a name="Move" class="button-link" title="Move this card to another board, another list"> <span class="icon-sm icon-clock"></span> Move </a>
+                                </div>
+
                             </div>
                         </div>
+
                     </div>
                     <div class="modal-footer">
                         <button name="Cancel" class="btn btn-default">Cancel</button>
