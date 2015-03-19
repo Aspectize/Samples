@@ -12,7 +12,7 @@ namespace LeanKanban
         bool SignUp(string firstName, string lastName, string email);
         string GetInscription(Guid code);
         void ValidateInscription(Guid code, string login, string pwdHash);
-        void RememberPasword(string email);
+        void ResetPassword(string email);
         bool IsEmailAvailable(string email);
     }
 
@@ -103,7 +103,7 @@ namespace LeanKanban
             }
         }
 
-        void IInscriptionService.RememberPasword(string email)
+        void IInscriptionService.ResetPassword(string email)
         {
             IDataManager dm = EntityManager.FromDataBaseService(ServiceName.MyDataService);
 
@@ -120,11 +120,11 @@ namespace LeanKanban
 
                     var mailService = ExecutingContext.GetService<IAspectizeSMTPService>(ServiceName.MyMailService);
 
-                    string subject = "Remember password";
+                    string subject = "Reset your password";
 
                     string applicationLink = string.Format(@"{0}{1}/app.ashx?@AuthClientService.ConfirmUserCommand&code={2}", ExecutingContext.CurrentHostUrl, ExecutingContext.CurrentApplicationName, user.VerificationCode);
                     
-                    string body = string.Format(@"Click on the following link to generate a new password: <a href='{0}' target='_blank'>New password</a>", applicationLink);
+                    string body = string.Format(@"Click on the following link to fill a new password: <a href='{0}' target='_blank'>New password</a>", applicationLink);
 
                     mailService.SendMailSimple(false, email, subject, body);
 

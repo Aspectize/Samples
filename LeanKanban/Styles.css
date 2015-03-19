@@ -212,3 +212,38 @@
 	vertical-align: top;
 }
 
+.aasFileUpload > div.content {
+	background-image:none;
+	line-height: 20px;
+    margin: 0px;
+    padding-left: 0px;
+}
+
+#EditWorkItem-UploaderAttachmentAdd.aasFileUpload > div.content > span
+{
+	color: #428bca;
+	text-decoration: none;
+}
+
+#EditWorkItem-UploaderAttachmentAdd.aasFileUpload:hover > div.content > span
+{
+	color: #fff;
+	text-decoration: none;
+}
+
+.ImageAttachment
+{
+	max-height:100px;
+	overflow: hidden;
+	margin-bottom: 15px;
+	padding-left: 20px;
+}
+
+.ImageAttachment > img
+{
+    max-width: 200px;
+    height: 100px;
+    background-position: center;
+    background-size: cover;
+}
+

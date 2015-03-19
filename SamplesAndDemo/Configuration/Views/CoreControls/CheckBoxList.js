@@ -1,4 +1,17 @@
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 var vCheckBoxList = Aspectize.CreateView("CheckBoxList", aas.Controls.CheckBoxList, aas.Zones.SideBarContent.ZoneContent);
 vCheckBoxList.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement, {element: aas.ViewName.CheckBoxList});
 vCheckBoxList.OnLoad.BindCommand(aas.Services.Server.LoadDataService.LoadSalesOrdersHeader, {salesPersonId: aas.Data.AdventureWorksData.SalesPerson.SalesPersonID}, aas.Data.AdventureWorksData, true, true);

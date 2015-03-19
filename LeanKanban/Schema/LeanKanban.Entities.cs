@@ -343,6 +343,7 @@ namespace LeanKanban
 			public const string Id = "Id";
 			public const string FileName = "FileName";
 			public const string DateUploaded = "DateUploaded";
+			public const string FileLength = "FileLength";
 		}
 
 		void IDataWrapper.InitData(DataRow data, string namePrefix)
@@ -369,6 +370,13 @@ namespace LeanKanban
 		{
 			get { return getValue<DateTime>("DateUploaded"); }
 			set { setValue<DateTime>("DateUploaded", value); }
+		}
+
+		[Data]
+		public int FileLength
+		{
+			get { return getValue<int>("FileLength"); }
+			set { setValue<int>("FileLength", value); }
 		}
 
 	}

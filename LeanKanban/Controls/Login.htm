@@ -16,11 +16,12 @@
                 <label>Password</label>
                 <input name="TxtPwd" type="password" class="form-control" placeholder="Password" />
             </div>
-            <div class="control-group">
+            <div class="form-group">
                 <div class="checkbox">
                     <label>
                         <input name="CheckBoxRememberMe" type="checkbox" />Remember me
                     </label>
+                    <a aas:name="ResetPassword" class="btn btn-link pull-right">Forgot your password ?</a>
                 </div>
             </div>
             <div class="form-group">
@@ -103,6 +104,33 @@
         </div>
     </div>
     
+    <div aas:control="name:'ResetPassword', isModal:true">
+        <div class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Reset your password</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form">
+                            Fill your email address and we send you an email with a link to reset your password.
+                            <br /><br />
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="text" class="form-control input-xlarge" placeholder="Email" name="TxtEmail" />
+                            </div>
+                            <div class="control-group">
+                                <div class="ConfirmUserAlert alert fade in" aria-hidden="true"></div>
+                            </div>
+                            <div class="control-group">
+                                <button class="btn btn-primary" name="BtnSave">Reset password</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 </body>

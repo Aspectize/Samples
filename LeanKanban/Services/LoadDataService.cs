@@ -17,8 +17,10 @@ namespace LeanKanban
     public interface ILoadDataService
     {
         DataSet LoadBoards();
-
         DataSet LoadBoard(Guid boardId);
+        DataSet UploadAttachment(UploadedFile[] uploadedFiles, Guid workItemId);
+        Byte[] DownloadAttachment(Guid workItemId, Guid attachmentId);
+        void DeleteAttachment(Guid workItemId, Guid attachmentId);
     }
 
     [Service(Name = "LoadDataService")]
@@ -51,11 +53,76 @@ namespace LeanKanban
 
             roleRelations.Add(new RoleRelationQuery<Board, BoardState>());
             roleRelations.Add(new RoleRelationQuery<State, WorkItemState>());
+            roleRelations.Add(new RoleRelationQuery<WorkItem, WorkItemAttachment>());
+            roleRelations.Add(new RoleRelationQuery<Attachment, AttachmentUser>());
 
             dm.LoadEntitiesGraph<Board>(roleRelations, boardId);
 
             return dm.Data;
         }
+
+        DataSet ILoadDataService.UploadAttachment(UploadedFile[] uploadedFiles, Guid workItemId)
+        {
+            IDataManager dm = EntityManager.FromDataBaseService("MyDataService");
+
+            IEntityManager em = dm as IEntityManager;
+
+            var fileService = ExecutingContext.GetService<IFileService>("MyFileService");
+
+            var workItem = dm.GetEntity<WorkItem>(workItemId);
+
+            foreach (UploadedFile uploadedFile in uploadedFiles)
+            {
+                var attachment = em.CreateInstance<Attachment>();
+
+                string pathFile = string.Format(@"{0:N}/{1:N}", workItemId, attachment.Id);
+
+                attachment.FileName = uploadedFile.Name;
+                attachment.FileLength = uploadedFile.ContentLength;
+
+                em.AssociateInstance<WorkItemAttachment>(workItem, attachment);
+
+                fileService.Write(pathFile, uploadedFile.Stream);
+            }
+
+            dm.SaveTransactional();
+
+            return dm.Data;
+        }
+
+        byte[] ILoadDataService.DownloadAttachment(Guid workItemId, Guid attachmentId)
+        {
+            IDataManager dm = EntityManager.FromDataBaseService("MyDataService");
+
+            var fileService = ExecutingContext.GetService<IFileService>("MyFileService");
+
+            var attachment = dm.GetEntity<Attachment>(attachmentId);
+
+            string pathFile = string.Format(@"{0:N}/{1:N}", workItemId, attachment.Id);
+
+            ExecutingContext.SetHttpDownloadFileName(attachment.FileName);
+
+            return fileService.ReadBytes(pathFile);
+        }
+
+        void ILoadDataService.DeleteAttachment(Guid workItemId, Guid attachmentId)
+        {
+            IDataManager dm = EntityManager.FromDataBaseService("MyDataService");
+
+            var fileService = ExecutingContext.GetService<IFileService>("MyFileService");
+
+            var attachment = dm.GetEntity<Attachment>(attachmentId);
+
+            string pathFile = string.Format(@"{0:N}/{1:N}", workItemId, attachment.Id);
+
+            fileService.DeleteFile(pathFile);
+
+            attachment.Delete();
+
+            dm.SaveTransactional();
+        }
+
+
     }
 
 }
