@@ -1,6 +1,76 @@
-﻿body
+﻿html {
+    color: #4d4d4d;
+    font-family: "jaf-facitweb","Helvetica Neue",Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.44em;
+}
+
+body
 {
     padding-top: 50px;
+}
+
+.section-wrapper {
+    margin: 0 auto;
+    max-width: 1300px;
+}
+
+.WelcomeTitle {
+    font-size: 35px;;
+    font-weight: 700;
+	margin-top: 1.6em;
+	margin: 0 auto;
+    max-width: 900px;
+}
+
+.WelcomeText {
+	font-size: 20px;
+}
+
+.navbar-inverse {
+    background-color: #026aa7;
+    border-color: #026aa7;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #fff;
+}
+
+.button {
+    background: linear-gradient(to bottom, #e6e6e6 0px, #d9d9d9 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 0 none;
+    border-radius: 3px;
+    box-shadow: 0 2px 0 #8c8c8c;
+    color: #4d4d4d;
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 0.8em;
+    padding: 0.6em 1.3em;
+    position: relative;
+    text-decoration: none;
+}
+
+a.quiet{
+    color: #999;
+}
+
+.button-green {
+    background: linear-gradient(to bottom, #48b512 0px, #3d990f 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 2px 0 #4d4d4d;
+    color: #fff;
+}
+
+.button-green:focus:not([disabled]), 
+.button-green:hover:not([disabled]) {
+    background: linear-gradient(to bottom, #3d990f 0px, #327d0c 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: #fff;
+	text-decoration: none;
+}
+
+.button-green:active:not([disabled]) {
+    background: none repeat scroll 0 0 #327d0c;
+    color: #fff;
 }
 
 .BoardItem
@@ -103,7 +173,7 @@
 #Login, #Register
 {
 	margin:auto;
-	max-width: 500px;
+	max-width: 400px;
 }
 
 .button-link {

@@ -28,6 +28,7 @@ namespace LeanKanban
                     Dictionary<string, object> dicoProfiles = new Dictionary<string, object>();
 
                     List<string> roles = new List<string>();
+
                     roles.Add("Registered");
 
                     return AspectizeUser.GetAuthenticatedUser(user.Id.ToString("N"), null, roles.ToArray(), dicoProfiles);

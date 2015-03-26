@@ -5,36 +5,55 @@
 </head>
 <body>
 
+    <div aas:control="Welcome">
+        <div class="section-wrapper text-center">
+            
+            <img src='http://www.aspectize.com/Applications/AzureHostManagerCommon/Images/LogoWhite.png' style="margin-bottom:50px;margin-top:25px;" />
+            <p class="WelcomeTitle">LeanKanban is an Aspectize demo app, largely inspired by the famous and essential Trello</p>
+            <br />
+            <br />
+            <p class="WelcomeText">You can get the source code of this app on <a href="https://github.com/Aspectize/Samples/tree/master/LeanKanban" target="_blank">GitHub</a></p>
+            <br />
+
+            <p>
+                <a name="SignUp" class="button button-green"> Sign Up &ndash; It’s Free. </a>
+            </p>
+            <p>
+                <a name="Login"> Or log in </a>
+            </p>
+        </div>
+    </div>
+
     <div aas:control="MainControl">
         <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
-          <div class="container">
-            <div class="navbar-header">
-              <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a name="Boards" class="navbar-brand">LeanKanban</a>
+            <div class="container">
+                <div class="navbar-header">
+                    <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a name="Boards" class="navbar-brand">LeanKanban</a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="hidden-xs hidden-sm dropdown {ShowRegister}">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #FFFFFF;">Welcome <span>{UserName}</span><span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a aas:name="LogOut">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="collapse navbar-collapse" id="navbar">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden-xs hidden-sm dropdown {ShowRegister}">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #FFFFFF;">Welcome <span>{UserName}</span><span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a aas:name="LogOut">Logout</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-          </div>
         </nav>
         <div aas:name="Content" aas:type="Panel" class="container"></div>
     </div>
 
     <div aas:control="MyBoards">
         <h1>My Boards</h1>
-        
+
         <div class="row">
             <div class="StateContainer">
                 <div aas:name="RepeaterPanelBoard" aas:type="AspectizeRepeaterPanel"></div>
@@ -48,7 +67,7 @@
 
     <div aas:control="Board">
         <h1>{BoardName}</h1>
-        
+
         <div class="row">
             <div class="StateContainer">
                 <div aas:name="RepeaterPanelState" aas:type="AspectizeRepeaterPanel"></div>

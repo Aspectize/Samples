@@ -95,6 +95,7 @@
     <Content Include="Configuration\Views\MoveCard.js" />
     <Content Include="Configuration\Views\MyBoards.js" />
     <Content Include="Configuration\Views\StateItem.js" />
+    <Content Include="Configuration\Views\Welcome.js" />
     <Content Include="Configuration\Views\WorkItem.js" />
     <Content Include="Controls\Attachment.htm" />
     <Content Include="Controls\EditWorkItem.htm" />
