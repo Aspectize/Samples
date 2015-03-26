@@ -7,7 +7,7 @@ function Main() {
         var currentUser = Aspectize.ExecutingContext.GetCurrentUser();
 
         if (currentUser.IsAuthenticated) {
-            Aspectize.Host.ActivateViewByName('MainControl');
+            Aspectize.Host.ActivateViewByName('MyBoards');
         }
         else {
             Aspectize.Host.ActivateViewByName('Welcome');

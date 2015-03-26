@@ -1,5 +1,5 @@
 ﻿
-var login = Aspectize.CreateView("Login", aas.Controls.Login, aas.Zones.MainControl.Content);
+var login = Aspectize.CreateView("Login", aas.Controls.Login);
 
 login.AddAuthorizationRole(aas.Roles.Anonymous, aas.Enum.AccessControl.ReadWrite);
 

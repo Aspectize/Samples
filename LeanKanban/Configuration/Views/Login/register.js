@@ -1,4 +1,4 @@
-﻿var register = Aspectize.CreateView("Register", aas.Controls.Register, aas.Zones.MainControl.Content);
+﻿var register = Aspectize.CreateView("Register", aas.Controls.Register);
 
 register.AddAuthorizationRole(aas.Roles.Anonymous, aas.Enum.AccessControl.ReadWrite);
 register.OnActivated.BindCommand(aas.Services.Browser.AuthClientService.ResetRegister());
