@@ -5,7 +5,7 @@
 </head>
 <body>
 
-    <div aas:control="Repeater">
+    <div aas-control="Repeater">
         <div class="row">
             <div class="pull-left">
                 <h1 class="page-header">
@@ -42,11 +42,11 @@
         <br />
         <div class="row">
             <h4>The repeater repeats a view for each product:</h4>
-            <div aas:name="RepeaterPanelProduct" aas:type="AspectizeRepeaterPanel"></div>
+            <div aas-name="RepeaterPanelProduct" aas-type="AspectizeRepeaterPanel"></div>
         </div>
     </div>
 
-    <div aas:control="ProductItem">
+    <div aas-control="ProductItem">
         <div class="row ProductItem">
             <div class="col-sm-2">
                 {ProductName}
@@ -55,7 +55,7 @@
                 {ProductNumber}
             </div>
             <div class="col-sm-3">
-                <div aas:name="ImageProduct" aas:type="AspectizeImage"></div>
+                <div aas-name="ImageProduct" aas-type="AspectizeImage"></div>
             </div>
             <div class="col-sm-2">
                 <a name="Delete">Delete</a>
