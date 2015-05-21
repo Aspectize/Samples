@@ -5,7 +5,7 @@
 </head>
 <body>
 
-    <div aas:control="Welcome">
+    <div aas-control="Welcome">
         <div class="section-wrapper text-center">
             
             <img src='http://www.aspectize.com/Applications/AzureHostManagerCommon/Images/LogoWhite.png' style="margin-bottom:50px;margin-top:25px;" />
@@ -24,7 +24,7 @@
         </div>
     </div>
 
-    <div aas:control="MainControl">
+    <div aas-control="MainControl">
         <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -41,22 +41,22 @@
                         <li class="hidden-xs hidden-sm dropdown {ShowRegister}">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #FFFFFF;">Welcome <span>{UserName}</span><span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a aas:name="LogOut">Logout</a></li>
+                                <li><a aas-name="LogOut">Logout</a></li>
                             </ul>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <div aas:name="Content" aas:type="Panel" class="container"></div>
+        <div aas-name="Content" aas-type="Panel" class="container"></div>
     </div>
 
-    <div aas:control="MyBoards">
+    <div aas-control="MyBoards">
         <h1>My Boards</h1>
 
         <div class="row">
             <div class="StateContainer">
-                <div aas:name="RepeaterPanelBoard" aas:type="AspectizeRepeaterPanel"></div>
+                <div aas-name="RepeaterPanelBoard" aas-type="AspectizeRepeaterPanel"></div>
             </div>
             <div>
                 <a name="BtnNewBoard" class="NewBoardItem">Add a board...</a>
@@ -65,12 +65,12 @@
         </div>
     </div>
 
-    <div aas:control="Board">
+    <div aas-control="Board">
         <h1>{BoardName}</h1>
 
         <div class="row">
             <div class="StateContainer">
-                <div aas:name="RepeaterPanelState" aas:type="AspectizeRepeaterPanel"></div>
+                <div aas-name="RepeaterPanelState" aas-type="AspectizeRepeaterPanel"></div>
             </div>
             <div>
                 <a name="BtnNewState" class="NewStateItem">Add a list...</a>
@@ -79,25 +79,25 @@
         </div>
     </div>
 
-    <div aas:control="BoardItem">
+    <div aas-control="BoardItem">
         <a name="BoardItem" class="BoardItem">
             <div>{Title}</div>
         </a>
     </div>
 
 
-    <div aas:control="StateItem">
+    <div aas-control="StateItem">
         <div class="StateItem">
             <div class="StateItemTitle">{Title}</div>
             <div class="">
-                <div aas:name="RepeaterPanelWorkItem" aas:type="AspectizeRepeaterPanel"></div>
+                <div aas-name="RepeaterPanelWorkItem" aas-type="AspectizeRepeaterPanel"></div>
             </div>
             <a name="BtnNewWorkItem">Add a card...</a>
         </div>
     </div>
 
 
-    <div aas:control="WorkItem">
+    <div aas-control="WorkItem">
         <a name="WorkItem" class="WorkItem">
             <div>{Title}</div>
             <div class="{DisplayDueDateBadge}">
@@ -109,7 +109,7 @@
         </a>
     </div>
 
-    <div aas:control="name:'EditState', isModal:true">
+    <div aas-control="name:'EditState', isModal:true">
         <div class="modal fade">
             <div class="modal-dialog">
                 <div class="modal-content">

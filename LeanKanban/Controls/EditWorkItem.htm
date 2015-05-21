@@ -6,7 +6,7 @@
 <body>
 
 
-    <div aas:control="name:'EditWorkItem', isModal:true">
+    <div aas-control="name:'EditWorkItem', isModal:true">
         <div class="modal fade">
             <div class="modal-dialog" style="width: 1200px;">
                 <div class="modal-content">
@@ -34,16 +34,16 @@
                                 <div class="form-group {DisplayAttachment}">
                                     <label>Attachements:</label>
                                     <div>
-                                        <div aas:name="AttachmentRepeaterPanel" aas:type="AspectizeRepeaterPanel"></div>
+                                        <div aas-name="AttachmentRepeaterPanel" aas-type="AspectizeRepeaterPanel"></div>
                                     </div>
-                                    <div aas:name="UploaderAttachment" aas:type="AspectizeFileUpload"></div>
+                                    <div aas-name="UploaderAttachment" aas-type="AspectizeFileUpload"></div>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <h4>Add</h4>
                                 <div class="form-group">
                                     <a name="DueDate" class="button-link" title="Add a due date for the card and get notifications when it is almost due."> <span class="icon-sm icon-clock"></span> Due date </a>
-                                    <div aas:name="UploaderAttachmentAdd" aas:type="AspectizeFileUpload" class="button-link"></div>
+                                    <div aas-name="UploaderAttachmentAdd" aas-type="AspectizeFileUpload" class="button-link"></div>
                                 </div>
                                 <br />
                                 <h4>Action</h4>

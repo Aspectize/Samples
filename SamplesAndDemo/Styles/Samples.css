@@ -1,4 +1,9 @@
-﻿.LinkFiles ul
+﻿a.btn-primary 
+{
+	color: #fff;
+}
+
+.LinkFiles ul
 {
 	display:inline-block;
 	font-size: large;
@@ -130,7 +135,7 @@
 
 #Upload-UploaderImage.aasFileUpload > div.content > span
 {
-	display: inline-block;
+	/*display: inline-block;*/
 }
 
 /* Complex Layout */

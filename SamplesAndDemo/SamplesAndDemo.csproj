@@ -133,10 +133,10 @@
     <Content Include="Configuration\Views\BootstrapExtension\BootstrapGrid.js" />
     <Content Include="Configuration\Views\BootstrapExtension\BootstrapModal.js" />
     <Content Include="Configuration\Views\BootstrapExtension\BootstrapTab.js" />
-    <Content Include="Configuration\Views\GooleExtension\GoogleLineChart.js" />
-    <Content Include="Configuration\Views\GooleExtension\GoogleTable.js" />
+    <Content Include="Configuration\Views\GoogleExtension\GoogleLineChart.js" />
+    <Content Include="Configuration\Views\GoogleExtension\GoogleTable.js" />
     <Content Include="Configuration\Views\JQueryExtension\JQueryAutoComplete.js" />
-    <Content Include="Configuration\Views\JQueryExtension\JQueryDatepicker.js" />
+    <Content Include="Configuration\Views\JQueryExtension\JQueryDatePicker.js" />
     <Content Include="Configuration\Views\Layout\Dialog.js" />
     <Content Include="Configuration\Views\Layout\Flyout.js" />
     <Content Include="Configuration\Views\Layout\Panel.js" />
@@ -169,6 +169,7 @@
     <Content Include="Controls\MainControls.htm" />
     <Content Include="Controls\TinyMCE\TinyMCE.htm" />
     <Content Include="Images\Category.png" />
+    <Content Include="Images\GitHub-Mark-32px.png" />
     <Content Include="Images\Product.png" />
     <Content Include="Images\SubCategory.png" />
     <Content Include="Images\TabNotSelected.png" />

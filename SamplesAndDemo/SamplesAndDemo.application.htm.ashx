@@ -39,10 +39,7 @@
     google.load('visualization', '1.0', {'packages':['annotatedtimeline', 'corechart', 'table', 'geochart', 'orgchart']});
 </script>
 
-<!-- JS Files -->
-<script type='text/javascript' src='~/main.js'></script>
-
-<title>Aspectize SamplesAndDemo Application</title>
+<title>SamplesAndDemo Application</title>
 </head>
 <body></body>
 </html>
