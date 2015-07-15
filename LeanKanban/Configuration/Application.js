@@ -1,7 +1,7 @@
 
 var app = newApplication();
 
-app.Directories = "Bootstrap, JQueryExtension";
+app.Directories = "Bootstrap, JQueryExtension, BootstrapDateTimePicker";
 app.SecurityEnabled = true;
 app.SecurityServicesConfiguration = "LeanKanbanSecurityService";
 

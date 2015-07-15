@@ -13,16 +13,17 @@
     <link rel='stylesheet' type='text/css' href='~JQueryExtension/jQuery/jquery-ui.css' />
     <script src="~JQueryExtension/jQuery/jquery-ui.min.js"></script>
 
-    <script type="text/javascript" src="~JQueryExtension/jQuery-Timepicker-Addon-master/jquery-ui-timepicker-addon.js"></script>
-    <link href="~JQueryExtension/jQuery-Timepicker-Addon-master/jquery-ui-timepicker-addon.css" rel="stylesheet">
-
     <link href="~Bootstrap/bootstrap%203.2.0/css/bootstrap.min.css" rel="stylesheet">
     <script src="~Bootstrap/bootstrap%203.2.0/js/bootstrap.min.js"></script>
+
+    <!-- bootstrap datepicker -->
+    <script src='~BootstrapDateTimePicker/Moment/moment.min.js'></script>
+    <script src='~BootstrapDateTimePicker/DatePicker/js/bootstrap-datetimepicker.min.js'></script>
+    <link rel='stylesheet' type='text/css' href='~BootstrapDateTimePicker/DatePicker/css/bootstrap-datetimepicker.min.css' />
 
     <link rel='stylesheet' type='text/css' href='~Bootstrap/BootstrapOverride.css' />
 
     <link rel="stylesheet" type='text/css' href="~/Styles.css">
-
 
     <title>Aspectize LeanKanban</title>
 </head>

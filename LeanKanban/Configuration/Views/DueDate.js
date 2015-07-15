@@ -3,7 +3,8 @@ var dueDateFlyOut = Aspectize.CreateView("DueDateFlyOut", aas.Controls.Aspectize
 
 var dueDate = Aspectize.CreateView("DueDate", aas.Controls.DueDate, aas.Zones.DueDateFlyOut.AspectizeFlyOutPanel, true);
 dueDate.DueDatePicker.Value.BindData(aas.Data.MainData.Board.BoardState.State.WorkItemState.WorkItem.DueDate);
-dueDate.DueDatePicker.WithTime.BindData(true);
+//dueDate.DueDatePicker.WithTime.BindData(true);
+dueDate.DueDatePicker.Inline.BindData(true);
 dueDate.DueDateDate.BindData(aas.Data.MainData.Board.BoardState.State.WorkItemState.WorkItem.DueDate, "dd/MM");
 dueDate.DueDateHour.BindData(aas.Data.MainData.Board.BoardState.State.WorkItemState.WorkItem.DueDate, "HH:mm");
 

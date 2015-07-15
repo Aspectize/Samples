@@ -17,11 +17,16 @@
 <script src='~Bootstrap/bootstrap 3.1.1/js/bootstrap.min.js'></script>
 
 <!-- bootstrap datepicker -->
-<script src='~Bootstrap/DatePicker/js/moment.min.js'></script>
-<script src='~Bootstrap/DatePicker/js/bootstrap-datetimepicker.min.js'></script>
-<link rel='stylesheet' type='text/css' href='~Bootstrap/DatePicker/css/bootstrap-datetimepicker.min.css' />
+<script src='~BootstrapDateTimePicker/Moment/moment.min.js'></script>
+<script src='~BootstrapDateTimePicker/DatePicker/js/bootstrap-datetimepicker.min.js'></script>
+<link rel='stylesheet' type='text/css' href='~BootstrapDateTimePicker/DatePicker/css/bootstrap-datetimepicker.min.css' />
 
 <link rel='stylesheet' type='text/css' href='~Bootstrap/bootstrap 3.1.1/css/bootstrap-tabs.css' />
+
+<!-- bootstrap datepicker -->
+<script src='~BootstrapDateTimePicker/Moment/moment.min.js'></script>
+<script src='~BootstrapDateTimePicker/DatePicker/js/bootstrap-datetimepicker.min.js'></script>
+<link rel='stylesheet' type='text/css' href='~BootstrapDateTimePicker/DatePicker/css/bootstrap-datetimepicker.min.css' />
 
 
 <link rel='stylesheet' type='text/css' href='~/Styles/dashboard.css' />
@@ -31,7 +36,7 @@
 <link rel='stylesheet' type='text/css' href='~Bootstrap/BootstrapOverride.css' />
 
 
-<script type="text/javascript" src="~TinyMCE/tinyMCEV4/js/tinymce/tinymce.min.js"></script>
+<script type="text/javascript" src="~TinyMCE/tinyMCEV4/js/tinymce_4.1.0/tinymce.min.js"></script>
 
 
 <script type="text/javascript" src="//www.google.com/jsapi"></script>
