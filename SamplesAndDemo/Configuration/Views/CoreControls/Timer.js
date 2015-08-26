@@ -8,6 +8,6 @@ vTimer.Timer.Period.BindData(vTimer.TxtPeriod.value);
 vTimer.Timer.OnTimer.BindCommand(aas.Services.Browser.DataService.AddRowAndSelect, {schemaPath: aas.Path.MainData.TimerTrace});
 vTimer.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement, {element: aas.ViewName.Timer});
 vTimer.GridTrace.BindGrid(aas.Data.MainData.TimerTrace, "DateEvent ASC");
-var cTrace = vTimer.GridTrace.AddGridColumn("Trace", "BootstrapSpan");
+var cTrace = vTimer.GridTrace.AddGridColumn("Trace", "Bootstrap.BootstrapSpan");
 cTrace.Text.BindData(aas.Expression('Timer call commands on ' + vTimer.GridTrace.DataSource.DateEvent));
 

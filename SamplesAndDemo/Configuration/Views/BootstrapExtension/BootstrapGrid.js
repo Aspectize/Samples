@@ -6,17 +6,17 @@ vBootstrapGrid.GridProduct.BindGrid(aas.Data.AdventureWorksData.Category.Categor
 vBootstrapGrid.GridProduct.className.BindData("table-hover table-condensed");
 vBootstrapGrid.GridProductColumns.BindGrid(aas.Data.AdventureWorksData.Category.CategorySubcategory.Subcategory.ProductSubcategory.Product);
 vBootstrapGrid.GridProductColumns.className.BindData("table-hover table-condensed");
-var cName = vBootstrapGrid.GridProductColumns.AddGridColumn("Name", "BootstrapSpan");
+var cName = vBootstrapGrid.GridProductColumns.AddGridColumn("Name", "Bootstrap.BootstrapSpan");
 cName.Text.BindData(vBootstrapGrid.GridProductColumns.DataSource.Name);
-var cProductNumber = vBootstrapGrid.GridProductColumns.AddGridColumn("ProductNumber", "BootstrapSpan");
+var cProductNumber = vBootstrapGrid.GridProductColumns.AddGridColumn("ProductNumber", "Bootstrap.BootstrapSpan");
 cProductNumber.Text.BindData(vBootstrapGrid.GridProductColumns.DataSource.ProductNumber);
-var cSafetyStockLevel = vBootstrapGrid.GridProductColumns.AddGridColumn("SafetyStockLevel", "BootstrapText");
+var cSafetyStockLevel = vBootstrapGrid.GridProductColumns.AddGridColumn("SafetyStockLevel", "Bootstrap.BootstrapText");
 cSafetyStockLevel.Text.BindData(vBootstrapGrid.GridProductColumns.DataSource.SafetyStockLevel);
-var cSize = vBootstrapGrid.GridProductColumns.AddGridColumn("Size", "BootstrapSpan");
+var cSize = vBootstrapGrid.GridProductColumns.AddGridColumn("Size", "Bootstrap.BootstrapSpan");
 cSize.Text.BindData(vBootstrapGrid.GridProductColumns.DataSource.Size);
-var cSizeUnitMeasureCode = vBootstrapGrid.GridProductColumns.AddGridColumn("SizeUnitMeasureCode", "BootstrapSpan");
+var cSizeUnitMeasureCode = vBootstrapGrid.GridProductColumns.AddGridColumn("SizeUnitMeasureCode", "Bootstrap.BootstrapSpan");
 cSizeUnitMeasureCode.Text.BindData(vBootstrapGrid.GridProductColumns.DataSource.SizeUnitMeasureCode);
-var cDynamicImage = vBootstrapGrid.GridProductColumns.AddGridColumn("DynamicImage", "BootstrapImage");
+var cDynamicImage = vBootstrapGrid.GridProductColumns.AddGridColumn("DynamicImage", "Bootstrap.BootstrapImage");
 cDynamicImage.ImageUrl.BindData(aas.Expression('./LoadDataService.LoadImage.jpg.cmd.ashx?productId=' + vBootstrapGrid.GridProductColumns.DataSource.ProductID));
 var cRowClassRed = vBootstrapGrid.GridProductColumns.AddGridColumn("RowClassRed", "RowClass");
 cRowClassRed.className.BindData(aas.Expression(IIF(vBootstrapGrid.GridProductColumns.DataSource.SafetyStockLevel < 100, 'danger', 'success')));
@@ -27,8 +27,8 @@ vBootstrapGrid.GridProductPage.className.BindData("table-hover table-condensed")
 vBootstrapGrid.GridSubCategory.BindGrid(aas.Data.AdventureWorksData.Subcategory, "CategorySubcategory.Category.Name ASC");
 vBootstrapGrid.GridSubCategory.GroupRows.BindData("true");
 vBootstrapGrid.GridSubCategory.className.BindData("table-hover table-condensed");
-var cCategory = vBootstrapGrid.GridSubCategory.AddGridColumn("Category", "BootstrapSpan");
+var cCategory = vBootstrapGrid.GridSubCategory.AddGridColumn("Category", "Bootstrap.BootstrapSpan");
 cCategory.Text.BindData(vBootstrapGrid.GridSubCategory.DataSource.CategorySubcategory.Category.Name);
-var cName = vBootstrapGrid.GridSubCategory.AddGridColumn("Name", "BootstrapSpan");
+var cName = vBootstrapGrid.GridSubCategory.AddGridColumn("Name", "Bootstrap.BootstrapSpan");
 cName.Text.BindData(vBootstrapGrid.GridSubCategory.DataSource.Name);
 

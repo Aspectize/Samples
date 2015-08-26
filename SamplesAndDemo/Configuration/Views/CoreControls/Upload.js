@@ -17,10 +17,10 @@ vUpload.UploaderLink.OnFileSelected.BindCommand(aas.Services.Server.UploaderServ
 vUpload.GridUploadedFiles.BindGrid(aas.Data.UploadData.FileUploaded);
 vUpload.GridUploadedFiles.EmptyGridMessage.BindData("");
 vUpload.GridUploadedFiles.AutoSort.BindData(false);
-var cName = vUpload.GridUploadedFiles.AddGridColumn("Name", "BootstrapSpan");
+var cName = vUpload.GridUploadedFiles.AddGridColumn("Name", "Bootstrap.BootstrapSpan");
 cName.Text.BindData(vUpload.GridUploadedFiles.DataSource.Name);
-var cContentType = vUpload.GridUploadedFiles.AddGridColumn("ContentType", "BootstrapSpan");
+var cContentType = vUpload.GridUploadedFiles.AddGridColumn("ContentType", "Bootstrap.BootstrapSpan");
 cContentType.Text.BindData(vUpload.GridUploadedFiles.DataSource.ContentType);
-var cSize = vUpload.GridUploadedFiles.AddGridColumn("Size", "BootstrapSpan");
+var cSize = vUpload.GridUploadedFiles.AddGridColumn("Size", "Bootstrap.BootstrapSpan");
 cSize.Text.BindData(vUpload.GridUploadedFiles.DataSource.Size, "# ### ###");
 
