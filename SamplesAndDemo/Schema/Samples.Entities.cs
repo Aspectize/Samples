@@ -122,14 +122,18 @@ namespace Samples
 		[Description("GoogleTable")]
 		GoogleTable,
 		[Description("GoogleLineChart")]
-		GoogleLineChart
+		GoogleLineChart,
+		[Description("GoogleMap")]
+		GoogleMap
 	}
 
 	[DataDefinition(MustPersist = false)]
 	public enum EnumJQueryExtension
 	{
 		[Description("JQueryDatePicker")]
-		JQueryDatePicker
+		JQueryDatePicker,
+		[Description("JQueryAutoComplete")]
+		JQueryAutoComplete
 	}
 
 	[DataDefinition(MustPersist = false)]

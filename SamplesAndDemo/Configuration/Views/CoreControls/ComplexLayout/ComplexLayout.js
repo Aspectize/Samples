@@ -3,6 +3,6 @@ var vComplexLayout = Aspectize.CreateView("ComplexLayout", aas.Controls.ComplexL
 vComplexLayout.BtnViewA.click.BindCommand(aas.Services.Browser.UIService.ShowView, {viewName: aas.ViewName.ChildViewA});
 vComplexLayout.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement, {element: aas.ViewName.ComplexLayout});
 vComplexLayout.BtnReset.click.BindCommand(aas.Services.Browser.UIService.UnactivateView, {viewName: aas.ViewName.ParentView});
-vComplexLayout.BtnResetTrace.click.BindCommand(aas.Services.Browser.ClientService.ResetTrace, {entityName: "ComplexLayoutTrace"});
+vComplexLayout.BtnResetTrace.click.BindCommand(aas.Services.Browser.DataService.ClearData(aas.Path.MainData.ComplexLayoutTrace));
 vComplexLayout.BtnParentView.click.BindCommand(aas.Services.Browser.UIService.ShowView, {viewName: aas.ViewName.ParentView});
 

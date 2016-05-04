@@ -1,7 +1,7 @@
 
 var vTimer = Aspectize.CreateView("Timer", aas.Controls.Timer, aas.Zones.SideBarContent.ZoneContent);
 vTimer.ActivateTimer.click.BindCommand(aas.Services.Browser.UIService.ActivateTimer, {controlName: vTimer.Timer});
-vTimer.BtnResetTrace.click.BindCommand(aas.Services.Browser.ClientService.ResetTrace, {entityName: "TimerTrace"});
+vTimer.BtnResetTrace.click.BindCommand(aas.Services.Browser.DataService.ClearData(aas.Path.MainData.TimerTrace));
 vTimer.DeactivateTimer.click.BindCommand(aas.Services.Browser.UIService.DeactivateTimer, {controlName: vTimer.Timer});
 vTimer.Timer.Count.BindData(vTimer.TxtCount.value);
 vTimer.Timer.Period.BindData(vTimer.TxtPeriod.value);

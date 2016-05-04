@@ -12,10 +12,30 @@
         complexLayoutTrace.Trace = trace;
     },
 
-    ResetTrace: function (entityName) {
-        var em = Aspectize.EntityManagerFromContextDataName(this.MainData);
+    SelectProduct: function (aasEventArg) {
+        // aasEventArg contains ProductID;
+        var result = 'Product ' + aasEventArg + ' has been selected';
 
-        em.ClearAllInstances(entityName);
+        Aspectize.Host.ExecuteCommand('UIService.SetControlProperty', 'JQueryAutoComplete', 'Result', result);
+    },
+
+    AddPointFromClick: function (aasEventArg) {
+
+        if (aasEventArg) {
+            //{ Location: event.latLng, FormatAdress: '', country: '', locality: '', postal_code: '', route: '', street_number: '' };
+            var em = Aspectize.EntityManagerFromContextDataName('MapData');
+
+            var place = em.CreateInstance('Place');
+
+            place.SetField('Longitude', aasEventArg.Longitude);
+            place.SetField('Latitude', aasEventArg.Latitude);
+            place.SetField('Adress_FullAdress', aasEventArg.FormatAdress);
+            place.SetField('Adress_Country', aasEventArg.country);
+            place.SetField('Adress_City', aasEventArg.locality);
+            place.SetField('Adress_Zip', aasEventArg.postal_code);
+            place.SetField('Adress_Route', aasEventArg.route);
+            place.SetField('Adress_StreetNumber', aasEventArg.street_number);
+        }
     }
 };
 

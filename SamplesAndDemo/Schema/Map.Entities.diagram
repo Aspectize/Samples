@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<minimalLanguageDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Map">
+  <diagramMoniker Id="a1278b7e-1c11-465a-b9b6-84f7a5bda878" />
+  <nestedChildShapes>
+    <entityShape Id="e252b34e-7d23-4fc7-93fd-ee90b889783f" absoluteBounds="0.5, 1.25, 1.75, 1.0069042968750002">
+      <entityMoniker Id="0179cfff-0aea-4699-a7c4-c5ab427f51e8" />
+      <nestedChildShapes>
+        <elementListCompartment Id="90093677-60d3-4cd0-90da-2da3bf327ec2" absoluteBounds="0.515, 1.58, 1.7200000000000002, 0.576904296875" name="Properties" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </entityShape>
+    <compositeTypeShape Id="c13cf20b-fcce-4001-abde-f1e47ebc927b" absoluteBounds="4.125, 1.125, 2, 1.5838085937500002">
+      <compositeTypeMoniker Id="de70e301-aa9a-46d5-b7b8-33c375c2a242" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a269595e-ed5b-4577-8c77-a9fb48e3a59e" absoluteBounds="4.14, 1.455, 1.9700000000000002, 1.15380859375" name="Properties" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </compositeTypeShape>
+  </nestedChildShapes>
+</minimalLanguageDiagram>

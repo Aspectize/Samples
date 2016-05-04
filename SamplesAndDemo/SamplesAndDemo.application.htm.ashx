@@ -28,6 +28,10 @@
 <script src='~BootstrapDateTimePicker/DatePicker/js/bootstrap-datetimepicker.min.js'></script>
 <link rel='stylesheet' type='text/css' href='~BootstrapDateTimePicker/DatePicker/css/bootstrap-datetimepicker.min.css' />
 
+<!-- RateIt -->
+<script src='~JQueryRateIt/JQueryRateIt/jquery.rateit.min.js'></script>
+<link rel='stylesheet' type='text/css' href='~JQueryRateIt/JQueryRateIt/rateit.css' />
+
 
 <link rel='stylesheet' type='text/css' href='~/Styles/dashboard.css' />
 <link rel='stylesheet' type='text/css' href='~/Styles/Samples.css' />
@@ -35,16 +39,15 @@
 
 <link rel='stylesheet' type='text/css' href='~Bootstrap/BootstrapOverride.css' />
 
-
 <script type="text/javascript" src="~TinyMCE/tinyMCEV4/js/tinymce_4.1.0/tinymce.min.js"></script>
 
-
-<script type="text/javascript" src="//www.google.com/jsapi"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script type="text/javascript">
+    google.load('maps','3',{'other_params':'libraries=places'});
     google.load('visualization', '1.0', {'packages':['annotatedtimeline', 'corechart', 'table', 'geochart', 'orgchart']});
 </script>
 
-<title>SamplesAndDemo Application</title>
+<title>Aspectize SamplesAndDemo</title>
 </head>
 <body></body>
 </html>

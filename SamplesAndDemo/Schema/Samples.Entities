@@ -69,11 +69,13 @@
       <enumItems>
         <enumItem name="GoogleTable" value="0" />
         <enumItem name="GoogleLineChart" value="0" />
+        <enumItem name="GoogleMap" value="0" />
       </enumItems>
     </enumEntity>
     <enumEntity Id="da994fba-ff4c-43b8-933d-dcfbddeb5028" name="EnumJQueryExtension">
       <enumItems>
         <enumItem name="JQueryDatePicker" value="0" />
+        <enumItem name="JQueryAutoComplete" value="0" />
       </enumItems>
     </enumEntity>
     <enumEntity Id="ec0336ca-f636-421c-b92f-04d1b4022871" name="EnumMiscExtension">

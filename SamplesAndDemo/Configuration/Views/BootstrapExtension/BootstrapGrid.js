@@ -4,6 +4,7 @@ vBootstrapGrid.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientServi
 vBootstrapGrid.SelectPageSize.BindList(aas.Data.MainData.EnumPageSize, "EnumerationValue", "EnumerationValue");
 vBootstrapGrid.GridProduct.BindGrid(aas.Data.AdventureWorksData.Category.CategorySubcategory.Subcategory.ProductSubcategory.Product);
 vBootstrapGrid.GridProduct.className.BindData("table-hover table-condensed");
+
 vBootstrapGrid.GridProductColumns.BindGrid(aas.Data.AdventureWorksData.Category.CategorySubcategory.Subcategory.ProductSubcategory.Product);
 vBootstrapGrid.GridProductColumns.className.BindData("table-hover table-condensed");
 var cName = vBootstrapGrid.GridProductColumns.AddGridColumn("Name", "Bootstrap.BootstrapSpan");
@@ -24,6 +25,7 @@ vBootstrapGrid.GridProductPage.BindGrid(aas.Data.AdventureWorksData.Category.Cat
 vBootstrapGrid.GridProductPage.PageSize.BindData(vBootstrapGrid.SelectPageSize.CurrentValue);
 vBootstrapGrid.GridProductPage.AutoSort.BindData(vBootstrapGrid.CheckBoxAutoSort.checked);
 vBootstrapGrid.GridProductPage.className.BindData("table-hover table-condensed");
+
 vBootstrapGrid.GridSubCategory.BindGrid(aas.Data.AdventureWorksData.Subcategory, "CategorySubcategory.Category.Name ASC");
 vBootstrapGrid.GridSubCategory.GroupRows.BindData("true");
 vBootstrapGrid.GridSubCategory.className.BindData("table-hover table-condensed");

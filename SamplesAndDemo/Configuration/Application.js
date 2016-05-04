@@ -1,6 +1,6 @@
 ﻿var app = newApplication();
 
-app.Directories = "Bootstrap, GoogleExtension, JQueryExtension, TinyMCE, BootstrapDateTimePicker";
+app.Directories = "Bootstrap, GoogleExtension, JQueryExtension, TinyMCE, BootstrapDateTimePicker, JQueryRateIt";
 
 var ctxData0 = newContextData();
 
@@ -21,6 +21,11 @@ var ctxData3 = newContextData();
 
 ctxData3.Name = "Content";
 ctxData3.IsDataSet = false;
+
+var ctxData4 = newContextData();
+
+ctxData4.Name = "MapData";
+ctxData4.NameSpaceList = "Map";
 
 
 

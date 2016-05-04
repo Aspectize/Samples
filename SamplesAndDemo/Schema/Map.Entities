@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<diagram xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="a1278b7e-1c11-465a-b9b6-84f7a5bda878" domain="Map" xmlns="http://schemas.microsoft.com/dsltools/EntityDesigner">
+  <entities>
+    <entity Id="0179cfff-0aea-4699-a7c4-c5ab427f51e8" name="Place" guid="3c1cd3c5-8e62-4fad-bd4d-918efe0cda9b" mustPersist="false" hasCustomValidators="false" hasTriggers="false">
+      <properties>
+        <entityProperty name="Adress" type="Adress" isCustomType="true" identity="false" isEnumType="false" isCompoType="true" isExternType="false" isEnumInBaseType="false" />
+        <entityProperty name="Latitude" type="Double" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+        <entityProperty name="Longitude" type="Double" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+      </properties>
+    </entity>
+  </entities>
+  <compositeTypes>
+    <compositeType Id="de70e301-aa9a-46d5-b7b8-33c375c2a242" name="Adress" guid="00000000-0000-0000-0000-000000000000">
+      <properties>
+        <compositeTypeProperty name="FullAdress" defaultValue="&quot;&quot;" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+        <compositeTypeProperty name="StreetNumber" defaultValue="&quot;&quot;" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+        <compositeTypeProperty name="Route" defaultValue="&quot;&quot;" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+        <compositeTypeProperty name="City" defaultValue="&quot;&quot;" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+        <compositeTypeProperty name="Zip" defaultValue="&quot;&quot;" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+        <compositeTypeProperty name="Country" defaultValue="&quot;&quot;" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+      </properties>
+    </compositeType>
+  </compositeTypes>
+</diagram>

@@ -35,11 +35,14 @@ namespace Samples
         DataSet LoadDataDemo();
 
         void BuildDataDemo();
+
+        Dictionary<string, object>[] SearchProduct(string term);
     }
 
     [Service(Name = "LoadDataService")]
     public class LoadDataService : ILoadDataService //, IInitializable, ISingleton
     {
+        static DataSet dsDemo = null;
 
         DataSet ILoadDataService.LoadCategories()
         {
@@ -125,15 +128,52 @@ namespace Samples
 
         DataSet ILoadDataService.LoadDataDemo()
         {
-            IFileService fs = ExecutingContext.GetService<IFileService>(ServiceName.ADWFileService);
+            if (dsDemo == null)
+            {
+                IFileService fs = ExecutingContext.GetService<IFileService>(ServiceName.ADWFileService);
 
-            var dataDemo = fs.Read("DataDemo");
+                var dataDemo = fs.Read("DataDemo");
 
-            var ds = DataSetHelper.BinaryLoad(dataDemo);
+                dsDemo = DataSetHelper.BinaryLoad(dataDemo);
+            }
 
-            return ds;
+            return dsDemo;
         }
-        
+
+        Dictionary<string, object>[] ILoadDataService.SearchProduct(string term)
+        {
+            List<Dictionary<string, object>> results = new List<Dictionary<string, object>>();
+
+            if (!String.IsNullOrEmpty(term))
+            {
+                // Define your own criteria to match the search term
+                var countResult = 0;
+
+                IEntityManager em = EntityManager.FromDataSet(dsDemo);
+
+                foreach(Product p in em.GetAllInstances<Product>())
+                {
+                    if (p.Name.ToLower().Contains(term.ToLower()))
+                    {
+                        countResult++;
+
+                        Dictionary<string, object> dico = new Dictionary<string, object>();
+
+                        dico.Add("label", p.Name);
+
+                        dico.Add("value", p.ProductID);
+
+                        results.Add(dico);
+                    }
+
+                    if (countResult > 9) break;
+                }
+            }
+
+            return results.ToArray();
+        }
+
+
         void ILoadDataService.BuildDataDemo()
         {
             //string adwCnxString = @"Data Source=NICOW8\SQLEXPRESS;Initial Catalog=AdventureWorks;Integrated Security=True";
