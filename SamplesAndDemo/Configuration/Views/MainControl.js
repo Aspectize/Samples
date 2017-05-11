@@ -24,6 +24,10 @@ var vHomeMenuLiItemJQueryControl = Aspectize.CreateRepeatedView("HomeMenuLiItemJ
 vHomeMenuLiItemJQueryControl.Link.click.BindCommand(aas.Services.Browser.BootStrapClientService.ShowView, { viewName: vHomeMenuLiItemJQueryControl.ParentData.EnumerationElement });
 vHomeMenuLiItemJQueryControl.LinkName.BindData(vHomeMenuLiItemJQueryControl.ParentData.EnumerationElement);
 
+var vHomeMenuLiItemDhtmlxControl = Aspectize.CreateRepeatedView("HomeMenuLiItemDhtmlxControl", aas.Controls.LiItem, aas.Zones.SampleHome.RepeaterPanelMenuDhtmlxExtension, aas.Data.MainData.EnumDhtmlxExtension);
+vHomeMenuLiItemDhtmlxControl.Link.click.BindCommand(aas.Services.Browser.BootStrapClientService.ShowView, { viewName: vHomeMenuLiItemDhtmlxControl.ParentData.EnumerationElement });
+vHomeMenuLiItemDhtmlxControl.LinkName.BindData(vHomeMenuLiItemJQueryControl.ParentData.EnumerationElement);
+
 var vHomeMenuLiItemMiscControl = Aspectize.CreateRepeatedView("HomeMenuLiItemMiscControl", aas.Controls.LiItem, aas.Zones.SampleHome.RepeaterPanelMenuMiscExtension, aas.Data.MainData.EnumMiscExtension);
 vHomeMenuLiItemMiscControl.Link.click.BindCommand(aas.Services.Browser.BootStrapClientService.ShowView, { viewName: vHomeMenuLiItemMiscControl.ParentData.EnumerationElement });
 vHomeMenuLiItemMiscControl.LinkName.BindData(vHomeMenuLiItemMiscControl.ParentData.EnumerationElement);

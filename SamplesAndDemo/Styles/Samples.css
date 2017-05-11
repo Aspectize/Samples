@@ -125,12 +125,17 @@
 	text-decoration: none;
 }
 
-#Upload-UploaderImage.aasFileUpload > div.content
+#Upload-UploaderImage.aasFileUpload
 {
-	background: url("http://www.agile-azure.com/Applications/AzureHostManagerCommon/Images/LogoWhite.png") no-repeat;
+	background: url("http://www.aspectize.com/Applications/AzureHostManagerCommon/Images/LogoWhite.png") no-repeat;
 	margin:0;
 	padding:0;
 	height:151px;
+    width: 264px;
+}
+
+#Upload-UploaderImage.aasFileUpload:hover {
+    background-color: #eee;
 }
 
 #Upload-UploaderImage.aasFileUpload > div.content > span
@@ -157,7 +162,7 @@
 
 /* Google Map */
 
-.GoogleMap {
+#GoogleMap-Map.GoogleMap {
 	bottom: 0;
 	position: relative;
 	top: 0;
@@ -173,3 +178,23 @@
 	height: 100%;
 	width: 100%;
 }
+
+fieldset.aasRadioButtons.VerticalRadio > label {
+	display: block;
+	padding: 8px;
+	margin-bottom: 0px;
+	margin-right: 0px;
+}
+
+fieldset.aasRadioButtons.VerticalRadio input[type="radio"] {
+	margin: 0 4px;
+}
+
+fieldset.aasRadioButtons > label {
+	margin-right: 10px;
+	font-weight: 400;
+}
+
+	fieldset.aasRadioButtons > label input[type="radio"] {
+		margin-right: 3px;
+	}

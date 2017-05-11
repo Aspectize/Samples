@@ -13,7 +13,9 @@ vGoogleMap.Map.BindGrid(aas.Data.MapData.Place);
 var map = vGoogleMap.Map.AddGridColumn("Place", "GoogleExtension.GoogleMarkerPart");
 map.Latitude.BindData(vGoogleMap.Map.DataSource.Latitude);
 map.Longitude.BindData(vGoogleMap.Map.DataSource.Longitude);
-//map.Draggable.BindData(true);
+map.Draggable.BindData(vGoogleMap.CheckMapDraggable.checked);
+map.OnDragEnd.BindCommand(aas.Services.Browser.ClientService.MovePointEnd(''));
+
 vGoogleMap.Map.AddMarkerOnClick.BindData(true);
 
 vGoogleMap.Map.OnMapClick.BindCommand(aas.Services.Browser.ClientService.AddPointFromClick(''));

@@ -21,19 +21,43 @@
                 </ul>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-2">
-                Stepping:
-            </div>
-            <div class="col-md-2">
-                <input name="TxtStepping" type="number" class="form-control" />
-            </div>
-        </div>
+
+        <h2>Basic Usage</h2>
 
         <br />
         <div class="row">
-            <div class="col-sm-3 form-group">
-                <div aas-name='BootstrapDatePickerSample' aas-type='BootstrapDateTimePicker.BootstrapDateTimePicker' class='input-group date'>
+            <div class="col-sm-2 form-group">
+                <div aas-name='BootstrapDatePickerBasic' aas-type='BootstrapDateTimePicker.BootstrapDateTimePicker' class='input-group date'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="fa fa-calendar"></span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="col-sm-3 form-control-static">
+                Date selected: <span>{DateSelected}</span>
+            </div>
+        </div>
+        <br />
+        <h2>Options</h2>
+        <div class="row">
+            <label class="col-xs-2 form-control-static">Stepping :</label>
+            <div class="col-md-1">
+                <input name="TxtStepping" type="number" class="form-control" value="5"/>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <label class="col-xs-2 form-control-static">ViewMode :</label>
+            <div class="col-md-2">
+                <select name="SelectViewMode" class="form-control"></select>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-sm-2 form-group">
+                <div aas-name='BootstrapDatePickerOptions' aas-type='BootstrapDateTimePicker.BootstrapDateTimePicker' class='input-group date'>
                     <input type='text' class="form-control" />
                     <span class="input-group-addon">
                         <span class="fa fa-calendar"></span>
@@ -41,9 +65,27 @@
                 </div>
             </div>
         </div>
-
+        <br />
+        <h2>Min / Max Date</h2>
         <div class="row">
-            Date selected: <span>{DateSelected}</span>
+            <label class="col-xs-1 form-control-static">Min :</label>
+            <div class="col-sm-2 form-group">
+                <div aas-name='BootstrapDatePickerMin' aas-type='BootstrapDateTimePicker.BootstrapDateTimePicker' class='input-group date'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="fa fa-calendar"></span>
+                    </span>
+                </div>
+            </div>
+            <label class="col-xs-1 form-control-static">Max :</label>
+            <div class="col-sm-2 form-group">
+                <div aas-name='BootstrapDatePickerMax' aas-type='BootstrapDateTimePicker.BootstrapDateTimePicker' class='input-group date'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="fa fa-calendar"></span>
+                    </span>
+                </div>
+            </div>
         </div>
     </div>
 

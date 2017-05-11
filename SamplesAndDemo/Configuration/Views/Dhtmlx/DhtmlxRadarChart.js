@@ -1,0 +1,47 @@
+﻿var vDhtmlxRadarChart = Aspectize.CreateView('DhtmlxRadarChart', aas.Controls.DhtmlxRadarChart, aas.Zones.SideBarContent.ZoneContent);
+vDhtmlxRadarChart.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement, { element: aas.ViewName.DhtmlxRadarChart });
+
+vDhtmlxRadarChart.DhtmlxRadarChartSales.BindGrid(aas.Data.AdventureWorksData.SalesPerson.QuotaHistory, "QuotaDate ASC");
+vDhtmlxRadarChart.DhtmlxRadarChartSales.Type.BindData('radar');
+vDhtmlxRadarChart.DhtmlxRadarChartSales.hLines.BindData(true);
+vDhtmlxRadarChart.DhtmlxRadarChartSales.vLines.BindData(true);
+vDhtmlxRadarChart.DhtmlxRadarChartSales.ShowPoints.BindData(true);
+vDhtmlxRadarChart.DhtmlxRadarChartSales.Legendlayout.BindData("x");
+vDhtmlxRadarChart.DhtmlxRadarChartSales.LegendAlign.BindData(true);
+//vDhtmlxRadarChart.DhtmlxRadarChartSales.xEnd.BindData(3000);
+//vDhtmlxRadarChart.DhtmlxRadarChartSales.xStart.BindData(0);
+//vDhtmlxRadarChart.DhtmlxRadarChartSales.xStep.BindData(1000);
+
+var cQuotaDate = vDhtmlxRadarChart.DhtmlxRadarChartSales.AddGridColumn("QuotaDate", "Dhtmlx.DhtmlxAxis");
+cQuotaDate.Value.BindData(vDhtmlxRadarChart.DhtmlxRadarChartSales.DataSource.QuotaDate);
+cQuotaDate.Label.BindData(vDhtmlxRadarChart.DhtmlxRadarChartSales.DataSource.QuotaDate, 'MM/yy');
+cQuotaDate.ItemColor.BindData('#cfcfcf');
+cQuotaDate.LineWidth.BindData(2);
+cQuotaDate.LineColor.BindData('#cfcfcf');
+
+//cQuotaDate.Title.BindData("Date");
+//cQuotaDate.ItemColor.BindData("#FFFFFF");
+//cQuotaDate.LineColor.BindData("#599EC8");
+//cQuotaDate.LineWidth.BindData(2);
+cQuotaDate.ItemRadius.BindData(3);
+cQuotaDate.ItemBorderColor.BindData("#599EC8");
+cQuotaDate.ItemBorderWidth.BindData(1);
+var cSalesQuota = vDhtmlxRadarChart.DhtmlxRadarChartSales.AddGridColumn("SalesQuota", "Dhtmlx.DhtmlxAxis");
+cSalesQuota.Value.BindData(vDhtmlxRadarChart.DhtmlxRadarChartSales.DataSource.SalesQuota);
+//cSalesQuota.Label.BindData(vDhtmlxRadarChart.DhtmlxRadarChartSales.DataSource.SalesQuota, 'G0');
+cSalesQuota.ItemColor.BindData("#FFFFFF");
+cSalesQuota.LineColor.BindData("#599EC8");
+cSalesQuota.LineWidth.BindData(2);
+cSalesQuota.ItemRadius.BindData(3);
+cSalesQuota.ItemBorderColor.BindData("#599EC8");
+cSalesQuota.ItemBorderWidth.BindData(1);
+
+
+
+
+vDhtmlxRadarChart.GridSalesPerson.BindGrid(aas.Data.AdventureWorksData.SalesPerson);
+var cFirstName = vDhtmlxRadarChart.GridSalesPerson.AddGridColumn("FirstName", "Span");
+cFirstName.Text.BindData(vDhtmlxRadarChart.GridSalesPerson.DataSource.ContactSalesPerson.Contact.FirstName);
+var cLastName = vDhtmlxRadarChart.GridSalesPerson.AddGridColumn("LastName", "Span");
+cLastName.Text.BindData(vDhtmlxRadarChart.GridSalesPerson.DataSource.ContactSalesPerson.Contact.LastName);
+

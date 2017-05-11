@@ -14,8 +14,10 @@
 
     SelectProduct: function (aasEventArg) {
         // aasEventArg contains ProductID;
-        var result = 'Product ' + aasEventArg + ' has been selected';
-
+        var result = '';
+        if (aasEventArg) {
+            result = 'Product Id ' + aasEventArg + ' has been selected';
+        }
         Aspectize.Host.ExecuteCommand('UIService.SetControlProperty', 'JQueryAutoComplete', 'Result', result);
     },
 
@@ -35,6 +37,24 @@
             place.SetField('Adress_Zip', aasEventArg.postal_code);
             place.SetField('Adress_Route', aasEventArg.route);
             place.SetField('Adress_StreetNumber', aasEventArg.street_number);
+        }
+    },
+
+    MovePointEnd: function (aasEventArg, placeId) {
+        if (aasEventArg) {
+            var em = Aspectize.EntityManagerFromContextDataName('MapData');
+
+            var place = em.GetInstance('Place', { Id: aasEventArg.item.id});
+
+            aas.Services.Browser.GoogleMapService.GeoCode()
+            //place.SetField('Longitude', aasEventArg.Longitude);
+            //place.SetField('Latitude', aasEventArg.Latitude);
+            //place.SetField('Adress_FullAdress', aasEventArg.FormatAdress);
+            //place.SetField('Adress_Country', aasEventArg.country);
+            //place.SetField('Adress_City', aasEventArg.locality);
+            //place.SetField('Adress_Zip', aasEventArg.postal_code);
+            //place.SetField('Adress_Route', aasEventArg.route);
+            //place.SetField('Adress_StreetNumber', aasEventArg.street_number);
         }
     }
 };

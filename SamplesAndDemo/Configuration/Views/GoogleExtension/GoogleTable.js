@@ -1,7 +1,6 @@
 
 var vGoogleTable = Aspectize.CreateView("GoogleTable", aas.Controls.GoogleTableControl, aas.Zones.SideBarContent.ZoneContent);
 vGoogleTable.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement, {element: aas.ViewName.GoogleTable});
-vGoogleTable.TextProductName.value.BindData(aas.Data.AdventureWorksData.Product.Name);
 vGoogleTable.GoogleTableProduct.BindGrid(aas.Data.AdventureWorksData.Product);
 vGoogleTable.GoogleTableProduct.PageSize.BindData("10");
 vGoogleTable.GoogleTableProduct.ShowRowNumber.BindData("true");

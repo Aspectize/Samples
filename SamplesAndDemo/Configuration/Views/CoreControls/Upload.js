@@ -10,7 +10,8 @@ vUpload.Uploader.OnFileSelected.BindCommand(aas.Services.Server.UploaderService.
 vUpload.UploaderButton.Text.BindData("Click on me to upload");
 vUpload.UploaderButton.className.BindData("btn btn-default");
 vUpload.UploaderButton.OnFileSelected.BindCommand(aas.Services.Server.UploaderService.UploadFiles, {uploadedFiles: vUpload.UploaderButton.SelectedFile}, aas.Data.UploadData, false, true);
-vUpload.UploaderImage.OnFileSelected.BindCommand(aas.Services.Server.UploaderService.UploadFiles, {uploadedFiles: vUpload.UploaderImage.SelectedFile}, aas.Data.UploadData, false, true);
+vUpload.UploaderImage.OnFileSelected.BindCommand(aas.Services.Server.UploaderService.UploadFiles, { uploadedFiles: vUpload.UploaderImage.SelectedFile }, aas.Data.UploadData, false, true);
+vUpload.UploaderImage.Text.BindData('');
 vUpload.UploaderLink.Text.BindData("Click on me to upload");
 vUpload.UploaderLink.OnFileSelected.BindCommand(aas.Services.Server.UploaderService.UploadFiles, {uploadedFiles: vUpload.UploaderLink.SelectedFile}, aas.Data.UploadData, false, true);
 

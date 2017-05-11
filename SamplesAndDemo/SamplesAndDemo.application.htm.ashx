@@ -11,17 +11,13 @@
 <link rel='stylesheet' type='text/css' href='~Bootstrap/jQuery/jquery-ui.css' />
 <script src="~Bootstrap/jQuery/jquery-ui.min.js"></script>
 
-<link rel='stylesheet' href='~Bootstrap/bootstrap 3.1.1/css/bootstrap.min.css' type='text/css'>
-<link rel='stylesheet' href='http://netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css' type='text/css'>
-
-<script src='~Bootstrap/bootstrap 3.1.1/js/bootstrap.min.js'></script>
-
-<!-- bootstrap datepicker -->
-<script src='~BootstrapDateTimePicker/Moment/moment.min.js'></script>
-<script src='~BootstrapDateTimePicker/DatePicker/js/bootstrap-datetimepicker.min.js'></script>
-<link rel='stylesheet' type='text/css' href='~BootstrapDateTimePicker/DatePicker/css/bootstrap-datetimepicker.min.css' />
+<script src='~/bootstrap-3.3.6-dist/js/bootstrap.min.js'></script>
+<link rel='stylesheet' type='text/css' href='~/bootstrap-3.3.6-dist/css/bootstrap.min.css' />
 
 <link rel='stylesheet' type='text/css' href='~Bootstrap/bootstrap 3.1.1/css/bootstrap-tabs.css' />
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 
 <!-- bootstrap datepicker -->
 <script src='~BootstrapDateTimePicker/Moment/moment.min.js'></script>
@@ -31,6 +27,13 @@
 <!-- RateIt -->
 <script src='~JQueryRateIt/JQueryRateIt/jquery.rateit.min.js'></script>
 <link rel='stylesheet' type='text/css' href='~JQueryRateIt/JQueryRateIt/rateit.css' />
+
+<!-- JQuery Mask -->
+<script type="text/javascript" src="~JQueryExtension/jQuery-Mask-Plugin-master/jquery.mask.min.js"></script>
+
+<!-- DHTMLX -->
+<script  type="text/javascript" src="~Dhtmlx/codebase/dhtmlxchart.js"></script>
+<link rel="STYLESHEET" type="text/css" href="~Dhtmlx/codebase/dhtmlxchart.css">
 
 
 <link rel='stylesheet' type='text/css' href='~/Styles/dashboard.css' />

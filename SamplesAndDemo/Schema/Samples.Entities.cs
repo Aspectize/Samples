@@ -133,7 +133,9 @@ namespace Samples
 		[Description("JQueryDatePicker")]
 		JQueryDatePicker,
 		[Description("JQueryAutoComplete")]
-		JQueryAutoComplete
+		JQueryAutoComplete,
+		[Description("JQueryMask")]
+		JQueryMask
 	}
 
 	[DataDefinition(MustPersist = false)]
@@ -141,6 +143,30 @@ namespace Samples
 	{
 		[Description("TinyMCE")]
 		TinyMCE
+	}
+
+	[DataDefinition(MustPersist = false)]
+	public enum EnumDatePickerViewMode
+	{
+		[Description("days")]
+		days,
+		[Description("months")]
+		months,
+		[Description("years")]
+		years,
+		[Description("decades")]
+		decades
+	}
+
+	[DataDefinition(MustPersist = false)]
+	public enum EnumDhtmlxExtension
+	{
+		[Description("DhtmlxLineChart")]
+		DhtmlxLineChart,
+		[Description("DhtmlxPieChart")]
+		DhtmlxPieChart,
+		[Description("DhtmlxRadarChart")]
+		DhtmlxRadarChart
 	}
 
 	[DataDefinition(MustPersist = false)]

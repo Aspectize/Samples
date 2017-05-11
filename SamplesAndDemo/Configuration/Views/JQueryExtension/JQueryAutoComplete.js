@@ -3,3 +3,5 @@ vJQueryAutoComplete.OnActivated.BindCommand(aas.Services.Browser.BootStrapClient
 vJQueryAutoComplete.Result.BindData('');
 vJQueryAutoComplete.TxtSearch.Url.BindData('LoadDataService.SearchProduct.jsonx.cmd.ashx');
 vJQueryAutoComplete.TxtSearch.OnSelectItem.BindCommand(aas.Services.Browser.ClientService.SelectProduct(''));
+vJQueryAutoComplete.TxtSearch.FillSelected.BindData(vJQueryAutoComplete.CheckFillSelected.checked);
+vJQueryAutoComplete.TxtSearch.Custom.BindData(vJQueryAutoComplete.CheckCustom.checked);

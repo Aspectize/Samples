@@ -23,6 +23,7 @@
     <IISExpressUseClassicPipelineMode />
     <UpgradeBackupLocation />
     <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -115,6 +116,16 @@
     <Compile Include="Services\Utilities.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bootstrap-3.3.6-dist\css\bootstrap-theme.css" />
+    <Content Include="bootstrap-3.3.6-dist\css\bootstrap-theme.min.css" />
+    <Content Include="bootstrap-3.3.6-dist\css\bootstrap.css" />
+    <Content Include="bootstrap-3.3.6-dist\css\bootstrap.min.css" />
+    <Content Include="bootstrap-3.3.6-dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bootstrap-3.3.6-dist\js\bootstrap.js" />
+    <Content Include="bootstrap-3.3.6-dist\js\bootstrap.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bootstrap-3.3.6-dist\js\npm.js" />
     <Content Include="Configuration\Application.js" />
     <Content Include="Configuration\Services\ConfiguredServices.js" />
     <Content Include="Configuration\Views\CoreControls\CheckBoxList.js" />
@@ -138,11 +149,15 @@
     <Content Include="Configuration\Views\BootstrapExtension\BootstrapGrid.js" />
     <Content Include="Configuration\Views\BootstrapExtension\BootstrapModal.js" />
     <Content Include="Configuration\Views\BootstrapExtension\BootstrapTab.js" />
+    <Content Include="Configuration\Views\Dhtmlx\DhtmlxLineChart.js" />
+    <Content Include="Configuration\Views\Dhtmlx\DhtmlxPieChart.js" />
+    <Content Include="Configuration\Views\Dhtmlx\DhtmlxRadarChart.js" />
     <Content Include="Configuration\Views\GoogleExtension\GoogleLineChart.js" />
     <Content Include="Configuration\Views\GoogleExtension\GoogleMap.js" />
     <Content Include="Configuration\Views\GoogleExtension\GoogleTable.js" />
     <Content Include="Configuration\Views\JQueryExtension\JQueryAutoComplete.js" />
     <Content Include="Configuration\Views\JQueryExtension\JQueryDatePicker.js" />
+    <Content Include="Configuration\Views\JQueryExtension\JQueryMask.js" />
     <Content Include="Configuration\Views\Layout\Dialog.js" />
     <Content Include="Configuration\Views\Layout\Flyout.js" />
     <Content Include="Configuration\Views\Layout\Panel.js" />
@@ -163,11 +178,15 @@
     <Content Include="Controls\Core\Timer.htm" />
     <Content Include="Controls\Core\TreeView.htm" />
     <Content Include="Controls\Core\Upload.htm" />
+    <Content Include="Controls\Dhtmlx\DhtmlxLineChart.htm" />
+    <Content Include="Controls\Dhtmlx\DhtmlxPieChart.htm" />
+    <Content Include="Controls\Dhtmlx\DhtmlxRadarChart.htm" />
     <Content Include="Controls\GoogleExtension\GoogleLineChart.htm" />
     <Content Include="Controls\GoogleExtension\GoogleMap.htm" />
     <Content Include="Controls\GoogleExtension\GoogleTableVisualisation.htm" />
     <Content Include="Controls\JQueryExtension\JQueryAutoComplete.htm" />
     <Content Include="Controls\JQueryExtension\JQueryDatePicker.htm" />
+    <Content Include="Controls\JQueryExtension\JQueryMask.htm" />
     <Content Include="Controls\Layout\ComplexLayout.htm" />
     <Content Include="Controls\Layout\Dialog.htm" />
     <Content Include="Controls\Layout\Flyout.htm" />
@@ -182,6 +201,14 @@
     <Content Include="Images\TabNotSelected.png" />
     <Content Include="Images\TabSelected.png" />
     <Content Include="main.js" />
+    <Content Include="bootstrap-3.3.6-dist\css\bootstrap-theme.css.map" />
+    <Content Include="bootstrap-3.3.6-dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="bootstrap-3.3.6-dist\css\bootstrap.css.map" />
+    <Content Include="bootstrap-3.3.6-dist\css\bootstrap.min.css.map" />
+    <Content Include="bootstrap-3.3.6-dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="bootstrap-3.3.6-dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="bootstrap-3.3.6-dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="bootstrap-3.3.6-dist\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Schema\AdventureWorks.HumanResources.Entities">
       <Generator>AspectizeEntitiesCodeGenerator2012</Generator>
       <LastGenOutput>AdventureWorks.HumanResources.Entities.cs</LastGenOutput>
