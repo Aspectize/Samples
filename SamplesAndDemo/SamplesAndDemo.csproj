@@ -194,12 +194,33 @@
     <Content Include="Controls\Layout\Tab.htm" />
     <Content Include="Controls\MainControls.htm" />
     <Content Include="Controls\TinyMCE\TinyMCE.htm" />
-    <Content Include="Images\Category.png" />
-    <Content Include="Images\GitHub-Mark-32px.png" />
-    <Content Include="Images\Product.png" />
-    <Content Include="Images\SubCategory.png" />
-    <Content Include="Images\TabNotSelected.png" />
-    <Content Include="Images\TabSelected.png" />
+    <Content Include="Images\Category.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\favicon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\GitHub-Mark-32px.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\LogoWhite.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Product.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\SubCategory.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\TabNotSelected.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\TabSelected.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="main.js" />
     <Content Include="bootstrap-3.3.6-dist\css\bootstrap-theme.css.map" />
     <Content Include="bootstrap-3.3.6-dist\css\bootstrap-theme.min.css.map" />
@@ -251,13 +272,13 @@
     <None Include="Schema\AutoIdentity.Entities.diagram">
       <DependentUpon>AutoIdentity.Entities</DependentUpon>
     </None>
-    <Content Include="Schema\Map.Entities">
+    <None Include="Schema\Map.Entities">
       <Generator>AspectizeEntitiesCodeGenerator2012</Generator>
       <LastGenOutput>Map.Entities.cs</LastGenOutput>
-    </Content>
-    <Content Include="Schema\Map.Entities.diagram">
+    </None>
+    <None Include="Schema\Map.Entities.diagram">
       <DependentUpon>Map.Entities</DependentUpon>
-    </Content>
+    </None>
     <None Include="Schema\Samples.Entities">
       <Generator>AspectizeEntitiesCodeGenerator2012</Generator>
       <LastGenOutput>Samples.Entities.cs</LastGenOutput>

@@ -127,7 +127,7 @@
 
 #Upload-UploaderImage.aasFileUpload
 {
-	background: url("http://www.aspectize.com/Applications/AzureHostManagerCommon/Images/LogoWhite.png") no-repeat;
+	background: url("../Images/LogoWhite.png") no-repeat;
 	margin:0;
 	padding:0;
 	height:151px;

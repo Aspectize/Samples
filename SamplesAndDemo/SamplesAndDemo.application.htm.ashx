@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
-<link rel="icon" type="image/png" href="~AzureHostManagerCommon/Images/favicon.ico"></link>
+<link rel="icon" type="image/png" href="~/Images/favicon.ico"></link>
 
 <!-- CSS Link -->
 <link rel='stylesheet' type='text/css' href='../Aspectize.core/Aspectize.css' />
