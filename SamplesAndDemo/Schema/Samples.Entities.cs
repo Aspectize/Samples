@@ -163,8 +163,8 @@ namespace Samples
 	{
 		[Description("DhtmlxLineChart")]
 		DhtmlxLineChart,
-		[Description("DhtmlxPieChart")]
-		DhtmlxPieChart,
+		//[Description("DhtmlxPieChart")]
+		//DhtmlxPieChart,
 		[Description("DhtmlxRadarChart")]
 		DhtmlxRadarChart
 	}

@@ -1,6 +1,6 @@
 ﻿var vDhtmlxLineChart = Aspectize.CreateView('DhtmlxLineChart', aas.Controls.DhtmlxLineChart, aas.Zones.SideBarContent.ZoneContent);
 vDhtmlxLineChart.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement, { element: aas.ViewName.DhtmlxLineChart });
-
+vDhtmlxLineChart.OnActivated.BindCommand(aas.Services.Browser.DhtmlxChartService.RefreshGraph(aas.ViewName.DhtmlxLineChart.DhtmlxLineChartSales));
 vDhtmlxLineChart.DhtmlxLineChartSales.BindGrid(aas.Data.AdventureWorksData.SalesPerson.QuotaHistory, "QuotaDate ASC");
 vDhtmlxLineChart.DhtmlxLineChartSales.Type.BindData('line');
 var cQuotaDate = vDhtmlxLineChart.DhtmlxLineChartSales.AddGridColumn("QuotaDate", "Dhtmlx.DhtmlxAxis");
@@ -10,7 +10,7 @@ cQuotaDate.Title.BindData("Date");
 var cSalesQuota = vDhtmlxLineChart.DhtmlxLineChartSales.AddGridColumn("SalesQuota", "Dhtmlx.DhtmlxAxis");
 cSalesQuota.Value.BindData(vDhtmlxLineChart.DhtmlxLineChartSales.DataSource.SalesQuota);
 cSalesQuota.Label.BindData(vDhtmlxLineChart.DhtmlxLineChartSales.DataSource.SalesQuota, 'G0');
-cSalesQuota.Title.BindData("Sales");
+//cSalesQuota.Title.BindData("Sales");
 cSalesQuota.ItemColor.BindData("#FFFFFF");
 cSalesQuota.LineColor.BindData("#599EC8");
 cSalesQuota.LineWidth.BindData(2);
