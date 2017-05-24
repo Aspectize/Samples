@@ -1,8 +1,8 @@
 
-var vUpload = Aspectize.CreateView("Upload", aas.Controls.Upload, aas.Zones.SideBarContent.ZoneContent);
+var vUpload = Aspectize.CreateView("FileUpload", aas.Controls.FileUpload, aas.Zones.SideBarContent.ZoneContent);
 vUpload.DisplayNbFileUploaded.BindData(aas.Expression(IIF(vUpload.GridUploadedFiles.RowCount, '', 'hidden')));
 vUpload.NbFileUploaded.BindData(vUpload.GridUploadedFiles.RowCount);
-vUpload.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement, {element: aas.ViewName.Upload});
+vUpload.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement, { element: aas.ViewName.FileUpload });
 vUpload.Uploader.MultipleFiles.BindData(vUpload.CheckBoxMultiple.checked);
 vUpload.Uploader.Text.BindData(aas.Expression(IIF(vUpload.CheckBoxMultiple.checked, 'You can choose multiple files', 'Choose a single file')));
 vUpload.Uploader.ToolTip.BindData("All modern browser are supported");

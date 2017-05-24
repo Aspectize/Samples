@@ -177,7 +177,7 @@
     <Content Include="Controls\Core\Repeater.htm" />
     <Content Include="Controls\Core\Timer.htm" />
     <Content Include="Controls\Core\TreeView.htm" />
-    <Content Include="Controls\Core\Upload.htm" />
+    <Content Include="Controls\Core\FileUpload.htm" />
     <Content Include="Controls\Dhtmlx\DhtmlxLineChart.htm" />
     <Content Include="Controls\Dhtmlx\DhtmlxPieChart.htm" />
     <Content Include="Controls\Dhtmlx\DhtmlxRadarChart.htm" />

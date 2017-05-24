@@ -41,8 +41,8 @@ namespace Samples
 		Image,
 		[Description("Repeater")]
 		Repeater,
-		[Description("Upload")]
-		Upload,
+		[Description("FileUpload")]
+		FileUpload,
 		[Description("Grid")]
 		Grid,
 		[Description("TreeView")]
@@ -163,8 +163,8 @@ namespace Samples
 	{
 		[Description("DhtmlxLineChart")]
 		DhtmlxLineChart,
-		//[Description("DhtmlxPieChart")]
-		//DhtmlxPieChart,
+		[Description("DhtmlxPieChart")]
+		DhtmlxPieChart,
 		[Description("DhtmlxRadarChart")]
 		DhtmlxRadarChart
 	}

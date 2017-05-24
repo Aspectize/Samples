@@ -21,7 +21,7 @@
         <enumItem name="CheckBoxList" value="0" />
         <enumItem name="Image" value="0" />
         <enumItem name="Repeater" value="0" />
-        <enumItem name="Upload" value="0" />
+        <enumItem name="FileUpload" value="0" />
         <enumItem name="Grid" value="0" />
         <enumItem name="TreeView" value="0" />
         <enumItem name="Timer" value="0" />

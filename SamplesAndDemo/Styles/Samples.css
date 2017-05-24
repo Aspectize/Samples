@@ -113,19 +113,19 @@
 
 /* Upload */
 
-#Upload-UploaderButton.aasFileUpload > div.content,
-#Upload-UploaderLink.aasFileUpload > div.content
+#FileUpload-UploaderButton.aasFileUpload > div.content,
+#FileUpload-UploaderLink.aasFileUpload > div.content
 {
 	background:none;
 	padding:0px;
 }
 
-#Upload-UploaderButton.aasFileUpload > div.content > span
+#FileUpload-UploaderButton.aasFileUpload > div.content > span
 {
 	text-decoration: none;
 }
 
-#Upload-UploaderImage.aasFileUpload
+#FileUpload-UploaderImage.aasFileUpload
 {
 	background: url("../Images/LogoWhite.png") no-repeat;
 	margin:0;
@@ -134,11 +134,11 @@
     width: 264px;
 }
 
-#Upload-UploaderImage.aasFileUpload:hover {
+#FileUpload-UploaderImage.aasFileUpload:hover {
     background-color: #eee;
 }
 
-#Upload-UploaderImage.aasFileUpload > div.content > span
+#FileUpload-UploaderImage.aasFileUpload > div.content > span
 {
 	/*display: inline-block;*/
 }
