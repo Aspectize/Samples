@@ -135,7 +135,9 @@ namespace Samples
 		[Description("JQueryAutoComplete")]
 		JQueryAutoComplete,
 		[Description("JQueryMask")]
-		JQueryMask
+		JQueryMask,
+		[Description("JQueryRateIt")]
+		JQueryRateIt
 	}
 
 	[DataDefinition(MustPersist = false)]

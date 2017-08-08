@@ -48,6 +48,7 @@ namespace AdventureWorks.Sales
 			public const string SalesOrderHeaderCreditCard = "SalesOrderHeaderCreditCard";
 			public const string CustomerAddress = "CustomerAddress";
 			public const string ContactSalesPerson = "ContactSalesPerson";
+			public const string SalesPersonDepartment = "SalesPersonDepartment";
 		}
 	}
 
@@ -174,6 +175,8 @@ namespace AdventureWorks.Sales
 			public const string ModifiedDate = "ModifiedDate";
 			public const string QuotaHistory = "QuotaHistory";
 			public const string MaxSales = "MaxSales";
+			public const string Rate = "Rate";
+			public const string NbDepartment = "NbDepartment";
 		}
 
 		void IDataWrapper.InitData(DataRow data, string namePrefix)
@@ -246,6 +249,19 @@ namespace AdventureWorks.Sales
 		public int? MaxSales
 		{
 			get { return getValue<int?>("MaxSales"); }
+		}
+
+		[Data(DefaultValue = 0, MustPersist = false)]
+		public short Rate
+		{
+			get { return getValue<short>("Rate"); }
+			set { setValue<short>("Rate", value); }
+		}
+
+		[Data(DefaultValue = 0, MustPersist = false, Expression = "Count(Child(SalesPersonDepartment_SalesPerson_SalesPerson_End).FakeColumn)")]
+		public short NbDepartment
+		{
+			get { return getValue<short>("NbDepartment"); }
 		}
 
 	}
@@ -1372,6 +1388,34 @@ namespace AdventureWorks.Sales
 
 		[RelationEnd(Type = typeof(AdventureWorks.Person.Contact), Role = typeof(AdventureWorks.Person.Contact), Multiplicity = Multiplicity.One, FkNames = "SalesPersonID")]
 		public IEntity Contact;
+
+	}
+
+	[DataDefinition(MustPersist = false)]
+	public class SalesPersonDepartment : DataWrapper, IDataWrapper, IRelation
+	{
+		public static partial class Fields
+		{
+			public const string FakeColumn = "FakeColumn";
+		}
+
+		void IDataWrapper.InitData(DataRow data, string namePrefix)
+		{
+			base.InitData(data, null);
+		}
+
+		[RelationEnd(Type = typeof(AdventureWorks.HumanResources.Department), Role = typeof(AdventureWorks.HumanResources.Department), Multiplicity = Multiplicity.ZeroOrMany)]
+		public IEntity Department;
+
+		[RelationEnd(Type = typeof(SalesPerson), Role = typeof(SalesPerson), Multiplicity = Multiplicity.ZeroOrMany)]
+		public IEntity SalesPerson;
+
+		[Data(DefaultValue = 1, MustPersist = false)]
+		public short FakeColumn
+		{
+			get { return getValue<short>("FakeColumn"); }
+			set { setValue<short>("FakeColumn", value); }
+		}
 
 	}
 

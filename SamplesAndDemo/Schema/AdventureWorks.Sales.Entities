@@ -13,6 +13,8 @@
         <entityProperty name="ModifiedDate" type="DateTime" physicalName="ModifiedDate" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
         <entityProperty name="QuotaHistory" type="SalesPersonQuotaHistory" physicalName="SalesPersonQuotaHistory" isCustomType="true" identity="false" isEnumType="false" isCompoType="true" isExternType="false" isEnumInBaseType="false" multiplicity="Multiple" fkNames="SalesPersonID" />
         <entityProperty name="MaxSales" type="Int32" nullable="true" mustPersist="false" expression="Max(Child(QuotaHistory).SalesQuota)" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+        <entityProperty name="Rate" type="Int16" mustPersist="false" defaultValue="0" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+        <entityProperty name="NbDepartment" type="Int16" mustPersist="false" defaultValue="0" expression="Count(Child(SalesPersonDepartment_SalesPerson_SalesPerson_End).FakeColumn)" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
       </properties>
     </entity>
     <entity Id="d0b8ade8-1381-4f2e-bf8d-6dd4c9a953b3" name="SalesOrderHeader" guid="97489149-4a07-4d41-b87a-6364381cf1e0" physicalName="SalesOrderHeader" guidIdentifier="false" hasCustomValidators="false" hasTriggers="false" physicalSchema="Sales">
@@ -336,11 +338,25 @@
         </relationReferencesEntityReferenceClasses>
       </entityReferenceClasses>
     </relation>
+    <relation Id="4993342d-6682-49ab-9570-0b4b228087c4" name="SalesPersonDepartment" guid="00000000-0000-0000-0000-000000000000" mustPersist="false" hasTriggers="false" hasCustomValidators="false">
+      <properties>
+        <relationProperty name="FakeColumn" type="Int16" mustPersist="false" defaultValue="1" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+      </properties>
+      <entityReferenceClasses>
+        <relationReferencesEntityReferenceClasses Id="09f94c91-147f-4cd6-a16f-6ebc49a278e5" role="Department" cardinality="O__N">
+          <entityReferenceMoniker Id="a3bac0fe-7ff4-4c5d-975c-99955a7364a6" />
+        </relationReferencesEntityReferenceClasses>
+        <relationReferencesEntityReferenceClasses Id="4be10372-7034-40c6-878d-270aeb3ee62e" role="SalesPerson" cardinality="O__N">
+          <entityMoniker Id="3376bca6-9b9d-4d36-b1e1-87e8bbb48322" />
+        </relationReferencesEntityReferenceClasses>
+      </entityReferenceClasses>
+    </relation>
   </relations>
   <entityReferences>
     <entityReference Id="f8c1a1b4-69d8-4f89-826c-4a10bbc5f5ec" name="Contact" domain="AdventureWorks.Person" />
     <entityReference Id="29c122b7-c305-4161-ad0c-af676adc24e4" name="Address" domain="AdventureWorks.Person" />
     <entityReference Id="73762985-17fc-45ec-8ed7-8748b1ea846d" name="Contact" domain="AdventureWorks.Person" />
+    <entityReference Id="a3bac0fe-7ff4-4c5d-975c-99955a7364a6" name="Department" domain="AdventureWorks.HumanResources" />
   </entityReferences>
   <commentBoxes>
     <commentBox comment="This Schema includes all Tables from Schema Sales" />

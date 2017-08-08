@@ -22,19 +22,19 @@
             </div>
         </div>
 
-        <h2>Basic Usage with related entities</h2>
+        <h2>Basic Usage with relation N-N</h2>
         <div class="row">
             <div class="col-sm-2">
                 Select a Sales:
                 <div aas-name="GridSalesPerson" aas-type="AspectizeGrid"></div>
             </div>
-            <div class="col-sm-3">
-                Select a Sales Order:
-                <div aas-name="GridSalesOrder" aas-type="AspectizeGrid"></div>
-            </div>
             <div class="col-sm-5">
-                Select sales reason associated to Sale Order: each check will associate a SalesReason to SalesOrder.
+                Select Department associated to Sale: each check will associate a Department to a Sale.
                 <div aas-name="CheckBoxListDemo" aas-type="AspectizeCheckBoxList"></div>
+            </div>
+            <div class="col-sm-3">
+                List of Department associated to sale <span>{SelectedSale}</span>:
+                <div aas-name="GridDepartment" aas-type="AspectizeGrid"></div>
             </div>
         </div>
         <br />

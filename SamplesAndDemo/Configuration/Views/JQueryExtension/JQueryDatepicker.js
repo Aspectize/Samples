@@ -4,6 +4,7 @@ vJQueryDatepicker.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientSe
 
 vJQueryDatepicker.EmployeeName.BindData(aas.Expression(aas.Data.AdventureWorksData.Employee.EmployeeContact.Contact.FirstName + ' ' + aas.Data.AdventureWorksData.Employee.EmployeeContact.Contact.LastName));
 vJQueryDatepicker.JQueryDatePickerSample.Value.BindData(aas.Data.AdventureWorksData.Employee.BirthDate);
+vJQueryDatepicker.JQueryDatePickerSample.DisplayFormat.BindData('dd MM yy');
 vJQueryDatepicker.DateSelected.BindData(vJQueryDatepicker.JQueryDatePickerSample.Value, "dd MMMM yyyy");
 
 //vJQueryDatepicker.JQueryDatePickerAdvanced.Value.BindData(aas.Data.AdventureWorksData.Employee.BirthDate);

@@ -40,7 +40,7 @@ namespace Samples
     }
 
     [Service(Name = "LoadDataService")]
-    public class LoadDataService : ILoadDataService //, IInitializable, ISingleton
+    public class LoadDataService : ILoadDataService, IInitializable, ISingleton
     {
         static DataSet dsDemo = null;
 
@@ -132,7 +132,7 @@ namespace Samples
             {
                 IFileService fs = ExecutingContext.GetService<IFileService>(ServiceName.ADWFileService);
 
-                var dataDemo = fs.Read("DataDemo");
+                var dataDemo = fs.Read("DataDemo2");
 
                 dsDemo = DataSetHelper.BinaryLoad(dataDemo);
             }
@@ -219,21 +219,31 @@ namespace Samples
             relations = new List<IRoleRelationQuery>();
 
             relations.Add(new RoleRelationQuery<SalesPerson, ContactSalesPerson>());
-            relations.Add(new RoleRelationQuery<SalesPerson, SalesOrderHeaderSalesPerson>());
-            relations.Add(new RoleRelationQuery<SalesOrderHeader, SalesOrderHeaderSalesReason>());
+            //relations.Add(new RoleRelationQuery<SalesPerson, SalesOrderHeaderSalesPerson>());
+            //relations.Add(new RoleRelationQuery<SalesOrderHeader, SalesOrderHeaderSalesReason>());
 
             dm.LoadEntitiesGraphFields<SalesPerson>(EntityLoadOption.AllFields, relations);
 
-            dm.LoadEntities<SalesReason>();
+            dm.LoadEntities<Department>();
 
             IFileService fs = ExecutingContext.GetService<IFileService>(ServiceName.ADWFileService);
 
             var data = DataSetHelper.BinarySave(dm.Data);
 
-            fs.Write("DataDemo", data);
+            fs.Write("DataDemo2", data);
         }
 
+        void IInitializable.Initialize(Dictionary<string, object> parameters)
+        {
+            if (dsDemo == null)
+            {
+                IFileService fs = ExecutingContext.GetService<IFileService>(ServiceName.ADWFileService);
 
+                var dataDemo = fs.Read("DataDemo2");
+
+                dsDemo = DataSetHelper.BinaryLoad(dataDemo);
+            }
+        }
     }
 
 }

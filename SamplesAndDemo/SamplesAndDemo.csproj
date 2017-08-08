@@ -158,6 +158,7 @@
     <Content Include="Configuration\Views\JQueryExtension\JQueryAutoComplete.js" />
     <Content Include="Configuration\Views\JQueryExtension\JQueryDatePicker.js" />
     <Content Include="Configuration\Views\JQueryExtension\JQueryMask.js" />
+    <Content Include="Configuration\Views\JQueryExtension\JQueryRateIt.js" />
     <Content Include="Configuration\Views\Layout\Dialog.js" />
     <Content Include="Configuration\Views\Layout\Flyout.js" />
     <Content Include="Configuration\Views\Layout\Panel.js" />
@@ -187,6 +188,7 @@
     <Content Include="Controls\JQueryExtension\JQueryAutoComplete.htm" />
     <Content Include="Controls\JQueryExtension\JQueryDatePicker.htm" />
     <Content Include="Controls\JQueryExtension\JQueryMask.htm" />
+    <Content Include="Controls\JQueryExtension\JQueryRateIt.htm" />
     <Content Include="Controls\Layout\ComplexLayout.htm" />
     <Content Include="Controls\Layout\Dialog.htm" />
     <Content Include="Controls\Layout\Flyout.htm" />

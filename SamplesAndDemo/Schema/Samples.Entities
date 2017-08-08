@@ -77,6 +77,7 @@
         <enumItem name="JQueryDatePicker" value="0" />
         <enumItem name="JQueryAutoComplete" value="0" />
         <enumItem name="JQueryMask" value="0" />
+        <enumItem name="JQueryRateIt" value="0" />
       </enumItems>
     </enumEntity>
     <enumEntity Id="ec0336ca-f636-421c-b92f-04d1b4022871" name="EnumMiscExtension">
