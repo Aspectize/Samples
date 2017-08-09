@@ -27,6 +27,69 @@ Global.ClientService = {
 
         em.ClearInstance('Attachment', { Id: attachmentId });
 
+    },
+
+    InitDrag: function () {
+        var uiService = Aspectize.Host.GetService('UIService');
+
+        $('.WorkItem').on('dragstart', function (e) {
+
+            var id = $(this)[0].id;
+
+            var workItemId = id.substring(id.lastIndexOf(":") + 1, id.lastIndexOf("-"));
+
+            uiService.SetContextValue('DragWorkItem', workItemId);
+
+            e.originalEvent.dataTransfer.setData('text/plain', workItemId);
+
+            e.stopPropagation();
+        });
+    },
+
+    InitDrop: function () {
+        var that = this;
+
+        var em = Aspectize.EntityManagerFromContextDataName('MainData');
+
+        var uiService = Aspectize.Host.GetService('UIService');
+
+        $('.DropZone').on('dragover', function (e) {
+
+            var workItemId = uiService.GetContextValue('DragWorkItem');
+
+            var workItem = em.GetInstance('WorkItem', { Id: workItemId });
+
+            if (workItem) {
+                e.preventDefault();
+            }
+
+        });
+
+        $('.DropZone').on('drop', function (e) {
+
+            var workItemId = uiService.GetContextValue('DragWorkItem');
+
+            var workItem = em.GetInstance('WorkItem', { Id: workItemId });
+
+            var stateId = $(this)[0].dataset.stateid;
+
+            var dropState = em.GetInstance('State', { Id: stateId });
+
+            if (workItem && dropState) {
+                var oldState = workItem.GetAssociated('WorkItemState', 'State')[0];
+
+                if (oldState.Id !== stateId) {
+                    em.DissociateInstance('WorkItemState', oldState, 'State', workItem, 'WorkItem');
+                    em.AssociateInstance('WorkItemState', dropState, 'State', workItem, 'WorkItem');
+
+                    Aspectize.Host.ExecuteCommand(aas.Services.Server.MyDataService.SaveTransactional, em.GetDataSet());
+                }
+            }
+
+            e.preventDefault();
+
+        });
+
     }
 
 };

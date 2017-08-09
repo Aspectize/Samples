@@ -87,7 +87,7 @@
 
 
     <div aas-control="StateItem">
-        <div class="StateItem">
+        <div class="StateItem DropZone" data-stateid="{stateId}">
             <div class="StateItemTitle">{Title}</div>
             <div class="">
                 <div aas-name="RepeaterPanelWorkItem" aas-type="AspectizeRepeaterPanel"></div>
@@ -98,7 +98,7 @@
 
 
     <div aas-control="WorkItem">
-        <a name="WorkItem" class="WorkItem">
+        <a name="WorkItem" class="WorkItem"  draggable="true">
             <div>{Title}</div>
             <div class="{DisplayDueDateBadge}">
                 <div title="This card is due later" class="WorkItemDueDate">

@@ -42,15 +42,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AspectizeCore">
-      <HintPath>S:\Delivery\Aspectize.core\AspectizeCore.dll</HintPath>
+      <HintPath>$(AspectizeWebHost)\Aspectize.core\AspectizeCore.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="BasicAuth">
-      <HintPath>..\..\..\Delivery\Applications\BasicAuth\BasicAuth.dll</HintPath>
+      <HintPath>$(AspectizeWebHost)\Applications\BasicAuth\BasicAuth.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="SmartBlocksCore">
-      <HintPath>S:\Delivery\Aspectize.core\SmartBlocksCore.dll</HintPath>
+      <HintPath>$(AspectizeWebHost)\Aspectize.core\SmartBlocksCore.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
