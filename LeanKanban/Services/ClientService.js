@@ -2,7 +2,7 @@
 
 Global.ClientService = {
 
-    aasService:'ClientService',
+    aasService: 'ClientService',
     aasPublished: true,
     MainData: 'MainData',
 
@@ -32,6 +32,8 @@ Global.ClientService = {
     InitDrag: function () {
         var uiService = Aspectize.Host.GetService('UIService');
 
+        $('.WorkItem').off('dragstart');
+
         $('.WorkItem').on('dragstart', function (e) {
 
             var id = $(this)[0].id;
@@ -57,10 +59,12 @@ Global.ClientService = {
 
             var workItemId = uiService.GetContextValue('DragWorkItem');
 
-            var workItem = em.GetInstance('WorkItem', { Id: workItemId });
+            if (workItemId) {
+                var workItem = em.GetInstance('WorkItem', { Id: workItemId });
 
-            if (workItem) {
-                e.preventDefault();
+                if (workItem) {
+                    e.preventDefault();
+                }
             }
 
         });
@@ -83,8 +87,12 @@ Global.ClientService = {
                     em.AssociateInstance('WorkItemState', dropState, 'State', workItem, 'WorkItem');
 
                     Aspectize.Host.ExecuteCommand(aas.Services.Server.MyDataService.SaveTransactional, em.GetDataSet());
+
+                    that.InitDrag();
                 }
             }
+
+            uiService.SetContextValue('DragWorkItem', null);
 
             e.preventDefault();
 

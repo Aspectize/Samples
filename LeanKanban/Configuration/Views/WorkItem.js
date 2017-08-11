@@ -5,5 +5,5 @@ workItem.WorkItem.click.BindCommand(aas.Services.Browser.UIService.SetCurrent(aa
 workItem.WorkItem.click.BindCommand(aas.Services.Browser.BootStrapClientService.ShowModal(aas.ViewName.EditWorkItem));
 workItem.DisplayDueDateBadge.BindData(aas.Expression(IIF(workItem.ParentData.DueDate, '', 'hidden')));
 workItem.DueDate.BindData(workItem.ParentData.DueDate, "ddd dd");
-workItem.OnLoad.BindCommand(aas.Services.Browser.ClientService.InitDrag());
+workItem.OnActivated.BindCommand(aas.Services.Browser.ClientService.InitDrag());
 
