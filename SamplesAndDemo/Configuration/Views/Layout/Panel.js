@@ -1,10 +1,10 @@
 
 var vPanel = Aspectize.CreateView("Panel", aas.Controls.PanelControl, aas.Zones.SideBarContent.ZoneContent);
-vPanel.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement, {element: aas.ViewName.Panel});
-vPanel.BtnViewA.click.BindCommand(aas.Services.Browser.UIService.ShowView, {viewName: aas.ViewName.ViewA});
-vPanel.BtnViewB.click.BindCommand(aas.Services.Browser.UIService.ShowView, {viewName: aas.ViewName.ViewB});
-vPanel.BtnViewC.click.BindCommand(aas.Services.Browser.UIService.ShowView, {viewName: aas.ViewName.ViewC});
-vPanel.BtnViewD.click.BindCommand(aas.Services.Browser.UIService.ShowView, {viewName: aas.ViewName.ViewD});
+vPanel.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement(aas.ViewName.Panel));
+vPanel.BtnViewA.click.BindCommand(aas.Services.Browser.UIService.ShowView(aas.ViewName.ViewA));
+vPanel.BtnViewB.click.BindCommand(aas.Services.Browser.UIService.ShowView(aas.ViewName.ViewB));
+vPanel.BtnViewC.click.BindCommand(aas.Services.Browser.UIService.ShowView(aas.ViewName.ViewC));
+vPanel.BtnViewD.click.BindCommand(aas.Services.Browser.UIService.ShowView(aas.ViewName.ViewD));
 
 var vViewA = Aspectize.CreateView("ViewA", aas.Controls.ViewA, aas.Zones.Panel.ZonePanelSample, true);
 var vViewB = Aspectize.CreateView("ViewB", aas.Controls.ViewB, aas.Zones.Panel.ZonePanelSample);

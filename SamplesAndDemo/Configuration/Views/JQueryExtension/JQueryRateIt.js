@@ -1,5 +1,5 @@
 ﻿var vJQueryRateIt = Aspectize.CreateView("JQueryRateIt", aas.Controls.JQueryRateItControl, aas.Zones.SideBarContent.ZoneContent);
-vJQueryRateIt.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement, { element: aas.ViewName.JQueryRateIt });
+vJQueryRateIt.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement(aas.ViewName.JQueryRateIt));
 
 vJQueryRateIt.SalesPersonRate.Value.BindData(aas.Data.AdventureWorksData.SalesPerson.Rate);
 vJQueryRateIt.SalesPersonRate.EditMode.BindData(vJQueryRateIt.CheckEditMode.checked);

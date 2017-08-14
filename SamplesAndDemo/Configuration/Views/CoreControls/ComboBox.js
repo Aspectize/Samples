@@ -6,7 +6,7 @@ vComboBox.BUNVDCurrentDisplay.BindData(vComboBox.SelectBUNVD.CurrentDisplay);
 vComboBox.BUNVDCurrentValue.BindData(vComboBox.SelectBUNVD.CurrentValue);
 vComboBox.CurrentProduct.BindData(aas.Data.AdventureWorksData.Product.Name);
 vComboBox.CurrentProductSubCategory.BindData(aas.Data.AdventureWorksData.Product.ProductSubcategory.Subcategory.Name);
-vComboBox.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement, {element: aas.ViewName.ComboBox});
+vComboBox.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement(aas.ViewName.ComboBox));
 vComboBox.SelectBU.BindList(aas.Data.AdventureWorksData.Category, "CategoryID", "Name", "Name ASC");
 vComboBox.SelectBU.CurrentSyncDisabled.BindData(true);
 vComboBox.SelectBUNVD.BindList(aas.Data.AdventureWorksData.Category, "CategoryID", "Name", "Name ASC");

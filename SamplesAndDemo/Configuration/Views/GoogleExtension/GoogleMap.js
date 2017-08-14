@@ -1,5 +1,5 @@
 ﻿var vGoogleMap = Aspectize.CreateView('GoogleMap', aas.Controls.GoogleMapControl, aas.Zones.SideBarContent.ZoneContent);
-vGoogleMap.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement, { element: aas.ViewName.GoogleMap });
+vGoogleMap.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement(aas.ViewName.GoogleMap));
 
 vGoogleMap.GridPlace.BindGrid(aas.Data.MapData.Place);
 var cFullAdress = vGoogleMap.GridPlace.AddGridColumn('Adress', 'Span');

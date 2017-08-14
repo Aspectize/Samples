@@ -1,5 +1,5 @@
 ﻿var vDhtmlxRadarChart = Aspectize.CreateView('DhtmlxRadarChart', aas.Controls.DhtmlxRadarChart, aas.Zones.SideBarContent.ZoneContent);
-vDhtmlxRadarChart.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement, { element: aas.ViewName.DhtmlxRadarChart });
+vDhtmlxRadarChart.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement(aas.ViewName.DhtmlxRadarChart));
 vDhtmlxRadarChart.OnActivated.BindCommand(aas.Services.Browser.DhtmlxChartService.RefreshGraph(aas.ViewName.DhtmlxRadarChart.DhtmlxRadarChartSales));
 vDhtmlxRadarChart.DhtmlxRadarChartSales.BindGrid(aas.Data.AdventureWorksData.SalesPerson.QuotaHistory, "QuotaDate ASC");
 vDhtmlxRadarChart.DhtmlxRadarChartSales.Type.BindData('radar');

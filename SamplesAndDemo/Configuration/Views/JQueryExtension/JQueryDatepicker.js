@@ -1,6 +1,6 @@
 ﻿
 var vJQueryDatepicker = Aspectize.CreateView("JQueryDatePicker", aas.Controls.JQueryDatePickerControl, aas.Zones.SideBarContent.ZoneContent);
-vJQueryDatepicker.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement, { element: aas.ViewName.JQueryDatePicker });
+vJQueryDatepicker.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement(aas.ViewName.JQueryDatePicker));
 
 vJQueryDatepicker.EmployeeName.BindData(aas.Expression(aas.Data.AdventureWorksData.Employee.EmployeeContact.Contact.FirstName + ' ' + aas.Data.AdventureWorksData.Employee.EmployeeContact.Contact.LastName));
 vJQueryDatepicker.JQueryDatePickerSample.Value.BindData(aas.Data.AdventureWorksData.Employee.BirthDate);

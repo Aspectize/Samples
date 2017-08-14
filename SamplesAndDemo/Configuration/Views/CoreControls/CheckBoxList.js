@@ -1,6 +1,6 @@
 
 var vCheckBoxList = Aspectize.CreateView("CheckBoxList", aas.Controls.CheckBoxList, aas.Zones.SideBarContent.ZoneContent);
-vCheckBoxList.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement, {element: aas.ViewName.CheckBoxList});
+vCheckBoxList.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement(aas.ViewName.CheckBoxList));
 vCheckBoxList.GridSalesPerson.BindGrid(aas.Data.AdventureWorksData.SalesPerson);
 var cContact = vCheckBoxList.GridSalesPerson.AddGridColumn("Contact", "Span");
 cContact.Text.BindData(aas.Expression(vCheckBoxList.GridSalesPerson.DataSource.ContactSalesPerson.Contact.FirstName + ' ' + vCheckBoxList.GridSalesPerson.DataSource.ContactSalesPerson.Contact.LastName));

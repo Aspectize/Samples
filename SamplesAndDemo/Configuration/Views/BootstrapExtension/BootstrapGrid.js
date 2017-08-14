@@ -1,6 +1,6 @@
 
 var vBootstrapGrid = Aspectize.CreateView("BootstrapGrid", aas.Controls.BootstrapGridControl, aas.Zones.SideBarContent.ZoneContent);
-vBootstrapGrid.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement, {element: aas.ViewName.BootstrapGrid});
+vBootstrapGrid.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement(aas.ViewName.BootstrapGrid));
 vBootstrapGrid.SelectPageSize.BindList(aas.Data.MainData.EnumPageSize, "EnumerationValue", "EnumerationValue");
 vBootstrapGrid.GridProduct.BindGrid(aas.Data.AdventureWorksData.Category.CategorySubcategory.Subcategory.ProductSubcategory.Product);
 vBootstrapGrid.GridProduct.className.BindData("table-hover table-condensed");

@@ -1,21 +1,21 @@
 
 var vUpload = Aspectize.CreateView("FileUpload", aas.Controls.FileUpload, aas.Zones.SideBarContent.ZoneContent);
+vUpload.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement(aas.ViewName.FileUpload));
 vUpload.DisplayNbFileUploaded.BindData(aas.Expression(IIF(vUpload.GridUploadedFiles.RowCount, '', 'hidden')));
 vUpload.NbFileUploaded.BindData(vUpload.GridUploadedFiles.RowCount);
-vUpload.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement, { element: aas.ViewName.FileUpload });
 vUpload.Uploader.MultipleFiles.BindData(vUpload.CheckBoxMultiple.checked);
 vUpload.Uploader.Text.BindData(aas.Expression(IIF(vUpload.CheckBoxMultiple.checked, 'You can choose multiple files', 'Choose a single file')));
 vUpload.Uploader.ToolTip.BindData("All modern browser are supported");
-vUpload.Uploader.OnFileSelected.BindCommand(aas.Services.Server.UploaderService.UploadFiles, {uploadedFiles: vUpload.Uploader.SelectedFile}, aas.Data.UploadData, false, true);
+vUpload.Uploader.OnFileSelected.BindCommand(aas.Services.Server.UploaderService.UploadFiles(vUpload.Uploader.SelectedFile), aas.Data.UploadData, false, true);
 vUpload.UploaderButton.Text.BindData("Click on me to upload");
 vUpload.UploaderButton.className.BindData("btn btn-default");
-vUpload.UploaderButton.OnFileSelected.BindCommand(aas.Services.Server.UploaderService.UploadFiles, {uploadedFiles: vUpload.UploaderButton.SelectedFile}, aas.Data.UploadData, false, true);
+vUpload.UploaderButton.OnFileSelected.BindCommand(aas.Services.Server.UploaderService.UploadFiles(vUpload.UploaderButton.SelectedFile), aas.Data.UploadData, false, true);
 vUpload.UploaderButton.MultipleFiles.BindData(true);
-vUpload.UploaderImage.OnFileSelected.BindCommand(aas.Services.Server.UploaderService.UploadFiles, { uploadedFiles: vUpload.UploaderImage.SelectedFile }, aas.Data.UploadData, false, true);
+vUpload.UploaderImage.OnFileSelected.BindCommand(aas.Services.Server.UploaderService.UploadFiles(vUpload.UploaderImage.SelectedFile ), aas.Data.UploadData, false, true);
 vUpload.UploaderImage.Text.BindData('');
 vUpload.UploaderImage.MultipleFiles.BindData(true);
 vUpload.UploaderLink.Text.BindData("Click on me to upload");
-vUpload.UploaderLink.OnFileSelected.BindCommand(aas.Services.Server.UploaderService.UploadFiles, {uploadedFiles: vUpload.UploaderLink.SelectedFile}, aas.Data.UploadData, false, true);
+vUpload.UploaderLink.OnFileSelected.BindCommand(aas.Services.Server.UploaderService.UploadFiles(vUpload.UploaderLink.SelectedFile), aas.Data.UploadData, false, true);
 vUpload.UploaderLink.MultipleFiles.BindData(true);
 
 vUpload.GridUploadedFiles.BindGrid(aas.Data.UploadData.FileUploaded);

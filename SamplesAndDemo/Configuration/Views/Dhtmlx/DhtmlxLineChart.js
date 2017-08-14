@@ -1,5 +1,5 @@
 ﻿var vDhtmlxLineChart = Aspectize.CreateView('DhtmlxLineChart', aas.Controls.DhtmlxLineChart, aas.Zones.SideBarContent.ZoneContent);
-vDhtmlxLineChart.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement, { element: aas.ViewName.DhtmlxLineChart });
+vDhtmlxLineChart.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement(aas.ViewName.DhtmlxLineChart));
 vDhtmlxLineChart.OnActivated.BindCommand(aas.Services.Browser.DhtmlxChartService.RefreshGraph(aas.ViewName.DhtmlxLineChart.DhtmlxLineChartSales));
 vDhtmlxLineChart.DhtmlxLineChartSales.BindGrid(aas.Data.AdventureWorksData.SalesPerson.QuotaHistory, "QuotaDate ASC");
 vDhtmlxLineChart.DhtmlxLineChartSales.Type.BindData('line');

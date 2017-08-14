@@ -1,6 +1,6 @@
 
 var vGoogleLineChart = Aspectize.CreateView("GoogleLineChart", aas.Controls.GoogleLineChartControl, aas.Zones.SideBarContent.ZoneContent);
-vGoogleLineChart.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement, {element: aas.ViewName.GoogleLineChart});
+vGoogleLineChart.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement(aas.ViewName.GoogleLineChart));
 vGoogleLineChart.GoogleLineChartSales.BindGrid(aas.Data.AdventureWorksData.SalesPerson.QuotaHistory, "QuotaDate ASC");
 vGoogleLineChart.GoogleLineChartSales.Title.BindData("Sales");
 var cQuotaDate = vGoogleLineChart.GoogleLineChartSales.AddGridColumn("QuotaDate", "GoogleExtension.GoogleLineChartColumn");

@@ -1,11 +1,11 @@
 
 var vGoogleTable = Aspectize.CreateView("GoogleTable", aas.Controls.GoogleTableControl, aas.Zones.SideBarContent.ZoneContent);
-vGoogleTable.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement, {element: aas.ViewName.GoogleTable});
+vGoogleTable.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement(aas.ViewName.GoogleTable));
 vGoogleTable.GoogleTableProduct.BindGrid(aas.Data.AdventureWorksData.Product);
 vGoogleTable.GoogleTableProduct.PageSize.BindData("10");
 vGoogleTable.GoogleTableProduct.ShowRowNumber.BindData("true");
 vGoogleTable.GoogleTableProduct.FirstRowNumber.BindData("12");
-vGoogleTable.GoogleTableProduct.OnRowClick.BindCommand(aas.Services.Browser.TestingServices.Alert, {message: aas.Data.AdventureWorksData.Product.Name});
+vGoogleTable.GoogleTableProduct.OnRowClick.BindCommand(aas.Services.Browser.TestingServices.Alert(aas.Data.AdventureWorksData.Product.Name));
 var cProductID = vGoogleTable.GoogleTableProduct.AddGridColumn("ProductID", "GoogleExtension.GoogleColumn");
 cProductID.Value.BindData(vGoogleTable.GoogleTableProduct.DataSource.ProductID);
 var cName = vGoogleTable.GoogleTableProduct.AddGridColumn("Name", "GoogleExtension.GoogleColumn");
