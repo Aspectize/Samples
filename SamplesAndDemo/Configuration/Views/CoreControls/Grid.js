@@ -13,7 +13,7 @@ vGrid.SelectPageSize.BindList(aas.Data.MainData.EnumPageSize, "EnumerationValue"
 
 // Dynamic Filter
 vGrid.GridDynamicFilter.BindGrid(aas.Data.AdventureWorksData.Category.CategorySubcategory.Subcategory.ProductSubcategory.Product);
-vGrid.TxtFilter.keyup.BindCommand(aas.Services.Browser.UIService.SetCustomFilter(aas.ViewName.Grid.GridDynamicFilter, aas.Expression('(Name).toLowerCase().indexOf("' + vGrid.TxtFilter.value + '".toLowerCase()) !== -1')));
+vGrid.TxtFilter.keyup.BindCommand(aas.Services.Browser.UIService.SetCustomFilter, { controlName: aas.ViewName.Grid.GridDynamicFilter, customFilter: aas.Expression('(Name).toLowerCase().indexOf("' + vGrid.TxtFilter.value + '".toLowerCase()) !== -1') });
 
 // Group Rows
 vGrid.GridSubCategory.BindGrid(aas.Data.AdventureWorksData.Subcategory, "CategorySubcategory.Category.Name ASC");

@@ -2,7 +2,7 @@
 var vRepeater = Aspectize.CreateView("Repeater", aas.Controls.Repeater, aas.Zones.SideBarContent.ZoneContent);
 vRepeater.NbProduct.BindData(vRepeater.RepeaterPanelProduct.RowCount);
 vRepeater.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement(aas.ViewName.Repeater));
-vRepeater.TxtFilter.keyup.BindCommand(aas.Services.Browser.UIService.SetCustomFilter(aas.ViewName.Repeater.RepeaterPanelProduct, aas.Expression('(Name).toLowerCase().indexOf("' + vRepeater.TxtFilter.value + '".toLowerCase()) !== -1')), null, false, true);
+vRepeater.TxtFilter.keyup.BindCommand(aas.Services.Browser.UIService.SetCustomFilter, { controlName: aas.ViewName.Repeater.RepeaterPanelProduct, customFilter: aas.Expression('(Name).toLowerCase().indexOf("' + vRepeater.TxtFilter.value + '".toLowerCase()) !== -1') }, null, false, true);
 vRepeater.SelectOrder.BindList(aas.Data.MainData.EnumProductOrderField, "EnumerationElement", "EnumerationElement");
 vRepeater.SelectOrder.NullValueDisplay.BindData("Choose Order Field");
 vRepeater.SelectOrder.CurrentSyncDisabled.BindData(true);
