@@ -3,6 +3,12 @@ vJQueryRateIt.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientServic
 
 vJQueryRateIt.SalesPersonRate.Value.BindData(aas.Data.AdventureWorksData.SalesPerson.Rate);
 vJQueryRateIt.SalesPersonRate.EditMode.BindData(vJQueryRateIt.CheckEditMode.checked);
+vJQueryRateIt.SalesPersonRate.Min.BindData(vJQueryRateIt.TxtMin.value);
+vJQueryRateIt.SalesPersonRate.Max.BindData(vJQueryRateIt.TxtMax.value);
+
+vJQueryRateIt.SalesPersonRateBig.StarHeight.BindData(32);
+vJQueryRateIt.SalesPersonRateBig.StarWidth.BindData(32);
+
 
 vJQueryRateIt.GridSalesPerson.BindGrid(aas.Data.AdventureWorksData.SalesPerson);
 var cFirstName = vJQueryRateIt.GridSalesPerson.AddGridColumn("FirstName", "Span");
