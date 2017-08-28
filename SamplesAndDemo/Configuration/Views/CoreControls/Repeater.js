@@ -9,6 +9,8 @@ vRepeater.SelectOrder.CurrentSyncDisabled.BindData(true);
 vRepeater.SelectOrder.SelectedValueChanged.BindCommand(aas.Services.Browser.UIService.SetSortExpression(aas.ViewName.Repeater.RepeaterPanelProduct, aas.Expression(IIF(vRepeater.SelectOrder.CurrentValue, vRepeater.SelectOrder.CurrentValue + ' ASC', ''))), null, false, true);
 vRepeater.SelectCategory.BindList(aas.Data.AdventureWorksData.Category, "CategoryID", "Name", "Name ASC");
 vRepeater.SelectSubCategory.BindList(aas.Data.AdventureWorksData.Category.CategorySubcategory.Subcategory, "SubcategoryID", "Name", "Name ASC", "", "");
+vRepeater.RepeaterPanelProduct.Click.BindCommand(aas.Services.Browser.SystemServices.Alert(aas.Expression(aas.Data.AdventureWorksData.Category.CategorySubcategory.Subcategory.ProductSubcategory.Product.Name + ' clicked !')));
+vRepeater.RepeaterPanelProduct.SelectedStyle.BindData('SelectedProduct');
 
 var vProductItem = Aspectize.CreateRepeatedView("ProductItem", aas.Controls.ProductItem, aas.Zones.Repeater.RepeaterPanelProduct, aas.Data.AdventureWorksData.Category.CategorySubcategory.Subcategory.ProductSubcategory.Product, "", "Literal:");
 vProductItem.ProductName.BindData(vProductItem.ParentData.Name);

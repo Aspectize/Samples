@@ -43,6 +43,10 @@
     background-color: transparent;
 }
 
+.SelectedProduct {
+    background-color: #E7E9F9;
+}
+
 .ProductItem
 {
 	padding: 10px;
