@@ -20,16 +20,4 @@ vGoogleMap.Map.AddMarkerOnClick.BindData(true);
 
 vGoogleMap.Map.OnMapClick.BindCommand(aas.Services.Browser.ClientService.AddPointFromClick(''));
 
-//vGoogleMap.Place.OnFullAdressChanged.BindCommand(aas.Services.Browser.DataService.AddRowAndSelect(aas.Path.MapData.Place));
-
-//vGoogleMap.Place.FullAdress.BindData(aas.Data.MapData.Place.Adress_FullAdress);
-//vGoogleMap.Place.City.BindData(aas.Data.MapData.Place.Adress_City);
-//vGoogleMap.Place.Country.BindData(aas.Data.MapData.Place.Adress_Country);
-//vGoogleMap.Place.Latitude.BindData(aas.Data.MapData.Place.Latitude);
-//vGoogleMap.Place.Longitude.BindData(aas.Data.MapData.Place.Longitude);
-//vGoogleMap.Place.Route.BindData(aas.Data.MapData.Place.Adress_Route);
-//vGoogleMap.Place.StreetNumber.BindData(aas.Data.MapData.Place.Adress_StreetNumber);
-//vGoogleMap.Place.Zip.BindData(aas.Data.MapData.Place.Adress_Zip);
-
-
 
