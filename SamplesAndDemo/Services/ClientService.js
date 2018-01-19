@@ -46,15 +46,14 @@
 
             var place = em.GetInstance('Place', { Id: aasEventArg.item.id});
 
-            aas.Services.Browser.GoogleMapService.GeoCode()
-            //place.SetField('Longitude', aasEventArg.Longitude);
-            //place.SetField('Latitude', aasEventArg.Latitude);
-            //place.SetField('Adress_FullAdress', aasEventArg.FormatAdress);
-            //place.SetField('Adress_Country', aasEventArg.country);
-            //place.SetField('Adress_City', aasEventArg.locality);
-            //place.SetField('Adress_Zip', aasEventArg.postal_code);
-            //place.SetField('Adress_Route', aasEventArg.route);
-            //place.SetField('Adress_StreetNumber', aasEventArg.street_number);
+            place.SetField('Longitude', aasEventArg.adressComponent.Longitude);
+            place.SetField('Latitude', aasEventArg.adressComponent.Latitude);
+            place.SetField('Adress_FullAdress', aasEventArg.adressComponent.FormatAdress);
+            place.SetField('Adress_Country', aasEventArg.adressComponent.country);
+            place.SetField('Adress_City', aasEventArg.adressComponent.locality);
+            place.SetField('Adress_Zip', aasEventArg.adressComponent.postal_code);
+            place.SetField('Adress_Route', aasEventArg.adressComponent.route);
+            place.SetField('Adress_StreetNumber', aasEventArg.adressComponent.street_number);
         }
     }
 };
