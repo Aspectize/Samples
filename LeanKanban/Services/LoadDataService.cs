@@ -4,7 +4,6 @@ using System.Text;
 using System.Data;
 using Aspectize.Core;
 using System.Security.Permissions;
-using BasicAuth;
 
 namespace LeanKanban
 {
