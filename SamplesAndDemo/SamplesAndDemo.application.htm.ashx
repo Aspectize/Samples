@@ -46,7 +46,7 @@
 
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script type="text/javascript">
-    google.load('maps','3',{'other_params':'libraries=places'});
+    google.load('maps','3',{'other_params':'libraries=places&key=AIzaSyA9nRTqATe9uhMID-6F3oE5Ye-S71GxsL4'});
     google.load('visualization', '1.0', {'packages':['annotatedtimeline', 'corechart', 'table', 'geochart', 'orgchart']});
 </script>
 
