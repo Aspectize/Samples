@@ -44,11 +44,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AspectizeCore">
-      <HintPath>..\..\..\..\Delivery\Aspectize.core\AspectizeCore.dll</HintPath>
+      <HintPath>$(AspectizeWebHost)\Aspectize.core\AspectizeCore.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="SmartBlocksCore">
-      <HintPath>..\..\..\..\Delivery\Aspectize.core\SmartBlocksCore.dll</HintPath>
+      <HintPath>$(AspectizeWebHost)\Aspectize.core\SmartBlocksCore.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -154,6 +154,7 @@
     <Content Include="Configuration\Views\Dhtmlx\DhtmlxRadarChart.js" />
     <Content Include="Configuration\Views\GoogleExtension\GoogleLineChart.js" />
     <Content Include="Configuration\Views\GoogleExtension\GoogleMap.js" />
+    <Content Include="Configuration\Views\GoogleExtension\GooglePlace.js" />
     <Content Include="Configuration\Views\GoogleExtension\GoogleTable.js" />
     <Content Include="Configuration\Views\JQueryExtension\JQueryAutoComplete.js" />
     <Content Include="Configuration\Views\JQueryExtension\JQueryDatePicker.js" />
@@ -184,6 +185,7 @@
     <Content Include="Controls\Dhtmlx\DhtmlxRadarChart.htm" />
     <Content Include="Controls\GoogleExtension\GoogleLineChart.htm" />
     <Content Include="Controls\GoogleExtension\GoogleMap.htm" />
+    <Content Include="Controls\GoogleExtension\GooglePlace.htm" />
     <Content Include="Controls\GoogleExtension\GoogleTableVisualisation.htm" />
     <Content Include="Controls\JQueryExtension\JQueryAutoComplete.htm" />
     <Content Include="Controls\JQueryExtension\JQueryDatePicker.htm" />

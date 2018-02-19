@@ -124,7 +124,9 @@ namespace Samples
 		[Description("GoogleLineChart")]
 		GoogleLineChart,
 		[Description("GoogleMap")]
-		GoogleMap
+		GoogleMap,
+		[Description("GooglePlace")]
+		GooglePlace
 	}
 
 	[DataDefinition(MustPersist = false)]

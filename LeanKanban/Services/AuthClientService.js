@@ -126,7 +126,7 @@
 
            var code = uiService.GetContextValue('ConfirmationCode');
 
-           var pwdHash = Aspectize.Md5HashBase64(pwd);
+           var pwdHash = Aspectize.Host.ExecuteCommand(aas.Services.Browser.SecurityServices.ComputeHashForStorage(pwd));
 
            Aspectize.Host.ExecuteCommand('Server/InscriptionService.ValidateInscription', code, login, pwdHash);
            Aspectize.Host.ExecuteCommand('Browser/SecurityServices.Authenticate', login, pwd, rememberMe);

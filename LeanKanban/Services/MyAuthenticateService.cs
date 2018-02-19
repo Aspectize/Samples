@@ -38,6 +38,29 @@ namespace LeanKanban
             return AspectizeUser.GetUnAuthenticatedUser();
         }
 
+        bool IPersistentAuthentication.ValidateUser(AspectizeUser user)
+        {
+            IDataManager dm = EntityManager.FromDataBaseService(ServiceName.MyDataService);
+
+            Guid userId = new Guid(user.UserId);
+
+            User appliUser = dm.GetEntity<User>(userId);
+
+            if (appliUser != null && appliUser.Status != EnumUserStatus.Blocked)
+            {
+                appliUser.DateLastLogin = DateTime.Now;
+
+                var roles = new List<string>();
+
+                roles.Add("Registered");
+
+                user.SetRoles(roles);
+
+                return true;
+            }
+            return false;
+        }
+
         DataSet IUserProfile.GetUserProfile()
         {
             AspectizeUser aspectizeUser = ExecutingContext.CurrentUser;
@@ -68,29 +91,6 @@ namespace LeanKanban
             }
 
             return dm.Data;
-        }
-
-        bool IPersistentAuthentication.ValidateUser(AspectizeUser user)
-        {
-            IDataManager dm = EntityManager.FromDataBaseService(ServiceName.MyDataService);
-
-            Guid userId = new Guid(user.UserId);
-
-            User appliUser = dm.GetEntity<User>(userId);
-
-            if (appliUser != null && appliUser.Status != EnumUserStatus.Blocked)
-            {
-                appliUser.DateLastLogin = DateTime.Now;
-
-                var roles = new List<string>();
-
-                roles.Add("Registered");
-
-                user.SetRoles(roles);
-
-                return true;
-            }
-            return false;
         }
 
     }

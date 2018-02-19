@@ -10,6 +10,7 @@ vBootstrapDatepicker.BootstrapDatePickerMin.Format.BindData('DD/MM/YYYY');
 vBootstrapDatepicker.BootstrapDatePickerMin.MaxDate.BindData(vBootstrapDatepicker.BootstrapDatePickerMax.Value);
 vBootstrapDatepicker.BootstrapDatePickerMax.Format.BindData('DD/MM/YYYY');
 vBootstrapDatepicker.BootstrapDatePickerMax.MinDate.BindData(vBootstrapDatepicker.BootstrapDatePickerMin.Value);
+vBootstrapDatepicker.BootstrapDatePickerMax.UseCurrent.BindData(false);
 vBootstrapDatepicker.BootstrapDatePickerInline.Inline.BindData(true);
 vBootstrapDatepicker.BootstrapDatePickerInline.Stepping.BindData(15);
 vBootstrapDatepicker.DateSelectedInline.BindData(vBootstrapDatepicker.BootstrapDatePickerInline.Value, "dd MMMM yyyy HH:mm");

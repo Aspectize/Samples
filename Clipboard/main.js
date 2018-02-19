@@ -1,5 +1,5 @@
 function Main() {
     Aspectize.Host.InitApplication();
 
-    Aspectize.Host.ActivateViewByName('MainView');
+    Aspectize.Host.ExecuteCommand('UIService.ShowView', 'MainView');
 }
