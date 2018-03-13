@@ -1,6 +1,6 @@
 ﻿var app = newApplication();
 
-app.Directories = "Bootstrap, GoogleExtension, JQueryExtension, TinyMCE, BootstrapDateTimePicker, JQueryRateIt, Dhtmlx";
+app.Directories = "Bootstrap, GoogleExtension, JQueryExtension, TinyMCE, BootstrapDateTimePicker, JQueryRateIt, Dhtmlx, FullCalendar";
 
 var ctxData0 = newContextData();
 

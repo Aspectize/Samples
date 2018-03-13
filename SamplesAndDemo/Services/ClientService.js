@@ -55,6 +55,18 @@
             place.SetField('Adress_Route', aasEventArg.adressComponent.route);
             place.SetField('Adress_StreetNumber', aasEventArg.adressComponent.street_number);
         }
+    },
+
+    AddCalendarEvent: function (aasEventArg) {
+
+        var em = Aspectize.EntityManagerFromContextDataName('MainData');
+        
+        var newCalendarEvent = em.CreateInstance('CalendarEvent');
+
+        newCalendarEvent.SetField('DateStart', aasEventArg.start);
+        newCalendarEvent.SetField('DateEnd', aasEventArg.end);
+        newCalendarEvent.SetField('Description', 'this is a new calendar event');
+
     }
 };
 

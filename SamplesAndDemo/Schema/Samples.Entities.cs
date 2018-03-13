@@ -17,6 +17,7 @@ namespace Samples
 		{
 			public const string ComplexLayoutTrace = "ComplexLayoutTrace";
 			public const string TimerTrace = "TimerTrace";
+			public const string CalendarEvent = "CalendarEvent";
 		}
 	}
 
@@ -146,7 +147,9 @@ namespace Samples
 	public enum EnumMiscExtension
 	{
 		[Description("TinyMCE")]
-		TinyMCE
+		TinyMCE,
+		[Description("FullCalendar")]
+		FullCalendar
 	}
 
 	[DataDefinition(MustPersist = false)]
@@ -237,6 +240,52 @@ namespace Samples
 		{
 			get { return getValue<DateTime>("DateEvent"); }
 			set { setValue<DateTime>("DateEvent", value); }
+		}
+
+	}
+
+	[DataDefinition(MustPersist = false)]
+	public class CalendarEvent : Entity, IDataWrapper
+	{
+		public static partial class Fields
+		{
+			public const string Id = "Id";
+			public const string DateStart = "DateStart";
+			public const string DateEnd = "DateEnd";
+			public const string Description = "Description";
+		}
+
+		void IDataWrapper.InitData(DataRow data, string namePrefix)
+		{
+			base.InitData(data, null);
+		}
+
+		[Data(IsPrimaryKey=true)]
+		public Guid Id
+		{
+			get { return getValue<Guid>("Id"); }
+			set { setValue<Guid>("Id", value); }
+		}
+
+		[Data]
+		public DateTime DateStart
+		{
+			get { return getValue<DateTime>("DateStart"); }
+			set { setValue<DateTime>("DateStart", value); }
+		}
+
+		[Data]
+		public DateTime DateEnd
+		{
+			get { return getValue<DateTime>("DateEnd"); }
+			set { setValue<DateTime>("DateEnd", value); }
+		}
+
+		[Data]
+		public string Description
+		{
+			get { return getValue<string>("Description"); }
+			set { setValue<string>("Description", value); }
 		}
 
 	}

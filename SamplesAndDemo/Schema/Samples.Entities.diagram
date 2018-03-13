@@ -68,10 +68,10 @@
         <elementListCompartment Id="ef075489-98d7-48e4-a8c6-531a2fe020db" absoluteBounds="3.765, 5.58, 1.8450000000000002, 0.76920572916666663" name="Elements" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </enumShape>
-    <enumShape Id="26c971c7-264e-4ddb-afff-bdb09a4bdc99" absoluteBounds="0.625, 5.75, 1.875, 0.62230143229166668">
+    <enumShape Id="26c971c7-264e-4ddb-afff-bdb09a4bdc99" absoluteBounds="0.625, 5.75, 1.875, 0.81460286458333275">
       <enumEntityMoniker Id="ec0336ca-f636-421c-b92f-04d1b4022871" />
       <nestedChildShapes>
-        <elementListCompartment Id="8a3d1bf3-8add-406a-80ac-f26602ea8dfb" absoluteBounds="0.64, 6.08, 1.8450000000000002, 0.19230143229166666" name="Elements" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="8a3d1bf3-8add-406a-80ac-f26602ea8dfb" absoluteBounds="0.64, 6.08, 1.8450000000000002, 0.38460286458333331" name="Elements" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </enumShape>
     <enumShape Id="1129faf1-5c46-4a96-8dc1-4613f9165744" absoluteBounds="9.625, 0.75, 2.125, 1.1992057291666667">
@@ -86,5 +86,11 @@
         <elementListCompartment Id="78efd80d-1fd4-46af-b8b5-02c89e9f77e4" absoluteBounds="10.265, 3.705, 2.0949999999999998, 0.576904296875" name="Elements" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </enumShape>
+    <entityShape Id="1cf0bd23-c41a-4c0b-86c1-55b20e91b9da" absoluteBounds="10.5, 5.75, 1.75, 1.0069042968749997">
+      <entityMoniker Id="b3d5922a-b15b-4091-98bf-cc312109610a" />
+      <nestedChildShapes>
+        <elementListCompartment Id="73b8025d-3e58-4be6-8491-3e8a8a74d74a" absoluteBounds="10.515, 6.08, 1.7200000000000002, 0.576904296875" name="Properties" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </entityShape>
   </nestedChildShapes>
 </minimalLanguageDiagram>

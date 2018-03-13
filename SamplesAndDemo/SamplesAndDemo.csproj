@@ -165,8 +165,9 @@
     <Content Include="Configuration\Views\Layout\Panel.js" />
     <Content Include="Configuration\Views\Layout\Tab.js" />
     <Content Include="Configuration\Views\MainControl.js" />
+    <Content Include="Configuration\Views\Misc\FullCalendar.js" />
     <Content Include="Configuration\Views\SideBar\SideBarContent.js" />
-    <Content Include="Configuration\Views\TinyMCE\TinyMCE.js" />
+    <Content Include="Configuration\Views\Misc\TinyMCE.js" />
     <Content Include="Controls\BootstrapExtension\BootstrapDatepicker.htm" />
     <Content Include="Controls\BootstrapExtension\BootstrapGrid.htm" />
     <Content Include="Controls\BootstrapExtension\BootstrapModal.htm" />
@@ -197,7 +198,8 @@
     <Content Include="Controls\Layout\Panel.htm" />
     <Content Include="Controls\Layout\Tab.htm" />
     <Content Include="Controls\MainControls.htm" />
-    <Content Include="Controls\TinyMCE\TinyMCE.htm" />
+    <Content Include="Controls\Misc\FullCalendar.htm" />
+    <Content Include="Controls\Misc\TinyMCE.htm" />
     <Content Include="Images\Category.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

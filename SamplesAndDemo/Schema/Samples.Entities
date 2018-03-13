@@ -12,6 +12,13 @@
         <entityProperty name="DateEvent" type="DateTime" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
       </properties>
     </entity>
+    <entity Id="b3d5922a-b15b-4091-98bf-cc312109610a" name="CalendarEvent" guid="bbae4de1-aa72-4add-b1e2-2e47b6d2e9a3" mustPersist="false" hasCustomValidators="false" hasTriggers="false">
+      <properties>
+        <entityProperty name="DateStart" type="DateTime" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+        <entityProperty name="DateEnd" type="DateTime" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+        <entityProperty name="Description" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+      </properties>
+    </entity>
   </entities>
   <enumEntities>
     <enumEntity Id="a3a50859-b3e8-4756-9ce5-6e5949846637" name="EnumCoreControl">
@@ -84,6 +91,7 @@
     <enumEntity Id="ec0336ca-f636-421c-b92f-04d1b4022871" name="EnumMiscExtension">
       <enumItems>
         <enumItem name="TinyMCE" value="0" />
+        <enumItem name="FullCalendar" value="0" />
       </enumItems>
     </enumEntity>
     <enumEntity Id="abe642f0-7967-40e4-8c8d-3a8ef8d62073" name="EnumDatePickerViewMode">
