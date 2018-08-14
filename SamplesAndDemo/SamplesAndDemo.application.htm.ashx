@@ -46,9 +46,12 @@
 
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script type="text/javascript">
-    google.load('maps','3',{'other_params':'libraries=places&key=AIzaSyBqDDlXzatlCIORxJ2sH8IfwrRG3VBF8ks'});
+   // google.load('maps','3',{'other_params':'libraries=places&key=AIzaSyBqDDlXzatlCIORxJ2sH8IfwrRG3VBF8ks'});
     google.load('visualization', '1.0', {'packages':['annotatedtimeline', 'corechart', 'table', 'geochart', 'orgchart']});
 </script>
+
+<script src="https://maps.googleapis.com/maps/api/js?libraries=geometry,places&region=fr&key=AIzaSyD7neqa17ylmzyL4mj7mxwivKCZ32FX75s"></script>
+
 
 <!-- FullCalendar -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js'></script>
