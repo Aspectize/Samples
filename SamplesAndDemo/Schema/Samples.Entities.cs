@@ -173,7 +173,9 @@ namespace Samples
 		[Description("DhtmlxPieChart")]
 		DhtmlxPieChart,
 		[Description("DhtmlxRadarChart")]
-		DhtmlxRadarChart
+		DhtmlxRadarChart,
+		[Description("DhtmlxBarChart")]
+		DhtmlxBarChart
 	}
 
 	[DataDefinition(MustPersist = false)]

@@ -5,7 +5,7 @@ vDhtmlxLineChart.DhtmlxLineChartSales.BindGrid(aas.Data.AdventureWorksData.Sales
 vDhtmlxLineChart.DhtmlxLineChartSales.Type.BindData('line');
 var cQuotaDate = vDhtmlxLineChart.DhtmlxLineChartSales.AddGridColumn("QuotaDate", "Dhtmlx.DhtmlxAxis");
 cQuotaDate.Value.BindData(vDhtmlxLineChart.DhtmlxLineChartSales.DataSource.QuotaDate);
-cQuotaDate.Label.BindData(vDhtmlxLineChart.DhtmlxLineChartSales.DataSource.QuotaDate, 'MM/yy');
+cQuotaDate.Label.BindData(vDhtmlxLineChart.DhtmlxLineChartSales.DataSource.QuotaDate, 'MM/yyyy');
 cQuotaDate.Title.BindData("Date");
 var cSalesQuota = vDhtmlxLineChart.DhtmlxLineChartSales.AddGridColumn("SalesQuota", "Dhtmlx.DhtmlxAxis");
 cSalesQuota.Value.BindData(vDhtmlxLineChart.DhtmlxLineChartSales.DataSource.SalesQuota);

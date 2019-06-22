@@ -107,6 +107,7 @@
         <enumItem name="DhtmlxLineChart" value="0" />
         <enumItem name="DhtmlxPieChart" value="0" />
         <enumItem name="DhtmlxRadarChart" value="0" />
+        <enumItem name="DhtmlxBarChart" value="0" />
       </enumItems>
     </enumEntity>
   </enumEntities>

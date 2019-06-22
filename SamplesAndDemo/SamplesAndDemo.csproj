@@ -149,6 +149,7 @@
     <Content Include="Configuration\Views\BootstrapExtension\BootstrapGrid.js" />
     <Content Include="Configuration\Views\BootstrapExtension\BootstrapModal.js" />
     <Content Include="Configuration\Views\BootstrapExtension\BootstrapTab.js" />
+    <Content Include="Configuration\Views\Dhtmlx\DhtmlxBarChart.js" />
     <Content Include="Configuration\Views\Dhtmlx\DhtmlxLineChart.js" />
     <Content Include="Configuration\Views\Dhtmlx\DhtmlxPieChart.js" />
     <Content Include="Configuration\Views\Dhtmlx\DhtmlxRadarChart.js" />
@@ -181,6 +182,7 @@
     <Content Include="Controls\Core\Timer.htm" />
     <Content Include="Controls\Core\TreeView.htm" />
     <Content Include="Controls\Core\FileUpload.htm" />
+    <Content Include="Controls\Dhtmlx\DhtmlxBarChart.htm" />
     <Content Include="Controls\Dhtmlx\DhtmlxLineChart.htm" />
     <Content Include="Controls\Dhtmlx\DhtmlxPieChart.htm" />
     <Content Include="Controls\Dhtmlx\DhtmlxRadarChart.htm" />

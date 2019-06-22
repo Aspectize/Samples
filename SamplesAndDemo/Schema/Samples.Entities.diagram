@@ -80,10 +80,10 @@
         <elementListCompartment Id="a30170f3-3a41-437c-94fc-372572761a68" absoluteBounds="9.64, 1.08, 2.0949999999999998, 0.76920572916666663" name="Elements" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </enumShape>
-    <enumShape Id="58c6aa8e-dc86-48dc-8ddb-bd7f657e0f36" absoluteBounds="10.25, 3.375, 2.125, 1.0069042968749997">
+    <enumShape Id="58c6aa8e-dc86-48dc-8ddb-bd7f657e0f36" absoluteBounds="10.25, 3.375, 2.125, 1.1992057291666658">
       <enumEntityMoniker Id="fc9e8627-f487-4a25-b273-d06de09840ee" />
       <nestedChildShapes>
-        <elementListCompartment Id="78efd80d-1fd4-46af-b8b5-02c89e9f77e4" absoluteBounds="10.265, 3.705, 2.0949999999999998, 0.576904296875" name="Elements" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="78efd80d-1fd4-46af-b8b5-02c89e9f77e4" absoluteBounds="10.265, 3.705, 2.0949999999999998, 0.76920572916666663" name="Elements" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </enumShape>
     <entityShape Id="1cf0bd23-c41a-4c0b-86c1-55b20e91b9da" absoluteBounds="10.5, 5.75, 1.75, 1.0069042968749997">

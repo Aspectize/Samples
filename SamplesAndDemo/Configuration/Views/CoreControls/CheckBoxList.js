@@ -12,6 +12,6 @@ vCheckBoxList.CheckBoxListDemo.SelectedValue.BindData(aas.Data.AdventureWorksDat
 
 vCheckBoxList.GridDepartment.BindGrid(aas.Data.AdventureWorksData.SalesPerson.SalesPersonDepartment.Department);
 var cDepartment = vCheckBoxList.GridDepartment.AddGridColumn("Department", "Span");
-cDepartment.Text.BindData(vCheckBoxList.GridSalesPerson.DataSource.Name);
+cDepartment.Text.BindData(vCheckBoxList.GridDepartment.DataSource.Name);
 
 vCheckBoxList.SelectedSale.BindData(aas.Expression(aas.Data.AdventureWorksData.SalesPerson.ContactSalesPerson.Contact.FirstName + ' ' + aas.Data.AdventureWorksData.SalesPerson.ContactSalesPerson.Contact.LastName));
