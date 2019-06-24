@@ -129,7 +129,7 @@
     <Content Include="Configuration\Application.js" />
     <Content Include="Configuration\Services\ConfiguredServices.js" />
     <Content Include="Configuration\Views\CoreControls\CheckBoxList.js" />
-    <Content Include="Configuration\Views\CoreControls\ComboBox.js" />
+    <Content Include="Configuration\Views\CoreControls\List.js" />
     <Content Include="Configuration\Views\CoreControls\ComplexLayout\ChildViewA.js" />
     <Content Include="Configuration\Views\CoreControls\ComplexLayout\ChildViewB.js" />
     <Content Include="Configuration\Views\CoreControls\ComplexLayout\ChildViewC.js" />
@@ -174,7 +174,7 @@
     <Content Include="Controls\BootstrapExtension\BootstrapModal.htm" />
     <Content Include="Controls\BootstrapExtension\BootstrapTab.htm" />
     <Content Include="Controls\Core\CheckBoxList.htm" />
-    <Content Include="Controls\Core\Combo.htm" />
+    <Content Include="Controls\Core\List.htm" />
     <Content Include="Controls\Core\Grid.htm" />
     <Content Include="Controls\Core\Image.htm" />
     <Content Include="Controls\Core\RadioButtons.htm" />

@@ -32,8 +32,8 @@ namespace Samples
 	[DataDefinition(MustPersist = false)]
 	public enum EnumCoreControl
 	{
-		[Description("ComboBox")]
-		ComboBox,
+		[Description("List")]
+		List,
 		[Description("RadioButtons")]
 		RadioButtons,
 		[Description("CheckBoxList")]
@@ -168,14 +168,14 @@ namespace Samples
 	[DataDefinition(MustPersist = false)]
 	public enum EnumDhtmlxExtension
 	{
-		[Description("DhtmlxLineChart")]
-		DhtmlxLineChart,
-		[Description("DhtmlxPieChart")]
-		DhtmlxPieChart,
-		[Description("DhtmlxRadarChart")]
-		DhtmlxRadarChart,
-		[Description("DhtmlxBarChart")]
-		DhtmlxBarChart
+		[Description("LineChart")]
+		LineChart,
+		[Description("PieChart")]
+		PieChart,
+		[Description("RadarChart")]
+		RadarChart,
+		[Description("BarChart")]
+		BarChart
 	}
 
 	[DataDefinition(MustPersist = false)]
