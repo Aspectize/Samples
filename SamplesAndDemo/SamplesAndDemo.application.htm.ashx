@@ -44,7 +44,7 @@
 
 <script type="text/javascript" src="~TinyMCE/tinyMCEV4/js/tinymce_4.1.0/tinymce.min.js"></script>
 
-<script src="https://maps.googleapis.com/maps/api/js?libraries=geometry,places&region=fr&key=AIzaSyD7neqa17ylmzyL4mj7mxwivKCZ32FX75s"></script>
+<script src="https://maps.googleapis.com/maps/api/js?libraries=geometry,places&region=fr"></script>
 
 
 <!-- FullCalendar -->

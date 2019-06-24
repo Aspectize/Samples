@@ -104,10 +104,10 @@
     </enumEntity>
     <enumEntity Id="fc9e8627-f487-4a25-b273-d06de09840ee" name="EnumDhtmlxExtension">
       <enumItems>
-        <enumItem name="LineChart" value="0" />
-        <enumItem name="PieChart" value="0" />
-        <enumItem name="RadarChart" value="0" />
-        <enumItem name="BarChart" value="0" />
+        <enumItem name="DhtmlxLineChart" value="0" />
+        <enumItem name="DhtmlxPieChart" value="0" />
+        <enumItem name="DhtmlxRadarChart" value="0" />
+        <enumItem name="DhtmlxBarChart" value="0" />
       </enumItems>
     </enumEntity>
   </enumEntities>

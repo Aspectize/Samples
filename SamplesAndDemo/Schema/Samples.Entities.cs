@@ -168,14 +168,14 @@ namespace Samples
 	[DataDefinition(MustPersist = false)]
 	public enum EnumDhtmlxExtension
 	{
-		[Description("LineChart")]
-		LineChart,
-		[Description("PieChart")]
-		PieChart,
-		[Description("RadarChart")]
-		RadarChart,
-		[Description("BarChart")]
-		BarChart
+		[Description("DhtmlxLineChart")]
+		DhtmlxLineChart,
+		[Description("DhtmlxPieChart")]
+		DhtmlxPieChart,
+		[Description("DhtmlxRadarChart")]
+		DhtmlxRadarChart,
+		[Description("DhtmlxBarChart")]
+		DhtmlxBarChart
 	}
 
 	[DataDefinition(MustPersist = false)]

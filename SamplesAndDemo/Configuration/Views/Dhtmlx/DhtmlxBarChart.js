@@ -24,8 +24,7 @@ cSalesQuota.LineWidth.BindData(2);
 cSalesQuota.ItemRadius.BindData(3);
 cSalesQuota.ItemBorderColor.BindData("#599EC8");
 cSalesQuota.ItemBorderWidth.BindData(1);
-
-
+cSalesQuota.AlphaTransparency.BindData(1);
 
 
 vDhtmlxBarChart.GridSalesPerson.BindGrid(aas.Data.AdventureWorksData.SalesPerson);
