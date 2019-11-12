@@ -1,12 +1,17 @@
+/// <reference path="S:\Delivery\Aspectize.core\AspectizeIntellisenseLibrary.js" />
+
 function Main() {
-    Aspectize.Host.InitApplication();
+    Aspectize.App.Initialize(function () {
 
-    var currentUser = Aspectize.ExecutingContext.GetCurrentUser();
+        var currentUser = Aspectize.GetCurrentUser();
 
-    if (currentUser.IsAuthenticated) {
-        Aspectize.Host.ExecuteCommand('UIService.ShowView', 'MyBoards');
-    }
-    else {
-        Aspectize.Host.ExecuteCommand('UIService.ShowView', 'Welcome');
-    }
+        if (currentUser.IsAuthenticated) {
+            Aspectize.ExecuteCommand('UIService.ShowView', 'MyBoards');
+        }
+        else {
+            Aspectize.ExecuteCommand('UIService.ShowView', 'Welcome');
+        }
+    });
+
+
 }
