@@ -4,8 +4,8 @@
     <title>Untitled</title>
 </head>
 <body>
-
-    <div aas:control="MainControl">
+    
+    <div aas-control="MainControl">
         <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
           <div class="container">
             <div class="navbar-header">
@@ -21,10 +21,10 @@
             <div class="collapse navbar-collapse"></div>
           </div>
         </nav>
-        <div aas:name="Content" class="Panel container"></div>
+        <div aas-name="Content" class="Panel container" aas-type="Panel"></div>
     </div>
 
-    <div aas:control="Welcome">
+    <div aas-control="Welcome">
         <div class="form form-horizontal text-center">
             <br />
             <br />
@@ -47,27 +47,27 @@
         <br />
     </div>
 
-    <div aas:control="ClipboardEdit">
+    <div aas-control="ClipboardEdit">
         <div><h1><span>{libelle}</span><span class="pull-right">{Code}</span></h1></div>
         <input name="Update" type="button" value="Update" />
         <br />
         <textarea class="ClipboardContent" cols="20" name="TxtClipboard"></textarea>
    </div>
 
-    <div aas:control="ClipboardRead">
+    <div aas-control="ClipboardRead">
         <div><h1><span>{libelle}</span><span class="pull-right">{Code}</span></h1></div>
         <input name="Update" type="button" value="Update" />
         <br />
         <textarea readonly class="ClipboardContent" cols="20" name="TxtClipboard"></textarea>
-        <div aas:name="Timer" class="AspectizeTimer"></div>
+        <div aas-name="Timer" class="AspectizeTimer" aas-type="AspectizeTimer"></div>
     </div>
 
-    <div aas:control="Clipboards">
+    <div aas-control="Clipboards">
         <button class="btn btn-primary" name="Create">Create a new clipboard</button>
-        <div aas:name="GridClipboards" class="BootstrapGrid"></div>
+        <div aas-name="GridClipboards" aas-type="Bootstrap.BootstrapGrid"></div>    
     </div>
 
-    <div aas:control="name:'NewClipboard', isModal:true">
+    <div aas-control="name:'NewClipboard', isModal:true">
         <div class="modal fade">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -93,7 +93,7 @@
         </div>
     </div>
     
-    <div aas:control="name:'ErrorControl', isModal:true">
+    <div aas-control="name:'ErrorControl', isModal:true">
         <div class="modal fade">
             <div class="modal-dialog">
                 <div class="modal-content">

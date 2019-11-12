@@ -38,10 +38,10 @@ var clipboards = Aspectize.CreateView("ClipBoards", aas.Controls.Clipboards, aas
 clipboards.OnLoad.BindCommand(aas.Services.Server.LoadDataService.LoadClipboards(), aas.Data.MainData, true, true);
 
 clipboards.GridClipboards.BindGrid(aas.Data.MainData.Clipboard);
-var cName = clipboards.GridClipboards.AddGridColumn("Name", "BootstrapSpan");
+var cName = clipboards.GridClipboards.AddGridColumn("Name", aas.ColumnType.Bootstrap.BootstrapSpan);
 cName.Text.BindData(clipboards.GridClipboards.DataSource.Libelle);
 
-var cButton = clipboards.GridClipboards.AddGridColumn("Enter", "BootstrapButton");
+var cButton = clipboards.GridClipboards.AddGridColumn("Enter", aas.ColumnType.Bootstrap.BootstrapButton);
 cButton.Click.BindCommand(aas.Services.Browser.UIService.ShowView(aas.ViewName.ClipBoardEdit));
 cButton.Text.BindData("Enter");
 
