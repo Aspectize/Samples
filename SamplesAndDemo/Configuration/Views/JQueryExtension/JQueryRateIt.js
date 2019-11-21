@@ -11,8 +11,8 @@ vJQueryRateIt.SalesPersonRateBig.StarWidth.BindData(32);
 
 
 vJQueryRateIt.GridSalesPerson.BindGrid(aas.Data.AdventureWorksData.SalesPerson);
-var cFirstName = vJQueryRateIt.GridSalesPerson.AddGridColumn("FirstName", "Span");
+var cFirstName = vJQueryRateIt.GridSalesPerson.AddGridColumn("FirstName", aas.ColumnType.Span);
 cFirstName.Text.BindData(vJQueryRateIt.GridSalesPerson.DataSource.ContactSalesPerson.Contact.FirstName);
-var cRate = vJQueryRateIt.GridSalesPerson.AddGridColumn("Rate", "Span");
+var cRate = vJQueryRateIt.GridSalesPerson.AddGridColumn("Rate", aas.ColumnType.Span);
 cRate.Text.BindData(vJQueryRateIt.GridSalesPerson.DataSource.Rate, 'F1');
 

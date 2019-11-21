@@ -13,7 +13,7 @@ vDhtmlxRadarChart.DhtmlxRadarChartSales.ShowPoints.BindData(false);
 //vDhtmlxRadarChart.DhtmlxRadarChartSales.xStart.BindData(0);
 //vDhtmlxRadarChart.DhtmlxRadarChartSales.xStep.BindData(1000);
 
-var cQuotaDate = vDhtmlxRadarChart.DhtmlxRadarChartSales.AddGridColumn("QuotaDate", "Dhtmlx.DhtmlxAxis");
+var cQuotaDate = vDhtmlxRadarChart.DhtmlxRadarChartSales.AddGridColumn("QuotaDate", aas.ColumnType.Dhtmlx.DhtmlxAxis);
 cQuotaDate.Value.BindData(vDhtmlxRadarChart.DhtmlxRadarChartSales.DataSource.QuotaDate);
 cQuotaDate.Label.BindData(vDhtmlxRadarChart.DhtmlxRadarChartSales.DataSource.QuotaDate, 'MM/yy');
 cQuotaDate.ItemColor.BindData('#cfcfcf');
@@ -28,7 +28,7 @@ cQuotaDate.LineColor.BindData('#cfcfcf');
 cQuotaDate.ItemRadius.BindData(3);
 cQuotaDate.ItemBorderColor.BindData("#599EC8");
 cQuotaDate.ItemBorderWidth.BindData(1);
-var cSalesQuota = vDhtmlxRadarChart.DhtmlxRadarChartSales.AddGridColumn("SalesQuota", "Dhtmlx.DhtmlxAxis");
+var cSalesQuota = vDhtmlxRadarChart.DhtmlxRadarChartSales.AddGridColumn("SalesQuota", aas.ColumnType.Dhtmlx.DhtmlxAxis);
 cSalesQuota.Value.BindData(vDhtmlxRadarChart.DhtmlxRadarChartSales.DataSource.SalesQuota);
 cSalesQuota.Title.BindData("Sales");
 //cSalesQuota.Label.BindData(vDhtmlxRadarChart.DhtmlxRadarChartSales.DataSource.SalesQuota, 'G0');
@@ -43,8 +43,8 @@ cSalesQuota.ItemBorderWidth.BindData(1);
 
 
 vDhtmlxRadarChart.GridSalesPerson.BindGrid(aas.Data.AdventureWorksData.SalesPerson);
-var cFirstName = vDhtmlxRadarChart.GridSalesPerson.AddGridColumn("FirstName", "Span");
+var cFirstName = vDhtmlxRadarChart.GridSalesPerson.AddGridColumn("FirstName", aas.ColumnType.Span);
 cFirstName.Text.BindData(vDhtmlxRadarChart.GridSalesPerson.DataSource.ContactSalesPerson.Contact.FirstName);
-var cLastName = vDhtmlxRadarChart.GridSalesPerson.AddGridColumn("LastName", "Span");
+var cLastName = vDhtmlxRadarChart.GridSalesPerson.AddGridColumn("LastName", aas.ColumnType.Span);
 cLastName.Text.BindData(vDhtmlxRadarChart.GridSalesPerson.DataSource.ContactSalesPerson.Contact.LastName);
 

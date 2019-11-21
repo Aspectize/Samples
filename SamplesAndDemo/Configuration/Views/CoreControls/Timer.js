@@ -6,7 +6,7 @@ vTimer.DeactivateTimer.click.BindCommand(aas.Services.Browser.UIService.Deactiva
 vTimer.Timer.Period.BindData(vTimer.TxtPeriod.value);
 vTimer.Timer.OnTimer.BindCommand(aas.Services.Browser.DataService.AddRowAndSelect(aas.Path.MainData.TimerTrace));
 vTimer.GridTrace.BindGrid(aas.Data.MainData.TimerTrace, "DateEvent ASC");
-var cTrace = vTimer.GridTrace.AddGridColumn("Trace", "Bootstrap.BootstrapSpan");
+var cTrace = vTimer.GridTrace.AddGridColumn("Trace", aas.ColumnType.Bootstrap.BootstrapSpan);
 cTrace.Text.BindData(aas.Expression('Timer call commands on ' + vTimer.GridTrace.DataSource.DateEvent));
 vTimer.BtnResetTrace.click.BindCommand(aas.Services.Browser.DataService.ClearData(aas.Path.MainData.TimerTrace));
 

@@ -15,7 +15,7 @@ vFullCalendar.Calendar.Locale.BindData(vFullCalendar.TxtLocale.value, '', aas.En
 
 vFullCalendar.Calendar.OnNewEvent.BindCommand(aas.Services.Browser.SystemServices.Alert('display your own view to manage event properties'));
 
-var cEvent = vFullCalendar.Calendar.AddGridColumn('xxx', 'FullCalendar.CalendarEvent');
+var cEvent = vFullCalendar.Calendar.AddGridColumn('xxx', aas.ColumnType.FullCalendar.CalendarEvent);
 cEvent.Start.BindData(vFullCalendar.Calendar.DataSource.DateStart);
 cEvent.End.BindData(vFullCalendar.Calendar.DataSource.DateEnd);
 cEvent.Text.BindData(vFullCalendar.Calendar.DataSource.Description);
@@ -23,9 +23,9 @@ cEvent.EditMode.BindData(aas.View.FullCalendar.CheckBoxEditMode.checked);
 cEvent.OnEventClick.BindCommand(aas.Services.Browser.SystemServices.Alert('display your own view to manage event properties'))
 
 vFullCalendar.GridEvent.BindGrid(aas.Data.MainData.CalendarEvent);
-var cStart = vFullCalendar.GridEvent.AddGridColumn('Start', 'Span');
+var cStart = vFullCalendar.GridEvent.AddGridColumn('Start', aas.ColumnType.Span);
 cStart.Text.BindData(vFullCalendar.GridEvent.DataSource.DateStart, 'dd/MM/yyyy HH:mm');
-var cEnd = vFullCalendar.GridEvent.AddGridColumn('End', 'Span');
+var cEnd = vFullCalendar.GridEvent.AddGridColumn('End', aas.ColumnType.Span);
 cEnd.Text.BindData(vFullCalendar.GridEvent.DataSource.DateEnd, 'dd/MM/yyyy HH:mm');
-var cDesc = vFullCalendar.GridEvent.AddGridColumn('Description', 'Span');
+var cDesc = vFullCalendar.GridEvent.AddGridColumn('Description', aas.ColumnType.Span);
 cDesc.Text.BindData(vFullCalendar.GridEvent.DataSource.Description);

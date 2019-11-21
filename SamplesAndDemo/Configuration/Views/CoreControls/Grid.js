@@ -18,26 +18,26 @@ vGrid.TxtFilter.keyup.BindCommand(aas.Services.Browser.UIService.SetCustomFilter
 // Group Rows
 vGrid.GridSubCategory.BindGrid(aas.Data.AdventureWorksData.Subcategory, "CategorySubcategory.Category.Name ASC");
 vGrid.GridSubCategory.GroupRows.BindData(true);
-var cCategory = vGrid.GridSubCategory.AddGridColumn("Category", "Span");
+var cCategory = vGrid.GridSubCategory.AddGridColumn("Category", aas.ColumnType.Span);
 cCategory.Text.BindData(vGrid.GridSubCategory.DataSource.CategorySubcategory.Category.Name);
-var cName = vGrid.GridSubCategory.AddGridColumn("Name", "Span");
+var cName = vGrid.GridSubCategory.AddGridColumn("Name", aas.ColumnType.Span);
 cName.Text.BindData(vGrid.GridSubCategory.DataSource.Name);
 
 // Different types of columns
 vGrid.GridProductColumns.BindGrid(aas.Data.AdventureWorksData.Category.CategorySubcategory.Subcategory.ProductSubcategory.Product);
-var cName = vGrid.GridProductColumns.AddGridColumn("Name", "Span");
+var cName = vGrid.GridProductColumns.AddGridColumn("Name", aas.ColumnType.Span);
 cName.Text.BindData(vGrid.GridProductColumns.DataSource.Name);
-var cProductNumber = vGrid.GridProductColumns.AddGridColumn("ProductNumber", "Span");
+var cProductNumber = vGrid.GridProductColumns.AddGridColumn("ProductNumber", aas.ColumnType.Span);
 cProductNumber.Text.BindData(vGrid.GridProductColumns.DataSource.ProductNumber);
-var cSafetyStockLevel = vGrid.GridProductColumns.AddGridColumn("SafetyStockLevel", "TextBox");
+var cSafetyStockLevel = vGrid.GridProductColumns.AddGridColumn("SafetyStockLevel", aas.ColumnType.TextBox);
 cSafetyStockLevel.Text.BindData(vGrid.GridProductColumns.DataSource.SafetyStockLevel);
-var cSize = vGrid.GridProductColumns.AddGridColumn("Size", "Span");
+var cSize = vGrid.GridProductColumns.AddGridColumn("Size", aas.ColumnType.Span);
 cSize.Text.BindData(vGrid.GridProductColumns.DataSource.Size);
-var cSizeUnitMeasureCode = vGrid.GridProductColumns.AddGridColumn("SizeUnitMeasureCode", "Span");
+var cSizeUnitMeasureCode = vGrid.GridProductColumns.AddGridColumn("SizeUnitMeasureCode", aas.ColumnType.Span);
 cSizeUnitMeasureCode.Text.BindData(vGrid.GridProductColumns.DataSource.SizeUnitMeasureCode);
-var cDynamicImage = vGrid.GridProductColumns.AddGridColumn("DynamicImage", "Image");
+var cDynamicImage = vGrid.GridProductColumns.AddGridColumn("DynamicImage", aas.ColumnType.Image);
 cDynamicImage.ImageUrl.BindData(aas.Expression('./LoadDataService.LoadImage.jpg.cmd.ashx?productId=' + vGrid.GridProductColumns.DataSource.ProductID));
-var cRowClassRed = vGrid.GridProductColumns.AddGridColumn("RowClassRed", "RowClass");
+var cRowClassRed = vGrid.GridProductColumns.AddGridColumn("RowClassRed", aas.ColumnType.RowClass);
 cRowClassRed.className.BindData(aas.Expression(IIF(vGrid.GridProductColumns.DataSource.SafetyStockLevel < 100, 'Red', 'Green')));
 
 // Parent - Child Grids
