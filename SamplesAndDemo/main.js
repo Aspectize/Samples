@@ -1,5 +1,10 @@
-function Main() {
-    Aspectize.Host.InitApplication();
+/// <reference path="S:\Delivery\Aspectize.core\AspectizeIntellisenseLibrary.js" />
 
-    Aspectize.Host.ExecuteCommand('UIService.ShowView', 'SampleHome');
+function Main() {
+
+    Aspectize.App.Initialize(function () {
+
+        Aspectize.ExecuteCommand(aas.Services.Browser.UIService.ShowView, aas.ViewName.SampleHome);
+    });
+
 }

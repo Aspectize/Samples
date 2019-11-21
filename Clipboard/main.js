@@ -1,5 +1,6 @@
+/// <reference path="S:\Delivery\Aspectize.core\AspectizeIntellisenseLibrary.js" />
 function Main() {
-    Aspectize.Host.InitApplication();
-
-    Aspectize.Host.ExecuteCommand('UIService.ShowView', 'MainView');
+    Aspectize.App.Initialize(function () {
+        Aspectize.ExecuteCommand('UIService.ShowView', 'MainView');
+    });
 }
