@@ -1,8 +1,8 @@
 
 var vTab = Aspectize.CreateView("Tab", aas.Controls.Tab, aas.Zones.SideBarContent.ZoneContent);
 vTab.OnActivated.BindCommand(aas.Services.Browser.BootStrapClientService.ActiveLiElement(aas.ViewName.Tab));
-vTab.BtnActivateView.click.BindCommand(aas.Services.Browser.UIService.ActivateView(aas.ViewName.TabPageCategory, aas.Path.AdventureWorksData.Category));
-vTab.SelectCategory.BindList(aas.Data.AdventureWorksData.Category, "CategoryID", "Name");
+//vTab.BtnActivateView.click.BindCommand(aas.Services.Browser.UIService.ActivateView(aas.ViewName.TabPageCategory, aas.Path.AdventureWorksData.Category));
+//vTab.SelectCategory.BindList(aas.Data.AdventureWorksData.Category, "CategoryID", "Name");
 
 var vTabContainer = Aspectize.CreateView("TabContainer", aas.Controls.AspectizeNewTab, aas.Zones.Tab.ZoneTab, true);
 
@@ -19,11 +19,11 @@ var vTabVerticalViewB = Aspectize.CreateView("TabVerticalViewB", aas.Controls.Vi
 var vTabVerticalViewC = Aspectize.CreateView("TabVerticalViewC", aas.Controls.ViewC, "TabVertical.2:ViewC");
 var vTabVerticalViewD = Aspectize.CreateView("TabVerticalViewD", aas.Controls.ViewD, "TabVertical.3:ViewD");
 
-var vDynamicTab = Aspectize.CreateView("DynamicTab", aas.Controls.AspectizeNewTab, aas.Zones.Tab.ZoneDynamicTab, true);
+//var vDynamicTab = Aspectize.CreateView("DynamicTab", aas.Controls.AspectizeNewTab, aas.Zones.Tab.ZoneDynamicTab, true);
 
-var vTabPageCategory = Aspectize.CreateView("TabPageCategory", aas.Controls.DynamicTabPage, "DynamicTab.0:Category", true, aas.Data.AdventureWorksData.Category);
-vTabPageCategory.Text.BindData(vTabPageCategory.ParentData.Name);
-vTabPageCategory.GridSubCategory.BindGrid(vTabPageCategory.ParentData.CategorySubcategory.Subcategory);
-var cName = vTabPageCategory.GridSubCategory.AddGridColumn("Name", aas.ColumnType.Span);
-cName.Text.BindData(vTabPageCategory.GridSubCategory.DataSource.Name);
+//var vTabPageCategory = Aspectize.CreateView("TabPageCategory", aas.Controls.DynamicTabPage, "DynamicTab.0:Category", false, aas.Data.AdventureWorksData.Category);
+//vTabPageCategory.Text.BindData(vTabPageCategory.ParentData.Name);
+//vTabPageCategory.GridSubCategory.BindGrid(vTabPageCategory.ParentData.CategorySubcategory.Subcategory);
+//var cName = vTabPageCategory.GridSubCategory.AddGridColumn("Name", aas.ColumnType.Span);
+//cName.Text.BindData(vTabPageCategory.GridSubCategory.DataSource.Name);
 
