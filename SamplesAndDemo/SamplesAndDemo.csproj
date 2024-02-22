@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4B60DC8D-9ED5-4F88-86BB-48BAC0ADC309}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SamplesAndDemo</RootNamespace>
+    <AssemblyName>SamplesAndDemo</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspectizeCore">
+      <HintPath>$(AspectizeWebHost)\Aspectize.core\AspectizeCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SmartBlocksCore">
+      <HintPath>$(AspectizeWebHost)\Aspectize.core\SmartBlocksCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Schema\AdventureWorks.HumanResources.Entities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdventureWorks.HumanResources.Entities</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\AdventureWorks.Person.Entities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdventureWorks.Person.Entities</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\AdventureWorks.Production.Entities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdventureWorks.Production.Entities</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\AdventureWorks.Purchasing.Entities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdventureWorks.Purchasing.Entities</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\AdventureWorks.Sales.Entities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdventureWorks.Sales.Entities</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\AutoIdentity.Entities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AutoIdentity.Entities</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\Map.Entities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Map.Entities</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\Samples.Entities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Samples.Entities</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\Upload.Entities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Upload.Entities</DependentUpon>
+    </Compile>
+    <Compile Include="Services\LoadDataService.cs" />
+    <Compile Include="Services\UploaderService.cs" />
+    <Compile Include="Services\Utilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bootstrap-3.3.6-dist\css\bootstrap-theme.css" />
+    <Content Include="bootstrap-3.3.6-dist\css\bootstrap-theme.min.css" />
+    <Content Include="bootstrap-3.3.6-dist\css\bootstrap.css" />
+    <Content Include="bootstrap-3.3.6-dist\css\bootstrap.min.css" />
+    <Content Include="bootstrap-3.3.6-dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bootstrap-3.3.6-dist\js\bootstrap.js" />
+    <Content Include="bootstrap-3.3.6-dist\js\bootstrap.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bootstrap-3.3.6-dist\js\npm.js" />
+    <Content Include="Configuration\Application.js" />
+    <Content Include="Configuration\Services\ConfiguredServices.js" />
+    <Content Include="Configuration\Views\CoreControls\CheckBoxList.js" />
+    <Content Include="Configuration\Views\CoreControls\List.js" />
+    <Content Include="Configuration\Views\CoreControls\ComplexLayout\ChildViewA.js" />
+    <Content Include="Configuration\Views\CoreControls\ComplexLayout\ChildViewB.js" />
+    <Content Include="Configuration\Views\CoreControls\ComplexLayout\ChildViewC.js" />
+    <Content Include="Configuration\Views\CoreControls\ComplexLayout\ChildViewD.js" />
+    <Content Include="Configuration\Views\CoreControls\ComplexLayout\ComplexLayout.js" />
+    <Content Include="Configuration\Views\CoreControls\ComplexLayout\HeaderView.js" />
+    <Content Include="Configuration\Views\CoreControls\ComplexLayout\ParentView.js" />
+    <Content Include="Configuration\Views\CoreControls\ComplexLayout\TraceElement.js" />
+    <Content Include="Configuration\Views\CoreControls\Grid.js" />
+    <Content Include="Configuration\Views\CoreControls\Image.js" />
+    <Content Include="Configuration\Views\CoreControls\RadioButtons.js" />
+    <Content Include="Configuration\Views\CoreControls\Repeater.js" />
+    <Content Include="Configuration\Views\CoreControls\Timer.js" />
+    <Content Include="Configuration\Views\CoreControls\TreeView.js" />
+    <Content Include="Configuration\Views\CoreControls\Upload.js" />
+    <Content Include="Configuration\Views\BootstrapExtension\BootstrapDatepicker.js" />
+    <Content Include="Configuration\Views\BootstrapExtension\BootstrapGrid.js" />
+    <Content Include="Configuration\Views\BootstrapExtension\BootstrapModal.js" />
+    <Content Include="Configuration\Views\BootstrapExtension\BootstrapTab.js" />
+    <Content Include="Configuration\Views\Dhtmlx\DhtmlxBarChart.js" />
+    <Content Include="Configuration\Views\Dhtmlx\DhtmlxLineChart.js" />
+    <Content Include="Configuration\Views\Dhtmlx\DhtmlxPieChart.js" />
+    <Content Include="Configuration\Views\Dhtmlx\DhtmlxRadarChart.js" />
+    <Content Include="Configuration\Views\GoogleExtension\GoogleBarChart.js" />
+    <Content Include="Configuration\Views\GoogleExtension\GoogleLineChart.js" />
+    <Content Include="Configuration\Views\GoogleExtension\GoogleMap.js" />
+    <Content Include="Configuration\Views\GoogleExtension\GooglePlace.js" />
+    <Content Include="Configuration\Views\GoogleExtension\GoogleTable.js" />
+    <Content Include="Configuration\Views\JQueryExtension\JQueryAutoComplete.js" />
+    <Content Include="Configuration\Views\JQueryExtension\JQueryDatePicker.js" />
+    <Content Include="Configuration\Views\JQueryExtension\JQueryMask.js" />
+    <Content Include="Configuration\Views\JQueryExtension\JQueryRateIt.js" />
+    <Content Include="Configuration\Views\Layout\Dialog.js" />
+    <Content Include="Configuration\Views\Layout\Flyout.js" />
+    <Content Include="Configuration\Views\Layout\Panel.js" />
+    <Content Include="Configuration\Views\Layout\Tab.js" />
+    <Content Include="Configuration\Views\MainControl.js" />
+    <Content Include="Configuration\Views\Misc\FullCalendar.js" />
+    <Content Include="Configuration\Views\SideBar\SideBarContent.js" />
+    <Content Include="Configuration\Views\Misc\TinyMCE.js" />
+    <Content Include="Controls\BootstrapExtension\BootstrapDatepicker.htm" />
+    <Content Include="Controls\BootstrapExtension\BootstrapGrid.htm" />
+    <Content Include="Controls\BootstrapExtension\BootstrapModal.htm" />
+    <Content Include="Controls\BootstrapExtension\BootstrapTab.htm" />
+    <Content Include="Controls\Core\CheckBoxList.htm" />
+    <Content Include="Controls\Core\List.htm" />
+    <Content Include="Controls\Core\Grid.htm" />
+    <Content Include="Controls\Core\Image.htm" />
+    <Content Include="Controls\Core\RadioButtons.htm" />
+    <Content Include="Controls\Core\Repeater.htm" />
+    <Content Include="Controls\Core\Timer.htm" />
+    <Content Include="Controls\Core\TreeView.htm" />
+    <Content Include="Controls\Core\FileUpload.htm" />
+    <Content Include="Controls\Dhtmlx\DhtmlxBarChart.htm" />
+    <Content Include="Controls\Dhtmlx\DhtmlxLineChart.htm" />
+    <Content Include="Controls\Dhtmlx\DhtmlxPieChart.htm" />
+    <Content Include="Controls\Dhtmlx\DhtmlxRadarChart.htm" />
+    <Content Include="Controls\GoogleExtension\GoogleBarChart.htm" />
+    <Content Include="Controls\GoogleExtension\GoogleLineChart.htm" />
+    <Content Include="Controls\GoogleExtension\GoogleMap.htm" />
+    <Content Include="Controls\GoogleExtension\GooglePlace.htm" />
+    <Content Include="Controls\GoogleExtension\GoogleTableVisualisation.htm" />
+    <Content Include="Controls\JQueryExtension\JQueryAutoComplete.htm" />
+    <Content Include="Controls\JQueryExtension\JQueryDatePicker.htm" />
+    <Content Include="Controls\JQueryExtension\JQueryMask.htm" />
+    <Content Include="Controls\JQueryExtension\JQueryRateIt.htm" />
+    <Content Include="Controls\Layout\ComplexLayout.htm" />
+    <Content Include="Controls\Layout\Dialog.htm" />
+    <Content Include="Controls\Layout\Flyout.htm" />
+    <Content Include="Controls\Layout\Panel.htm" />
+    <Content Include="Controls\Layout\Tab.htm" />
+    <Content Include="Controls\MainControls.htm" />
+    <Content Include="Controls\Misc\FullCalendar.htm" />
+    <Content Include="Controls\Misc\TinyMCE.htm" />
+    <Content Include="Images\Category.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\favicon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\GitHub-Mark-32px.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\LogoWhite.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Product.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\SubCategory.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\TabNotSelected.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\TabSelected.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="main.js" />
+    <Content Include="bootstrap-3.3.6-dist\css\bootstrap-theme.css.map" />
+    <Content Include="bootstrap-3.3.6-dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="bootstrap-3.3.6-dist\css\bootstrap.css.map" />
+    <Content Include="bootstrap-3.3.6-dist\css\bootstrap.min.css.map" />
+    <Content Include="bootstrap-3.3.6-dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="bootstrap-3.3.6-dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="bootstrap-3.3.6-dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="bootstrap-3.3.6-dist\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Schema\AdventureWorks.HumanResources.Entities">
+      <Generator>AspectizeEntitiesCodeGenerator2012</Generator>
+      <LastGenOutput>AdventureWorks.HumanResources.Entities.cs</LastGenOutput>
+    </None>
+    <None Include="Schema\AdventureWorks.HumanResources.Entities.diagram">
+      <DependentUpon>AdventureWorks.HumanResources.Entities</DependentUpon>
+    </None>
+    <None Include="Schema\AdventureWorks.Person.Entities">
+      <Generator>AspectizeEntitiesCodeGenerator2012</Generator>
+      <LastGenOutput>AdventureWorks.Person.Entities.cs</LastGenOutput>
+    </None>
+    <None Include="Schema\AdventureWorks.Person.Entities.diagram">
+      <DependentUpon>AdventureWorks.Person.Entities</DependentUpon>
+    </None>
+    <None Include="Schema\AdventureWorks.Production.Entities">
+      <Generator>AspectizeEntitiesCodeGenerator2012</Generator>
+      <LastGenOutput>AdventureWorks.Production.Entities.cs</LastGenOutput>
+    </None>
+    <None Include="Schema\AdventureWorks.Production.Entities.diagram">
+      <DependentUpon>AdventureWorks.Production.Entities</DependentUpon>
+    </None>
+    <None Include="Schema\AdventureWorks.Purchasing.Entities">
+      <Generator>AspectizeEntitiesCodeGenerator2012</Generator>
+      <LastGenOutput>AdventureWorks.Purchasing.Entities.cs</LastGenOutput>
+    </None>
+    <None Include="Schema\AdventureWorks.Purchasing.Entities.diagram">
+      <DependentUpon>AdventureWorks.Purchasing.Entities</DependentUpon>
+    </None>
+    <None Include="Schema\AdventureWorks.Sales.Entities">
+      <Generator>AspectizeEntitiesCodeGenerator2012</Generator>
+      <LastGenOutput>AdventureWorks.Sales.Entities.cs</LastGenOutput>
+    </None>
+    <None Include="Schema\AdventureWorks.Sales.Entities.diagram">
+      <DependentUpon>AdventureWorks.Sales.Entities</DependentUpon>
+    </None>
+    <None Include="Schema\AutoIdentity.Entities">
+      <Generator>AspectizeEntitiesCodeGenerator2012</Generator>
+      <LastGenOutput>AutoIdentity.Entities.cs</LastGenOutput>
+    </None>
+    <None Include="Schema\AutoIdentity.Entities.diagram">
+      <DependentUpon>AutoIdentity.Entities</DependentUpon>
+    </None>
+    <None Include="Schema\Map.Entities">
+      <Generator>AspectizeEntitiesCodeGenerator2012</Generator>
+      <LastGenOutput>Map.Entities.cs</LastGenOutput>
+    </None>
+    <None Include="Schema\Map.Entities.diagram">
+      <DependentUpon>Map.Entities</DependentUpon>
+    </None>
+    <None Include="Schema\Samples.Entities">
+      <Generator>AspectizeEntitiesCodeGenerator2012</Generator>
+      <LastGenOutput>Samples.Entities.cs</LastGenOutput>
+    </None>
+    <None Include="Schema\Samples.Entities.diagram">
+      <DependentUpon>Samples.Entities</DependentUpon>
+    </None>
+    <None Include="Schema\Upload.Entities">
+      <Generator>AspectizeEntitiesCodeGenerator2012</Generator>
+      <LastGenOutput>Upload.Entities.cs</LastGenOutput>
+    </None>
+    <None Include="Schema\Upload.Entities.diagram">
+      <DependentUpon>Upload.Entities</DependentUpon>
+    </None>
+    <None Include="Scripts\_references.js" />
+    <Content Include="Services\ClientService.js" />
+    <Content Include="Styles\dashboard.css" />
+    <Content Include="Styles\Samples.css" />
+    <Content Include="Styles\TabVertical.css" />
+    <Content Include="web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SamplesAndDemo.application.htm.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Import Project="$(MSBuildExtensionsPath)\Aspectize\Aspectize.Targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="AfterBuild">
+    <AspectizeCompileWebAppTask ProjectPath="$(ProjectPath)" TargetAppName="SamplesAndDemo" OutputPath="$(OutputPath)">
+    </AspectizeCompileWebAppTask>
+    <AspectizeTouchWebConfigTask>
+    </AspectizeTouchWebConfigTask>
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4189</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/WebHost</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost/WebHost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

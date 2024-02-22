@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html> 
+<html>
+<head>
+    <title>Untitled</title>
+</head>
+<body>
+
+    <div aas-control="JQueryRateItControl">
+        <div class="row">
+            <div class="col-xs-2 pull-left">
+                <h1 class="page-header">JQueryRateIt</h1>
+            </div>
+            <div class="pull-right col-xs-4 text-right LinkFiles">
+                <ul>
+                    <li>
+                        <a href="https://github.com/Aspectize/Samples/blob/master/SamplesAndDemo/Controls/JQueryExtension/JQueryRateIt.htm" target="_blank">View Html</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Aspectize/Samples/blob/master/SamplesAndDemo/Configuration/Views/JQueryExtension/JQueryRateIt.js" target="_blank">View Configuration</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <br />
+
+        <div class="row">
+            <div class="col-sm-2">
+                <div aas-name="GridSalesPerson" aas-type="Bootstrap.BootstrapGrid"></div>
+            </div>
+            <div class="col-sm-10">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="form-inline">
+                            <input name="CheckEditMode" type="checkbox" class="form-control" /> EditMode
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-inline">
+                            Icon size: <input name="TxtIconSize" type="text" class="form-control" value="16" />
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-inline">
+                            Min: <input name="TxtMin" type="text" class="form-control" value="0" />
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-inline">
+                            Max: <input name="TxtMax" type="text" class="form-control" value="5" />
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div aas-name="SalesPersonRate" aas-type="JQueryRateIt.JQueryRateIt"></div>
+                <br />
+
+                <h3>Big star</h3>
+                <br />
+                <div aas-name="SalesPersonRateBig" aas-type="JQueryRateIt.JQueryRateIt" class="bigstars"></div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

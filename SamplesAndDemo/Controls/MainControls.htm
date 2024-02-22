@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled</title>
+</head>
+<body>
+
+    <div aas-control="MainControl" class="container-fluid">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-header">
+                <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand hidden-xs logo"><img src="~/Images/Logo.png"></a>
+                <a class="navbar-brand" name="Home">Samples</a>
+            </div>
+        </div>
+        <div aas-name="ZoneMainContent" aas-type="Panel row"></div>
+    </div>
+
+    <div aas-control="SideBarContent">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <h4>Core Controls</h4>
+            <ul class="nav nav-sidebar">
+                <div aas-name="RepeaterPanelMenuCoreControl" aas-type="AspectizeRepeaterPanel"></div>
+            </ul>
+            <h4>Layout Controls</h4>
+            <ul class="nav nav-sidebar">
+                <div aas-name="RepeaterPanelMenuLayout" aas-type="AspectizeRepeaterPanel"></div>
+            </ul>
+            <h4>Bootstrap Extensions</h4>
+            <ul class="nav nav-sidebar">
+                <div aas-name="RepeaterPanelMenuBootstrap" aas-type="AspectizeRepeaterPanel"></div>
+            </ul>
+            <h4>Google Extensions</h4>
+            <ul class="nav nav-sidebar">
+                <div aas-name="RepeaterPanelMenuGoogle" aas-type="AspectizeRepeaterPanel"></div>
+            </ul>
+            <h4>JQuery Extensions</h4>
+            <ul class="nav nav-sidebar">
+                <div aas-name="RepeaterPanelMenuJQuery" aas-type="AspectizeRepeaterPanel"></div>
+            </ul>
+            <h4>Dhtmlx Extensions</h4>
+            <ul class="nav nav-sidebar">
+                <div aas-name="RepeaterPanelMenuDhtmlx" aas-type="AspectizeRepeaterPanel"></div>
+            </ul>
+            <h4>Misc Extensions</h4>
+            <ul class="nav nav-sidebar">
+                <div aas-name="RepeaterPanelMenuMisc" aas-type="AspectizeRepeaterPanel"></div>
+            </ul>
+        </div>
+        <div aas-name="ZoneContent" aas-type="Panel" class="Panel col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main"></div>
+    </div>
+
+    <div aas-control="SampleHome">
+        <div class="container">
+            <h1 class="text-center">Aspectize Samples and Demo</h1>
+            <p class="text-center"><img src="~/Images/GitHub-Mark-32px.png" /><a target="_blank" href="https://github.com/Aspectize/Samples"> View Source on Github</a></p>
+            <div class="row">
+                 <div class="col-sm-3">
+                    <h3>Core Controls</h3>
+                    <ul>
+                        <div aas-name="RepeaterPanelMenuCoreControl" aas-type="AspectizeRepeaterPanel"></div>
+                    </ul>
+                 </div>
+                 <div class="col-sm-3">
+                    <h3>Layout Controls</h3>
+                    <ul>
+                        <div aas-name="RepeaterPanelMenuLayout" aas-type="AspectizeRepeaterPanel"></div>
+                    </ul>
+                 </div>
+                 <div class="col-sm-3">
+                    <h3>Bootstrap Extensions</h3>
+                    <ul>
+                        <div aas-name="RepeaterPanelMenuBootstrapExtension" aas-type="AspectizeRepeaterPanel"></div>
+                    </ul>
+                 </div>
+                 <div class="col-sm-3">
+                    <h3>Google Extensions</h3>
+                    <ul>
+                        <div aas-name="RepeaterPanelMenuGoogleExtension" aas-type="AspectizeRepeaterPanel"></div>
+                    </ul>
+                 </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <h3>JQuery Extensions</h3>
+                    <ul>
+                        <div aas-name="RepeaterPanelMenuJQueryExtension" aas-type="AspectizeRepeaterPanel"></div>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h3>Dhtmlx Extensions</h3>
+                    <ul>
+                        <div aas-name="RepeaterPanelMenuDhtmlxExtension" aas-type="AspectizeRepeaterPanel"></div>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h3>Misc Extensions</h3>
+                    <ul>
+                        <div aas-name="RepeaterPanelMenuMiscExtension" aas-type="AspectizeRepeaterPanel"></div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>        
+    
+    <div aas-control="LiItem">
+        <li><a name="Link" class="LiItem {LinkName}">{LinkName}</a></li>
+    </div>
+
+</body>
+</html>

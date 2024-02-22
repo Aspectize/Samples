@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled</title>
+</head>
+<body>
+
+    <div aas-control="GooglePlaceControl">
+        <div class="row">
+            <div class="col-xs-2 pull-left">
+                <h1 class="page-header">GooglePlace</h1>
+            </div>
+            <div class="pull-right col-xs-4 text-right LinkFiles">
+                <ul>
+                    <li>
+                        <a href="https://github.com/Aspectize/Samples/blob/master/SamplesAndDemo/Controls/GoogleExtension/GooglePlace.htm" target="_blank">View Html</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Aspectize/Samples/blob/master/SamplesAndDemo/Configuration/Views/GoogleExtension/GooglePlace.js" target="_blank">View Configuration</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <br />
+
+        <h4>Adress selector</h4>
+        <div class="row">
+            <div class="col-xs-12">
+                <input name="Place" aas-type="GoogleExtension.GoogleMapPlaceInput" class="form-control" type="text" placeholder="Enter an adress" style="width: 600px;" />
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <label class="col-xs-2 col-sm-1 control-label">N°&nbsp;:</label>
+            <div class="col-xs-2 col-sm-1">
+                {StreetNumber}
+            </div>
+            <label class="col-xs-2 col-sm-1 control-label">Route&nbsp;:</label>
+            <div class="col-xs-3 col-sm-6">
+                {Route}
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-xs-2 col-sm-1 control-label">Zip&nbsp;:</label>
+            <div class="col-xs-2 col-sm-1">
+                {Zip}
+            </div>
+            <label class="col-xs-2 col-sm-1 control-label">City&nbsp;:</label>
+            <div class="col-xs-4 col-sm-6">
+                {City}
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-xs-2 col-sm-1 control-label">Pays&nbsp;:</label>
+            <div class="col-xs-4 col-sm-6">
+                {Country}
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <label class="col-xs-2 col-sm-1 control-label">Longitude&nbsp;:</label>
+            <div class="col-xs-4 col-sm-1">
+                {Longitude}
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-xs-2 col-sm-1 control-label">Latitude&nbsp;:</label>
+            <div class="col-xs-4 col-sm-6">
+                {Latitude}
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

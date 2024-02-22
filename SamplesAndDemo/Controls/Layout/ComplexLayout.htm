@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled</title>
+</head>
+<body>
+
+    <div aas-control="ComplexLayout">
+        <h1 class="page-header">Complex Layout</h1>
+        <h4>Click on the button do display ViewA in the following Panel</h4>
+        <br />
+        <input name="BtnParentView" type="button" value="Display ParentView" class="btn btn-default" />
+        <input name="BtnViewA" type="button" value="Display ViewA" class="btn btn-default" />
+        <input name="BtnReset" type="button" value="Reset" class="btn btn-default" />
+        <br />
+        <div aas-name="ZoneMain" aas-type="Panel"></div>
+        <br />
+        <h4>Trace of events OnLoad, OnActivated, OnDeactivated</h4>
+        <input name="BtnResetTrace" type="button" value="Reset trace" class="btn btn-default" />
+        <div aas-name="GridTrace" aas-type="Bootstrap.BootstrapGrid"></div>
+        <div aas-name="RepeaterTrace" aas-type="AspectizeRepeaterPanel"></div>
+    </div>
+
+    <div aas-control="TraceElementControl">
+        <div class="row">
+            {Trace}
+        </div>
+    </div>
+
+    <div aas-control="ParentControl">
+        <div aas-name="ZoneHeader" aas-type="Panel"></div>
+        <div style="padding:10px">
+            <input name="BtnViewA" type="button" value="Display View A" class="btn btn-default" />
+            <input name="BtnViewB" type="button" value="Display View B" class="btn btn-default" />
+        </div>
+        <div aas-name="ZoneContent" aas-type="Panel"></div>
+    </div>
+
+    <div aas-control="HeaderControl">
+        <h1>Header</h1>
+    </div>
+
+    <div aas-control="ControlA">
+        <h1>ViewA</h1>
+        <div class="row">
+            <div class="col-md-6">
+                some controls
+            </div>
+            <div class="col-md-6">
+                <div style="padding:10px">
+                    <input name="BtnViewC" type="button" value="Display View C" class="btn btn-default" />
+                    <input name="BtnViewD" type="button" value="Display View D" class="btn btn-default" />
+                </div>
+                <div aas-name="ZoneDetail" aas-type="Panel"></div>
+            </div>
+        </div>
+    </div>
+
+    <div aas-control="ControlB">
+        <h1>ViewB</h1>
+        Some controls
+    </div>
+
+    <div aas-control="ControlC">
+        <h1>ViewC</h1>
+    </div>
+
+    <div aas-control="ControlD">
+        <h1>ViewD</h1>
+    </div>
+
+</body>
+</html>

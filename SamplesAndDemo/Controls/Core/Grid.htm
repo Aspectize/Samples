@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled</title>
+</head>
+<body>
+
+    <div aas-control="Grid">
+        <div class="row">
+            <div class="col-xs-2 pull-left">
+                <h1 class="page-header">Grid</h1>
+            </div>
+            <div class="pull-right col-xs-4 text-right LinkFiles">
+                <ul>
+                    <li>
+                        <a href="https://github.com/Aspectize/Samples/blob/master/SamplesAndDemo/Controls/Core/Grid.htm" target="_blank">View Html</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Aspectize/Samples/blob/master/SamplesAndDemo/Configuration/Views/CoreControls/Grid.js" target="_blank">View Configuration</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Basic Usage</h2>
+        <div class="row">
+            <div class="col-md-9">
+                <div aas-name="GridProduct" aas-type="AspectizeGrid"></div>
+            </div>
+            <div class="col-md-3">
+                <a target="_blank" href="../PlayGround/id=0a3f22e0e" rel="nofollow" class="btn btn-primary">Try it yourself</a>
+            </div>
+        </div>
+        <br />
+        <br />
+        <h2>Grid with pagination and AutoSort</h2>
+        <div class="row form-inline">
+            <div class="col-md-2">
+                Page size: <select name="SelectPageSize" class="form-control"></select>
+            </div>
+            <div class="col-md-7">
+                <div class="checkbox">
+                    <label>
+                        <input name="CheckBoxAutoSort" type="checkbox" class="form-control" /> allow AutoSort
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <a target="_blank" href="../PlayGround/id=b993a0fda" rel="nofollow" class="btn btn-primary">Try it yourself</a>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-sm-12">
+                <div aas-name="GridProductPage" aas-type="AspectizeGrid"></div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <h2>Dynamic Filter</h2>
+        <br />
+        <div class="row form-inline">
+            <div class="col-xs-12">
+                While typing a name, Grid will filter products containing the name: <input name="TxtFilter" type="text" class="form-control" />
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-9">
+                <div aas-name="GridDynamicFilter" aas-type="AspectizeGrid"></div>
+            </div>
+            <div class="col-md-3">
+                <a target="_blank" href="../PlayGround/id=6b0f48003" rel="nofollow" class="btn btn-primary">Try it yourself</a>
+            </div>
+        </div>
+        <br />
+        <br />
+        <h2>Group Rows</h2>
+        <div class="row">
+            <div class="col-sm-9">
+                <div aas-name="GridSubCategory" aas-type="AspectizeGrid"></div>
+            </div>
+            <div class="col-md-3">
+                <a target="_blank" href="../PlayGround/id=5bde30cec" rel="nofollow" class="btn btn-primary">Try it yourself</a>
+            </div>
+        </div>
+        <br />
+        <br />
+        <h2>Different types of columns</h2>
+        <br />
+        Edit the SafetyStockLevel affect the Row class: if values is less than 100, color is red, otherwise color is green.
+        <div class="row">
+            <div class="col-sm-9">
+                <div aas-name="GridProductColumns" aas-type="AspectizeGrid"></div>
+            </div>
+            <div class="col-md-3">
+                <a target="_blank" href="../PlayGround/id=563cd3bf8" rel="nofollow" class="btn btn-primary">Try it yourself</a>
+            </div>
+        </div>
+        <br />
+        <br />
+        <h2>Parent - Child Grids</h2>
+        <br />
+        Select a Category synchronize the Child SubCategory
+        <div class="row">
+            <div class="col-md-4">
+                <div aas-name="GridCategory" aas-type="AspectizeGrid"></div>
+            </div>
+            <div class="col-md-5">
+                <div aas-name="GridSubCategoryChild" aas-type="AspectizeGrid"></div>
+            </div>
+            <div class="col-md-3">
+                <a target="_blank" href="../PlayGround/id=d6b568dc5" rel="nofollow" class="btn btn-primary">Try it yourself</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

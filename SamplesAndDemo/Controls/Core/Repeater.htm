@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled</title>
+</head>
+<body>
+
+    <div aas-control="Repeater">
+        <div class="row">
+            <div class="col-xs-2 pull-left">
+                <h1 class="page-header">
+                    Repeater
+                </h1>
+            </div>
+            <div class="pull-right col-xs-4 text-right LinkFiles">
+                <ul>
+                    <li>
+                        <a href="https://github.com/Aspectize/Samples/blob/master/SamplesAndDemo/Controls/Core/Repeater.htm" target="_blank">View Html</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Aspectize/Samples/blob/master/SamplesAndDemo/Configuration/Views/CoreControls/Repeater.js" target="_blank">View Configuration</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row form-inline">
+            <h4>Repeat Product of the following catgeory:</h4>
+            <label class="col-md-1 control-label">Category:</label>
+            <div class="col-md-3">
+                <select name="SelectCategory" class="form-control"></select>
+            </div>
+            <label class="col-md-2 control-label">Sub Categories:</label>
+            <div class="col-md-3">
+                <select name="SelectSubCategory" class="form-control"></select>
+            </div>
+            <div class="col-md-3">
+                <a target="_blank" href="../PlayGround/id=494d8dc36" rel="nofollow" class="btn btn-primary">Try it yourself</a>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="row form-inline">
+            <h4>Order and filter:</h4>
+            <label class="col-md-1 control-label"> Order by:</label>
+            <div class="col-md-3">
+                <select name="SelectOrder" class="form-control"></select>
+            </div>
+            <label class="col-md-2 control-label">Filter by name:</label>
+            <div class="col-md-3">
+                <input name="TxtFilter" type="text" class="form-control" /> <span>{NbProduct}</span> products.
+            </div>
+            <div class="col-md-3">
+                <a target="_blank" href="../PlayGround/id=5ab74569a" rel="nofollow" class="btn btn-primary">Try it yourself</a>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="row">
+            <h4>The repeater repeats a view for each product:</h4>
+            <div aas-name="RepeaterPanelProduct" aas-type="AspectizeRepeaterPanel"></div>
+        </div>
+    </div>
+
+    <div aas-control="ProductItem">
+        <div class="row ProductItem">
+            <div class="col-sm-2">
+                {ProductName}
+            </div>
+            <div class="col-sm-2">
+                {ProductNumber}
+            </div>
+            <div class="col-sm-3">
+                <div aas-name="ImageProduct" aas-type="AspectizeImage"></div>
+            </div>
+            <div class="col-sm-2">
+                <a name="Delete">Delete</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

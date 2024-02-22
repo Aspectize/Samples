@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled</title>
+</head>
+<body>
+
+    <div aas-control="TreeView">
+        <div class="row">
+            <div class="col-xs-2 pull-left">
+                <h1 class="page-header">TreeView</h1>
+            </div>
+            <div class="pull-right col-xs-4 text-right LinkFiles">
+                <ul>
+                    <li>
+                        <a href="https://github.com/Aspectize/Samples/blob/master/SamplesAndDemo/Controls/Core/TreeView.htm" target="_blank">View Html</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Aspectize/Samples/blob/master/SamplesAndDemo/Configuration/Views/CoreControls/TreeView.js" target="_blank">View Configuration</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Basic Usage</h2>
+        <div class="row">
+            <div class="col-sm-6">
+                <div aas-name="TreeViewProduct" aas-type="AspectizeTreeView"></div>
+            </div>
+            <div class="col-sm-6">
+                <div aas-name="ZoneDetail" aas-type="Panel"></div>
+            </div>
+        </div>
+        <br />
+        <br />
+
+        <h2>TreeView with recursive Nodes</h2>
+        <div class="row">
+            <div class="col-sm-6">
+                <div aas-name="TreeViewEmployee" aas-type="AspectizeTreeView"></div>
+            </div>
+            <div class="col-sm-6">
+                <div aas-name="ZoneEmployeeDetail" aas-type="Panel"></div>
+            </div>
+        </div>
+        <br />
+        <br />
+    </div>
+
+    <div aas-control="CategoryDetail">
+        This is the Category: <span>{CategoryName}</span>
+    </div>
+
+    <div aas-control="SubcategoryDetail">
+        This is the Sub category: <span>{SubCategoryName}</span>
+    </div>
+
+    <div aas-control="ProductDetail">
+        This is the Product: <span>{ProductName}</span>
+    </div>
+
+    <div aas-control="EmployeeDetail">
+        This is Employee: <span>{EmployeeName}</span>
+    </div>
+</body>
+</html>

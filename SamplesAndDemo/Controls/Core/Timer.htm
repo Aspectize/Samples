@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled</title>
+</head>
+<body>
+
+    <div aas-control="Timer">
+        <div class="row">
+            <div class="col-xs-2 pull-left">
+                <h1 class="page-header">Timer</h1>
+            </div>
+            <div class="pull-right col-xs-4 text-right LinkFiles">
+                <ul>
+                    <li>
+                        <a href="https://github.com/Aspectize/Samples/blob/master/SamplesAndDemo/Controls/Core/Timer.htm" target="_blank">View Html</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Aspectize/Samples/blob/master/SamplesAndDemo/Configuration/Views/CoreControls/Timer.js" target="_blank">View Configuration</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <input name="ActivateTimer" type="button" value="Activate Timer" class="btn btn-default" />
+            <input name="DeactivateTimer" type="button" value="Deactivate Timer" class="btn btn-default" />
+        </div>
+        <br />
+        <div class="row">
+            Count : <input name="TxtCount" type="text" value="10" />
+            Period : <input name="TxtPeriod" type="text" value="500" />
+        </div>
+        <br />
+        <div class="row">
+            <h4>Trace of Timer call</h4>
+            <input name="BtnResetTrace" type="button" value="Reset trace" class="btn btn-default" />
+            <div aas-name="GridTrace" aas-type="Bootstrap.BootstrapGrid"></div>
+        </div>
+        <div aas-name="Timer" aas-type="AspectizeTimer"></div>
+    </div>
+
+</body>
+</html>

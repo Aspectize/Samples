@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<diagram xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="57d2bf39-9edf-4c6a-b80d-31a2f6a9745c" domain="Samples" xmlns="http://schemas.microsoft.com/dsltools/EntityDesigner">
+  <entities>
+    <entity Id="94857801-b9d8-46e3-8ff3-79478482f135" name="ComplexLayoutTrace" guid="2f4cc9b1-e34d-46d9-b667-77009ac04c87" mustPersist="false" hasCustomValidators="false" hasTriggers="false">
+      <properties>
+        <entityProperty name="DateEvent" type="DateTime" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+        <entityProperty name="Trace" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+      </properties>
+    </entity>
+    <entity Id="93dbf22a-1c58-4ed2-b417-6d3b20c43d3d" name="TimerTrace" guid="0823c6dc-c6dd-47bf-9a3c-885afbc3563b" mustPersist="false" hasCustomValidators="false" hasTriggers="false">
+      <properties>
+        <entityProperty name="DateEvent" type="DateTime" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+      </properties>
+    </entity>
+    <entity Id="b3d5922a-b15b-4091-98bf-cc312109610a" name="CalendarEvent" guid="bbae4de1-aa72-4add-b1e2-2e47b6d2e9a3" mustPersist="false" hasCustomValidators="false" hasTriggers="false">
+      <properties>
+        <entityProperty name="DateStart" type="DateTime" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+        <entityProperty name="DateEnd" type="DateTime" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+        <entityProperty name="Description" identity="false" isEnumType="false" isCompoType="false" isExternType="false" isEnumInBaseType="false" />
+      </properties>
+    </entity>
+  </entities>
+  <enumEntities>
+    <enumEntity Id="a3a50859-b3e8-4756-9ce5-6e5949846637" name="EnumCoreControl">
+      <enumItems>
+        <enumItem name="List" value="0" />
+        <enumItem name="RadioButtons" value="0" />
+        <enumItem name="CheckBoxList" value="0" />
+        <enumItem name="Image" value="0" />
+        <enumItem name="Repeater" value="0" />
+        <enumItem name="FileUpload" value="0" />
+        <enumItem name="Grid" value="0" />
+        <enumItem name="TreeView" value="0" />
+        <enumItem name="Timer" value="0" />
+      </enumItems>
+    </enumEntity>
+    <enumEntity Id="ee37ad49-abb0-4683-94e5-ab6a0f4d7ddd" name="EnumProductOrderField">
+      <enumItems>
+        <enumItem name="Name" value="0" />
+        <enumItem name="ProductNumber" value="0" />
+      </enumItems>
+    </enumEntity>
+    <enumEntity Id="9de9302d-55b1-4e1e-afa4-460654b5330c" name="EnumPageSize">
+      <enumItems>
+        <enumItem name="p10" value="10" />
+        <enumItem name="p20" value="20" />
+        <enumItem name="p50" value="50" />
+      </enumItems>
+    </enumEntity>
+    <enumEntity Id="9bdd7cc4-eea9-441d-b3e9-497af5ecb557" name="EnumLayout">
+      <enumItems>
+        <enumItem name="Panel" value="0" />
+        <enumItem name="Tab" value="0" />
+        <enumItem name="Dialog" value="0" />
+        <enumItem name="Flyout" value="0" />
+        <enumItem name="ComplexLayout" value="0" />
+      </enumItems>
+    </enumEntity>
+    <enumEntity Id="f700c0d1-4c91-4ed5-a188-681fdd39dd75" name="EnumSamplePanelView" />
+    <enumEntity Id="56a0d1a3-3d05-40e1-9064-e421740957b5" name="EnumBootstrapExtension">
+      <enumItems>
+        <enumItem name="BootstrapGrid" value="0" />
+        <enumItem name="BootstrapTab" value="0" />
+        <enumItem name="BootstrapDatepicker" value="0" />
+        <enumItem name="BootstrapModal" value="0" />
+      </enumItems>
+    </enumEntity>
+    <enumEntity Id="ae099766-e542-49be-9474-08c056256ea9" name="EnumBootstrapTabOrientation">
+      <enumItems>
+        <enumItem name="Normal" value="0" />
+        <enumItem name="Left" value="0" description="tabs-left" />
+        <enumItem name="Right" value="0" description="tabs-right" />
+      </enumItems>
+    </enumEntity>
+    <enumEntity Id="ed67b79e-533b-4c12-af6f-8f94eadce807" name="EnumGoogleExtension">
+      <enumItems>
+        <enumItem name="GoogleTable" value="0" />
+        <enumItem name="GoogleLineChart" value="0" />
+        <enumItem name="GoogleBarChart" value="0" />
+        <enumItem name="GoogleMap" value="0" />
+        <enumItem name="GooglePlace" value="0" />
+      </enumItems>
+    </enumEntity>
+    <enumEntity Id="da994fba-ff4c-43b8-933d-dcfbddeb5028" name="EnumJQueryExtension">
+      <enumItems>
+        <enumItem name="JQueryDatePicker" value="0" />
+        <enumItem name="JQueryAutoComplete" value="0" />
+        <enumItem name="JQueryMask" value="0" />
+        <enumItem name="JQueryRateIt" value="0" />
+      </enumItems>
+    </enumEntity>
+    <enumEntity Id="ec0336ca-f636-421c-b92f-04d1b4022871" name="EnumMiscExtension">
+      <enumItems>
+        <enumItem name="TinyMCE" value="0" />
+        <enumItem name="FullCalendar" value="0" />
+      </enumItems>
+    </enumEntity>
+    <enumEntity Id="abe642f0-7967-40e4-8c8d-3a8ef8d62073" name="EnumDatePickerViewMode">
+      <enumItems>
+        <enumItem name="days" value="0" />
+        <enumItem name="months" value="0" />
+        <enumItem name="years" value="0" />
+        <enumItem name="decades" value="0" />
+      </enumItems>
+    </enumEntity>
+    <enumEntity Id="fc9e8627-f487-4a25-b273-d06de09840ee" name="EnumDhtmlxExtension">
+      <enumItems>
+        <enumItem name="DhtmlxLineChart" value="0" />
+        <enumItem name="DhtmlxPieChart" value="0" />
+        <enumItem name="DhtmlxRadarChart" value="0" />
+        <enumItem name="DhtmlxBarChart" value="0" />
+      </enumItems>
+    </enumEntity>
+  </enumEntities>
+</diagram>

@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled</title>
+</head>
+<body>
+
+    <div aas-control="RadioButtons">
+        <div class="row">
+            <div class="col-xs-2 pull-left">
+                <h1 class="page-header">RadioButtons</h1>
+            </div>
+            <div class="pull-right col-xs-4 text-right LinkFiles">
+                <ul>
+                    <li>
+                        <a href="https://github.com/Aspectize/Samples/blob/master/SamplesAndDemo/Controls/Core/RadioButtons.htm" target="_blank">View Html</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Aspectize/Samples/blob/master/SamplesAndDemo/Configuration/Views/CoreControls/RadioButtons.js" target="_blank">View Configuration</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Basic Usage</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div aas-name="RadioButtonCategory" aas-type="AspectizeRadioButtons"></div>
+            </div>
+            <div class="col-md-3">
+                <a target="_blank" href="../PlayGround/id=2dcd2191b" rel="nofollow" class="btn btn-primary">Try it yourself</a>
+            </div>
+        </div>
+        <div  class="row">
+            <div class="col-md-4">
+                Current Category Selected: <span>{CurrentDisplay}</span>
+            </div>
+        </div>
+        <br />
+        <br />
+        <h2>SelectedValue Usage</h2>
+        <div class="row">
+            <div class="col-sm-4">
+                Choose a product: <select name="SelectProduct" class="form-control"></select>
+                <div>Product: <span>{CurrentProduct}</span> </div>
+                <div>is associated with the SubCategory: <span>{CurrentProductSubCategory}</span></div>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-sm-12">
+                Choose another SubCategory to associate with the current product:
+                <div aas-name="RadioButtonSubCategory" aas-type="AspectizeRadioButtons"></div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

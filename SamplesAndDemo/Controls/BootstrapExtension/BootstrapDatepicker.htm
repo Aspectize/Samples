@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled</title>
+</head>
+<body>
+
+    <div aas-control="BootstrapDatepickerControl">
+        <div class="row">
+            <div class="col-xs-2 pull-left">
+                <h1 class="page-header">Bootstrap Datepicker</h1>
+            </div>
+            <div class="pull-right col-xs-4 text-right LinkFiles">
+                <ul>
+                    <li>
+                        <a href="https://github.com/Aspectize/Samples/blob/master/SamplesAndDemo/Controls/BootstrapExtension/BootstrapDatepicker.htm" target="_blank">View Html</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Aspectize/Samples/blob/master/SamplesAndDemo/Configuration/Views/BootstrapExtension/BootstrapDatepicker.js" target="_blank">View Configuration</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Basic Usage</h2>
+
+        <br />
+        <div class="row">
+            <div class="col-sm-2 form-group">
+                <div aas-name='BootstrapDatePickerBasic' aas-type='BootstrapDateTimePicker.BootstrapDateTimePicker' class='input-group date'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="fa fa-calendar"></span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="col-sm-3 form-control-static">
+                Date selected: <span>{DateSelected}</span>
+            </div>
+        </div>
+        <br />
+        <h2>Options</h2>
+        <div class="row">
+            <label class="col-xs-2 form-control-static">Stepping :</label>
+            <div class="col-md-1">
+                <input name="TxtStepping" type="number" class="form-control" value="5"/>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <label class="col-xs-2 form-control-static">ViewMode :</label>
+            <div class="col-md-2">
+                <select name="SelectViewMode" class="form-control"></select>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-sm-2 form-group">
+                <div aas-name='BootstrapDatePickerOptions' aas-type='BootstrapDateTimePicker.BootstrapDateTimePicker' class='input-group date'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="fa fa-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <br />
+        <h2>Min / Max Date</h2>
+        <div class="row">
+            <label class="col-xs-1 form-control-static">Min :</label>
+            <div class="col-sm-2 form-group">
+                <div aas-name='BootstrapDatePickerMin' aas-type='BootstrapDateTimePicker.BootstrapDateTimePicker' class='input-group date'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="fa fa-calendar"></span>
+                    </span>
+                </div>
+            </div>
+            <label class="col-xs-1 form-control-static">Max :</label>
+            <div class="col-sm-2 form-group">
+                <div aas-name='BootstrapDatePickerMax' aas-type='BootstrapDateTimePicker.BootstrapDateTimePicker' class='input-group date'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="fa fa-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <br />
+        <h2>Inline</h2>
+        <div class="row">
+            <div class="col-sm-2 form-group">
+                <div aas-name='BootstrapDatePickerInline' aas-type='BootstrapDateTimePicker.BootstrapDateTimePicker'></div>
+            </div>
+            <div class="col-sm-3 form-control-static">
+                Date selected: <span>{DateSelectedInline}</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

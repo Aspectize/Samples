@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled</title>
+</head>
+<body>
+    
+    <div aas-control="Tab">
+        <div class="row">
+            <div class="col-xs-2 pull-left">
+                <h1 class="page-header">Tab</h1>
+            </div>
+            <div class="col-xs-4 pull-right text-right LinkFiles">
+                <ul>
+                    <li>
+                        <a href="https://github.com/Aspectize/Samples/blob/master/SamplesAndDemo/Controls/Layout/Tab.htm" target="_blank">View Html</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Aspectize/Samples/blob/master/SamplesAndDemo/Configuration/Views/Layout/Tab.js" target="_blank">View Configuration</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-9">
+                <h2>Basic Usage</h2>
+            </div>
+            <div class="col-md-3">
+                <a target="_blank" href="../PlayGround/id=d6efa71d7" rel="nofollow" class="btn btn-primary">Try it yourself</a>
+            </div>
+        </div>
+        <br />
+        <div aas-name="ZoneTab" aas-type="Panel" class="Panel"></div>
+        <br />
+        <br />
+        <h2>Vertical Usage</h2>
+        <div class="row">
+            <div class="col-md-9">
+                <h4>Vertical tab is made with pure CSS</h4>
+            </div>
+            <div class="col-md-3">
+                <a target="_blank" href="../PlayGround/id=f5cbe0590" rel="nofollow" class="btn btn-primary">Try it yourself</a>
+            </div>
+        </div>
+        <div class="row" style="min-height: 280px;">
+            <br />
+            <div aas-name="ZoneTabVertical" aas-type="Panel"></div>
+            <br />
+            <br />
+        </div>
+
+        <div class="row hidden">
+            <h2>Dynamic Usage</h2>
+            <h4>Each tab is bound to data. Tab are created when needed.</h4>
+            <div class="row">
+                <div class="col-sm-3">
+                    <select name="SelectCategory" class="form-control"></select>
+                </div>
+                <div class="col-sm-3">
+                    <input name="BtnActivateView" type="button" value="Activate Tab" class="btn btn-default" />
+                </div>
+            </div>
+            <br />
+            <br />
+            <div aas-name="ZoneDynamicTab" aas-type="Panel"></div>
+            <br />
+            <br />
+        </div>
+    </div>
+
+
+    
+    <div aas-control="DynamicTabPage">
+        <h2>{Text}</h2>
+        <p>
+            <div aas-name="GridSubCategory" aas-type="Bootstrap.BootstrapGrid"></div>
+        </p>
+    </div>
+
+</body>
+</html>

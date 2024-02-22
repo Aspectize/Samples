@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html >
+<html>
+<head>
+    <title>Untitled</title>
+</head>
+<body>
+
+    <div aas-control="BootstrapGridControl">
+        <div class="row">
+            <div class="col-xs-2 pull-left">
+                <h1 class="page-header">Bootstrap Grid</h1>
+            </div>
+            <div class="pull-right col-xs-4 text-right LinkFiles">
+                <ul>
+                    <li>
+                        <a href="https://github.com/Aspectize/Samples/blob/master/SamplesAndDemo/Controls/BootstrapExtension/BootstrapGrid.htm" target="_blank">View Html</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Aspectize/Samples/blob/master/SamplesAndDemo/Configuration/Views/BootstrapExtension/BootstrapGrid.js" target="_blank">View Configuration</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-9">
+                <h2>Basic Usage</h2>
+            </div>
+            <div class="col-md-3">
+                <a target="_blank" href="../PlayGround/id=b70fa4ab4" rel="nofollow" class="btn btn-primary">Try it yourself</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div aas-name="GridProduct" aas-type="Bootstrap.BootstrapGrid"></div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <h2>Grid with pagination and AutoSort</h2>
+        <div class="row form-inline">
+            <div class="col-sm-3">
+                Page size: <select name="SelectPageSize" class="form-control"></select> <input name="CheckBoxAutoSort" type="checkbox" class="form-control" /> allow AutoSort
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-sm-12">
+                <div aas-name="GridProductPage" aas-type="Bootstrap.BootstrapGrid"></div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <h2>Group Rows</h2>
+        <div class="row">
+            <div class="col-sm-12">
+                <div aas-name="GridSubCategory" aas-type="Bootstrap.BootstrapGrid"></div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <h2>Different types of columns</h2>
+        <br />
+        Edit the SafetyStockLevel affect the Row class: if values is less than 100, class is danger, otherwise class is success.
+        <div class="row">
+            <div class="col-sm-12">
+                <div aas-name="GridProductColumns" aas-type="Bootstrap.BootstrapGrid"></div>
+            </div>
+        </div>
+        <br />
+        <br />
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled</title>
+</head>
+<body>
+
+    <div aas-control="FileUpload">
+        <div class="row">
+            <div class="col-xs-2 pull-left">
+                <h1 class="page-header">File Upload</h1>
+            </div>
+            <div class="pull-right col-xs-4 text-right LinkFiles">
+                <ul>
+                    <li>
+                        <a href="https://github.com/Aspectize/Samples/blob/master/SamplesAndDemo/Controls/Core/FileUpload.htm" target="_blank">View Html</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Aspectize/Samples/blob/master/SamplesAndDemo/Configuration/Views/CoreControls/FileUpload.js" target="_blank">View Configuration</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Basic usage</h2>
+        <br />
+        <div class="row">
+            <div class="col-md-4">
+                <input name="CheckBoxMultiple" type="checkbox" /> allow multiple files
+                <br />
+                <div aas-name="Uploader" aas-type="AspectizeFileUpload"></div>
+            </div>
+
+            <div class="col-md-3">
+                <a target="_blank" href="../PlayGround/id=1d2a34388" rel="nofollow" class="btn btn-primary">Try it yourself</a>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="row {DisplayNbFileUploaded}">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div><span>{NbFileUploaded}</span> files uploaded</div>
+                    <div>
+                        <div aas-name="GridUploadedFiles" aas-type="Bootstrap.BootstrapGrid"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+
+        <h2>Customize display</h2>
+        <h3>Uploader appearance can be modified with css</h3>
+        <div class="row">
+            
+            <div class="col-sm-4">
+                <h4>as an image</h4>
+                <div aas-name="UploaderImage" aas-type="AspectizeFileUpload"></div>
+            </div>
+            <div class="col-sm-4">
+                <h4>as a button</h4>
+                <div aas-name="UploaderButton" aas-type="AspectizeFileUpload"></div>
+            </div>
+            <div class="col-sm-4">
+                <h4>as a link</h4>
+                <div aas-name="UploaderLink" aas-type="AspectizeFileUpload"></div>
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+</html>

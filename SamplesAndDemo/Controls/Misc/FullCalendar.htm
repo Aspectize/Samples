@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled</title>
+</head>
+<body>
+
+    <div aas-control="FullCalendarControl">
+        <div class="row">
+            <div class="col-xs-2 pull-left">
+                <h1 class="page-header">Full Calendar</h1>
+            </div>
+            <div class="pull-right col-xs-4 text-right LinkFiles">
+                <ul>
+                    <li>
+                        <a href="https://github.com/Aspectize/Samples/blob/master/SamplesAndDemo/Controls/Misc/FullCalendar.htm" target="_blank">View Html</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Aspectize/Samples/blob/master/SamplesAndDemo/Configuration/Views/Misc/FullCalendar.js" target="_blank">View Configuration</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <br />
+        <div class="form-horizontal">
+            <div class="form-group">
+                <div class="col-xs-4">
+                    <div class="checkbox">
+                        <label>
+                            <input name="CheckBoxEditMode" type="checkbox" /> EditMode : when checked, add or modify an event with mouse
+                        </label>
+                    </div>
+                </div>
+                <label class="col-xs-1 control-label">View :</label>
+                <div class="col-xs-1">
+                    <input name="TxtView" type="text" class="form-control" value="month" />
+                </div>
+                <label class="col-xs-2 control-label">Locale :</label>
+                <div class="col-xs-1">
+                    <input name="TxtLocale" type="text" class="form-control" value="en" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-xs-1 control-label">LeftButtons :</label>
+                <div class="col-xs-2">
+                    <input name="TxtLeftButtons" type="text" class="form-control" value="prev,next today" />
+                </div>
+                <label class="col-xs-2 control-label">CenterButtons :</label>
+                <div class="col-xs-1">
+                    <input name="TxtCenterButtons" type="text" class="form-control" value="month" />
+                </div>
+                <label class="col-xs-2 control-label">RightButtons :</label>
+                <div class="col-xs-3">
+                    <input name="TxtRightButtons" type="text" class="form-control" value="month,agendaWeek,agendaDay listMonth" />
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="col-xs-3">
+                    <div class="checkbox">
+                        <label>
+                            <input name="CheckBoxWeekEnds" type="checkbox"  /> Display WeekEnds
+                        </label>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="checkbox">
+                        <label>
+                            <input name="CheckBoxWeekNumbers" type="checkbox"   /> Display WeekNumbers
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div aas-name="Calendar" aas-type="FullCalendar.FullCalendar" style="height:750px;"></div>
+        </div>
+        <div class="row">
+            <div aas-name="GridEvent" aas-type="Bootstrap.BootstrapGrid"></div>
+        </div>
+    </div>
+
+</body>
+</html>

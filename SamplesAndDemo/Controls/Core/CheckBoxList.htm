@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled</title>
+</head>
+<body>
+
+    <div aas-control="CheckBoxList">
+        <div class="row">
+            <div class="col-xs-2 pull-left">
+                <h1 class="page-header">CheckBoxList</h1>
+            </div>
+            <div class="pull-right col-xs-4 text-right LinkFiles">
+                <ul>
+                    <li>
+                        <a href="https://github.com/Aspectize/Samples/blob/master/SamplesAndDemo/Controls/Core/CheckBoxList.htm" target="_blank">View Html</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Aspectize/Samples/blob/master/SamplesAndDemo/Configuration/Views/CoreControls/CheckBoxList.js" target="_blank">View Configuration</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Basic Usage with relation N-N</h2>
+        <div class="row">
+            <div class="col-sm-2">
+                Select a Sales:
+                <div aas-name="GridSalesPerson" aas-type="Bootstrap.BootstrapGrid"></div>
+            </div>
+            <div class="col-sm-5">
+                Select Department associated to Sale: each check will associate a Department to a Sale.
+                <div aas-name="CheckBoxListDemo" aas-type="AspectizeCheckBoxList"></div>
+            </div>
+            <div class="col-sm-3">
+                List of Department associated to sale <span>{SelectedSale}</span>:
+                <div aas-name="GridDepartment" aas-type="Bootstrap.BootstrapGrid"></div>
+            </div>
+        </div>
+        <br />
+        <br />    
+
+
+    </div>
+
+</body>
+</html>

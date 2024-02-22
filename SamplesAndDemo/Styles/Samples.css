@@ -1,0 +1,204 @@
+﻿a.btn-primary 
+{
+	color: #fff;
+}
+
+.LinkFiles ul
+{
+	display:inline-block;
+	font-size: large;
+}
+
+.LinkFiles ul > li
+{
+	display:inline-block;    
+	border-right: 1px solid #ebecee;
+    padding: 0 0.6em;
+}
+
+.LinkFiles ul > li:last-child {
+    border-right: 0 none;
+    padding-right: 0;
+}
+
+.navbar-brand.logo
+{
+	padding: 0px;
+}
+
+.navbar-brand.logo img
+{
+	max-height: 50px;
+    padding: 5px;
+}
+
+.nav > li.active > a:hover
+{
+	background-color: #428BCA;
+    color: #FFFFFF;
+}
+
+#SampleHome .aasRepeaterItem.aasSelected,
+#SideBarContent .sidebar .aasRepeaterItem.aasSelected {
+    background-color: transparent;
+}
+
+.SelectedProduct {
+    background-color: #E7E9F9;
+}
+
+.ProductItem
+{
+	padding: 10px;
+	cursor: pointer;
+}
+
+.Red
+{
+	color: Red;
+}
+
+.Green
+{
+	color: Green;
+}
+
+.ZonePanelSample
+{
+	margin:10px;
+	border: 1px solid #ddd;
+}
+
+.Padding10
+{
+	padding: 10px;
+}
+
+
+#DialogDemo {
+    height: 353px;
+    width: 739px;
+}
+
+
+.Category.open span.image,
+.Category.closed span.image
+{
+	background:url(../Images/Category.png) no-repeat;
+}
+
+.Subcategory.open span.image,
+.Subcategory.closed span.image
+{
+	background:url(../Images/SubCategory.png) no-repeat;
+}
+
+.Product.open span.image,
+.Product.closed span.image
+{
+	background:url(../Images/Product.png) no-repeat;
+}
+
+#FlyoutPanel {
+    border: 1px solid #CCCCCC;
+    margin: inherit;
+    padding: 4px;
+    width: 320px;
+    position:absolute;
+    left: 500px;
+    top: 200px;
+}
+
+.AspectizeRadioButtons label 
+{
+	padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* Upload */
+
+#FileUpload-UploaderButton.aasFileUpload > div.content,
+#FileUpload-UploaderLink.aasFileUpload > div.content
+{
+	background:none;
+	padding:0px;
+}
+
+#FileUpload-UploaderButton.aasFileUpload > div.content > span
+{
+	text-decoration: none;
+}
+
+#FileUpload-UploaderImage.aasFileUpload
+{
+	background: url("../Images/LogoWhite.png") no-repeat;
+	margin:0;
+	padding:0;
+	height:151px;
+    width: 264px;
+}
+
+#FileUpload-UploaderImage.aasFileUpload:hover {
+    background-color: #eee;
+}
+
+#FileUpload-UploaderImage.aasFileUpload > div.content > span
+{
+	/*display: inline-block;*/
+}
+
+/* Complex Layout */
+
+.ZoneMain
+{
+	min-height: 400px;
+	min-width: 400px;
+	border:1px dashed #333;
+	margin-top: 20px;
+	padding: 10px;
+}
+
+#ParentView, #ChildViewA, #ChildViewB, #ChildViewC, #ChildViewD, #HeaderView
+{
+	padding: 10px;
+	border: 1px solid #333;
+}
+
+/* Google Map */
+
+#GoogleMap-Map.GoogleMap {
+	bottom: 0;
+	position: relative;
+	top: 0;
+	min-height: 500px;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+
+.GoogleMapControl {
+	height: 100%;
+	width: 100%;
+}
+
+fieldset.aasRadioButtons.VerticalRadio > label {
+	display: block;
+	padding: 8px;
+	margin-bottom: 0px;
+	margin-right: 0px;
+}
+
+fieldset.aasRadioButtons.VerticalRadio input[type="radio"] {
+	margin: 0 4px;
+}
+
+fieldset.aasRadioButtons > label {
+	margin-right: 10px;
+	font-weight: 400;
+}
+
+	fieldset.aasRadioButtons > label input[type="radio"] {
+		margin-right: 3px;
+	}
