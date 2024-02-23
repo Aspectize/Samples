@@ -26,6 +26,7 @@
 
 <!-- bootstrap datepicker -->
 <script src='~BootstrapDateTimePicker/Moment/moment.min.js'></script>
+<script src='~BootstrapDateTimePicker/Moment/moment-with-locales.min.js'></script>
 <script src='~BootstrapDateTimePicker/DatePicker/js/bootstrap-datetimepicker.min.js'></script>
 <link rel='stylesheet' type='text/css' href='~BootstrapDateTimePicker/DatePicker/css/bootstrap-datetimepicker.min.css' />
 
